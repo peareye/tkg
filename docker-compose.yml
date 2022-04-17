@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  web:
+    build: ./docker/web
+    image: tkg
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www/tkg
+    depends_on:
+      - db
+    tty: true
+    secrets:
+      - host_ssh_key
+    command: bash -c '/usr/local/bin/wait-for-it db:3306 -t 60 -- /usr/local/bin/run'
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/.mysql-data/tkg:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=tkg
+      - MYSQL_USER=tkg
+      - MYSQL_PASSWORD=tkg
+
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/id_rsa
