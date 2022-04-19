@@ -20,6 +20,14 @@
         },
         {
             "category": "site",
+            "label": "Website Call to Action (URL)",
+            "key": "ctaURL",
+            "value": "",
+            "inputType": "text",
+            "help": "This creates a link for the Call to Action button. Usually goes to the contact form page."
+        },
+        {
+            "category": "site",
             "label": "Website Contact Email",
             "key": "contactEmail",
             "value": "",
@@ -69,23 +77,9 @@
         },
         {
             "category": "social",
-            "label": "Github Link",
-            "key": "githubLink",
-            "value": "https://www.github.com",
-            "inputType": "url"
-        },
-        {
-            "category": "social",
-            "label": "Twitter Link",
-            "key": "twitterLink",
-            "value": "https://twitter.com",
-            "inputType": "url"
-        },
-        {
-            "category": "social",
-            "label": "Instagram Link",
-            "key": "instagramLink",
-            "value": "https://www.instagram.com",
+            "label": "LinkedIn Link",
+            "key": "linkedInLink",
+            "value": "https://www.linkedin.com",
             "inputType": "url"
         }
      ]

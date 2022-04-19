@@ -1,0 +1,21 @@
+<header class="header">
+
+  <div class="logo">
+    <a href="{{ pathFor('home') }}">{{ site.settings.siteName|default('Piton<span>CMS</span>') }}</a>
+  </div>
+
+  <div class="phone">
+    <i class="fas fa-phone"></i> <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+  </div>
+
+  <div class="location">
+    <i class="fa-solid fa-location-dot"></i> Honolulu, Hawaii
+  </div>
+
+  {{ include("includes/_social.html") }}
+
+  {# NOTE: Need to update Schedule Now Button to link to Contact Page#}
+
+  <div class="contact"> <a href="/{{ site.settings.ctaURL }}" class="btn">Schedule Now</a></div>
+
+</header>
