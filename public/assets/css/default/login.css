@@ -211,6 +211,8 @@ img {
 
 figure {
   border-radius: var(--br);
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
 }
 figure img {
   max-height: 450px;
@@ -225,6 +227,14 @@ figure figcaption {
   font-weight: 300;
   margin-top: 0.25rem !important;
   text-align: center;
+}
+
+p {
+  margin-block-start: 1rem;
+}
+
+.element__title + p {
+  margin-block-start: 1rem;
 }
 
 a {
@@ -283,6 +293,18 @@ main {
 }
 .container > * {
   grid-column: 2/3;
+}
+
+.hero + .container main {
+  margin: 0;
+  padding: 0;
+}
+
+.element {
+  margin-block: 1rem;
+}
+.element-title {
+  margin-block-start: 1rem;
 }
 
 .text-danger {

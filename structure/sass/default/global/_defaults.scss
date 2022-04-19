@@ -3,8 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  // @includemargin(0);
-  // @includepadding(0);
   // -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +39,8 @@ img {
 
 figure {
   border-radius: var(--br);
-  // @includepadding(2rem null 1rem);
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
 
   img {
     max-height   : 450px;
@@ -61,11 +60,13 @@ figure {
 }
 
 p {
-  // @includemargin(1rem null null null);
+ 
+  margin-block-start: 1rem;
 }
 
 .element__title+p {
-  // @includemargin(1rem null null null);
+   
+  margin-block-start: 1rem;
 }
 
 a {
@@ -133,15 +134,15 @@ main {
 }
 
 .hero+.container main {
-  // @includemargin(0);
-  // @includepadding(0);
+  margin: 0;
+  padding: 0;
 }
 
 .element {
-  // @includemargin(1rem null);
+  margin-block: 1rem;
 
   &-title {
-    // @includemargin(1rem null null null);
+    margin-block-start: 1rem;
   }
 }
 
