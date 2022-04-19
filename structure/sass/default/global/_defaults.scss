@@ -3,8 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  @include margin(0);
-  @include padding(0);
+  // @includemargin(0);
+  // @includepadding(0);
   // -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +41,7 @@ img {
 
 figure {
   border-radius: var(--br);
-  @include padding(2rem null 1rem);
+  // @includepadding(2rem null 1rem);
 
   img {
     max-height   : 450px;
@@ -61,11 +61,11 @@ figure {
 }
 
 p {
-  @include margin(1rem null null null);
+  // @includemargin(1rem null null null);
 }
 
 .element__title+p {
-  @include margin(1rem null null null);
+  // @includemargin(1rem null null null);
 }
 
 a {
@@ -116,12 +116,12 @@ h6 {
 }
 
 main {
-  // @include padding(#{$nav-height} null 2rem);
+  // // @includepadding(#{$nav-height} null 2rem);
   padding: calc(#{$nav-height} * 1.5) 0;
 }
 
 .container {
-  @include margin(auto);
+  // @includemargin(auto);
   width: 100%;
 
   display              : grid;
@@ -133,15 +133,15 @@ main {
 }
 
 .hero+.container main {
-  @include margin(0);
-  @include padding(0);
+  // @includemargin(0);
+  // @includepadding(0);
 }
 
 .element {
-  @include margin(1rem null);
+  // @includemargin(1rem null);
 
   &-title {
-    @include margin(1rem null null null);
+    // @includemargin(1rem null null null);
   }
 }
 

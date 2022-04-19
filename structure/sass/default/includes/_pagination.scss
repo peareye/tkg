@@ -1,5 +1,5 @@
 .pagination {
-  @include margin(2rem null 1rem);
+  // @include margin(2rem null 1rem);
   line-height: 1;
 
   display        : flex;
@@ -7,8 +7,8 @@
   justify-content: center;
 
   *+* {
-    @include margin(0);
-    @include padding(0);
+    // @include margin(0);
+    // @include padding(0);
   }
 
   .page-link {
@@ -33,7 +33,7 @@
       font-weight: 300;
     }
     a {
-      @include padding(.5rem);
+      // @include padding(.5rem);
       text-decoration: none;
       color          : var(--clr-primary);
      

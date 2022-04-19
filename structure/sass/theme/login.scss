@@ -1,5 +1,30 @@
-@import 'vars/vars';
-@import 'global/global';
-@import 'elements/elements';
-@import 'includes/includes';
-@import 'pages/pages';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/theme';
+@import 'abstracts/typography';
+
+
+@import 'global/reset';
+@import 'global/defaults';
+@import 'global/layout';
+@import 'global/buttons';
+
+
+@import 'elements/collection';
+@import 'elements/contact';
+@import 'elements/embedded';
+@import 'elements/gallery';
+@import 'elements/hero';
+@import 'elements/image';
+@import 'elements/text';
+
+
+
+@import 'includes/header';
+@import 'includes/hamburger';
+@import 'includes/navbar';
+@import 'includes/pagination';
+@import 'includes/social';
+@import 'includes/footer';
+
+@import 'pages/home';

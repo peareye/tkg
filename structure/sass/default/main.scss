@@ -1,7 +1,8 @@
-@import 'vendor/vendor';
-@import '../fontawesome/scss/fontawesome.scss';
-@import '../fontawesome/scss/brands.scss';
-@import '../fontawesome/scss/solid.scss';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/theme';
+@import 'abstracts/typography';
+
 @import 'vars/vars';
 @import 'global/global';
 @import 'elements/elements';

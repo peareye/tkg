@@ -1,4 +1,8 @@
-@import 'vendor/vendor';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/theme';
+@import 'abstracts/typography';
+
 @import 'vars/vars';
 @import 'global/global';
 @import 'elements/elements';
