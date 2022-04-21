@@ -41,6 +41,6 @@ $value: map-get($breakpoints, $size);
 @mixin grid($cols: 3){
   display: grid;
   grid: auto-flow / repeat($cols, 1fr);
-  gap: $spacer;
+  gap: 1rem;
   max-width: 1200px;
 }

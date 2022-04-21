@@ -1,0 +1,90 @@
+// Footer Styles
+
+.footer {
+  margin-block-start: auto;
+  background-color: var(--clr-primary);
+
+  a {
+    text-decoration: none;
+    color          : gray(2);
+    font-weight    : var(--fw-n);
+
+    &:hover {
+      color: var(--clr-accent);
+    }
+  }
+
+  p {
+    margin : 0;
+    padding: 0;
+  }
+
+  &-nav {
+    ul {
+      list-style: none;
+      margin    : 0;
+      padding   : 0;
+    }
+  }
+
+  &-social {
+    font-size: 1.3rem;
+
+    >* {
+
+      display            : flex;
+      // align-items     : flex-start;
+      // justify-content : center;
+      gap                : 1rem;
+    }
+  }
+
+  &-title {
+    font-family     : var(--ff-sans-headings);
+    margin          : 0;
+    margin-block-end: 1rem;
+    padding         : 0;
+    font-size       : 1rem;
+  }
+
+  &-about {
+    text-align: center;
+  }
+
+
+  .footer1 {
+    margin-inline   : auto;
+    padding-block   : 1em;
+    font-size       : .9rem;
+    background-color: var(--clr-primary);
+    color           : var(--clr-white);
+
+    width: min(calc(100% - var(--spacer)), var(--max-width));
+
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap                  : 1rem;
+    grid-auto-flow       : dense;
+
+    >* {
+      background-color: var(--clr-primary-light);
+      padding         : .5em;
+      border-radius   : var(--br);
+    }
+
+  }
+}
+
+.footer2 {
+  width           : 100%;
+  background-color: var(--clr-primary-dark);
+  color           : var(--clr-white);
+  padding-block   : .5em;
+  font-size       : .9em;
+
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  gap            : .25em;
+}
