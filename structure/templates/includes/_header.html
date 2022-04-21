@@ -1,11 +1,17 @@
 <header class="header">
 
   <div class="logo">
-    <a href="{{ pathFor('home') }}">{{ site.settings.siteName|default('Piton<span>CMS</span>') }}</a>
+
+    <h1 class="page__title">
+      <a href="{{ pathFor('home') }}">
+        {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
+      </a>
+    </h1>
   </div>
 
   <div class="phone">
-    <i class="fas fa-phone"></i> <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+    <i class="fas fa-phone" style="display: inline-block"></i> 
+    <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
   </div>
 
   <div class="location">
@@ -14,8 +20,8 @@
 
   {{ include("includes/_social.html") }}
 
-  {# NOTE: Need to update Schedule Now Button to link to Contact Page#}
-
-  <div class="contact"> <a href="/{{ site.settings.ctaURL }}" class="btn">Schedule Now</a></div>
+  <div class="contact"> 
+    <a href="/{{ site.settings.ctaURL }}" class="btn">Schedule Now</a>
+  </div>
 
 </header>

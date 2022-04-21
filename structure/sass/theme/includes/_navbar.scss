@@ -1,0 +1,147 @@
+/* Navigation Styles w/sub navigation dropdown and responsive toggles */
+
+.navbar {
+    background-color: transparent;
+    // height: var(--nav-height);
+   
+  
+    position: absolute;
+   top: 0;
+    right: 0;
+    left: 0;
+  
+    z-index: 1001;
+  
+    .nav {
+      margin: 0;
+      padding: 0;
+      background-color: lighten($clr-primary, 10%);
+      text-align: center;
+  
+      transform: scaleY($scale); //Set to zero for animation
+      opacity: $scale; //Set to zero for animation
+      transition: transform .2s ease, opacity 250ms ease-out;
+      transform-origin: top;
+  
+     @include mq(small) {
+        background: unset;
+        display: flex;
+        flex-flow: row nowrap;
+        // gap: $spacer;
+        justify-content: center;
+    
+  
+        transform: scaleY(1); //Scale set to 1 for desktop navigation
+        opacity: 1; //Opacity set to 1 for desktop navigation
+        position: static; //Position static for desktop navigation
+        width: auto; //Width Auto to break subnav outside of parent
+      }
+  
+      &-link {
+        padding-block: 0;
+        list-style: none;
+        width: 100%;
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: $fw-l;
+        letter-spacing: 1px;
+        border-bottom: solid $clr-grey-light 1px;
+  
+        @include mq(small){
+          padding-inline: .5rem;
+          height: calc(#{$nav-height} / 2);
+          line-height: calc(#{$nav-height} / 2);
+          font-size: 1rem;
+          width: auto;
+          border: none;
+        }
+  
+      }
+  
+      a {
+        padding-inline: 1rem;
+        text-decoration: none;
+        color: $clr-light-text;
+        display: block;
+        
+        padding-block: 1em;
+        &:hover {
+          background: $clr-primary-dark;
+    
+        }
+      }
+    }
+  
+    // Static placeholder for navigation with sub menu. Uses the checkbox/label trick to toggle
+    .toggle-label {
+      // color: $clr-light-text;
+      // cursor: pointer;
+      // font-size: inherit;
+  
+      // display: block;
+  
+  
+      &::after {
+        // content: '\25bc';
+        // font-size: .7em;
+      }
+    }
+  
+    .subnav {
+      // width: 100%;
+      // background: lighten($clr-primary, 15%);
+      // transform: scaleY($scale);
+      height: 0; // Set height to 0 for mobile dropdown animation
+  
+      @include mq(small) {
+        // white-space: nowrap;
+        // width: auto;
+  
+        // display: block;
+  
+        // position: absolute;
+        // top: 100%;
+        // right: 0;
+  
+        // transform: scaleY($scale);
+        // opacity: $scale;
+        // transition: transform .2s ease, opacity .4s ease-out;
+        // transform-origin: top;
+  
+      }
+  
+      &-link {
+        // list-style: none;
+        // text-align: center;
+        // display: flex;
+  
+        @include mq(small) {
+          // text-align: left;
+        }
+  
+        &:hover {
+          // background: darken($clr-primary, 10%);
+          // color: constrast-switch($clr-primary);
+        }
+  
+        a {
+          // text-decoration: none;
+          // width: 100%;
+          // padding-inline: 1rem;
+        }
+      }
+    }
+  }
+  
+  /* Toggle States */
+  .toggle:checked~.subnav {
+    transform: scaleY(1);
+    opacity: 1;
+    height: auto;
+  }
+  
+  .nav-toggle:checked~.nav {
+    transform: scaleY(1);
+    opacity: 1;
+    min-height: calc(100vh - 60px);
+  }

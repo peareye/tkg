@@ -4,19 +4,13 @@
     <a href="{{ site.settings.facebookLink }}"><i class="social-icon fab fa-facebook"></i></a>
     {% endif %}
 
-    {% if site.settings.twitterLink %}
-    <a href="{{ site.settings.twitterLink }}"><i class="social-icon fab fa-twitter"></i></a>
+
+    {% if site.settings.linkedInLink %}
+    <a href="{{ site.settings.linkedIn }}"><i class="social-icon fab fa-linkedin"></i></a>
     {% endif %}
 
-    {% if site.settings.instagramLink %}
-    <a href="{{ site.settings.instagramLink }}"><i class="social-icon fab fa-linkedin"></i></a>
+    {% if site.settings.ctaURL %}
+    <a href="/{{ site.settings.ctaURL }}"><i class="social-icon fa-solid fa-envelope"></i></a>
     {% endif %}
-
-    {% if site.settings.githubLink %}
-    <a href="{{ site.settings.githubLink }}"><i class="social-icon fab fa-github"></i></a>
-    {% endif %}
-
-    {# NOTE: Need to add link to contact here #}
-    <a href="#"></a><i class="social-icon fa-solid fa-envelope"></i>
 
 </div>

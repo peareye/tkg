@@ -459,16 +459,16 @@
         },
         {
             "name": "pitoncms/engine",
-            "version": "0.7.1",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Engine.git",
-                "reference": "d936228df4e5a7a6aaceb1c93195fc1d30a644e9"
+                "reference": "5d140bba93a4bc68a5993789b243d602dc0b9b23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/d936228df4e5a7a6aaceb1c93195fc1d30a644e9",
-                "reference": "d936228df4e5a7a6aaceb1c93195fc1d30a644e9",
+                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/5d140bba93a4bc68a5993789b243d602dc0b9b23",
+                "reference": "5d140bba93a4bc68a5993789b243d602dc0b9b23",
                 "shasum": ""
             },
             "require": {
@@ -504,9 +504,9 @@
             "homepage": "https://github.com/PitonCMS/Engine",
             "support": {
                 "issues": "https://github.com/PitonCMS/Engine/issues",
-                "source": "https://github.com/PitonCMS/Engine/tree/0.7.1"
+                "source": "https://github.com/PitonCMS/Engine/tree/0.8.0"
             },
-            "time": "2021-09-23T03:27:23+00:00"
+            "time": "2022-04-19T04:04:58+00:00"
         },
         {
             "name": "pitoncms/orm",

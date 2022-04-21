@@ -1,5 +1,10 @@
 {% extends 'pages/_base_layout.html' %}
+{% block navbar %}
+{{ include('includes/_navbar.html') }}
+
+{% endblock navbar %}
 
 {% block body %}
+
   {{ getBlockElementsHtml(page.blocks.contentBlock) }}
 {% endblock body %}

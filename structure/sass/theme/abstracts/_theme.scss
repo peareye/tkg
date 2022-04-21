@@ -1,10 +1,10 @@
   // Color Pallette
 
   $grays: (1: hsl(0, 0%, 100%),
-      2: hsl(0, 0%, 95%),
-      3: hsl(0, 0%, 62%),
-      4: hsl(0, 0%, 36%),
-      5: hsl(0, 0%, 20%),
+    2: hsl(0, 0%, 95%),
+    3: hsl(0, 0%, 62%),
+    4: hsl(0, 0%, 36%),
+    5: hsl(0, 0%, 20%),
   );
 
   $clr-red    : rgb(184, 41, 37);
@@ -32,32 +32,29 @@
 
 
   // Default Element Styles 
-  $bg            : gray(2);
+  $bg-primary    : $clr-primary;
   $bs            : 0 0 25px rgba(gray(5), .25);
   $bs-1          : 0 10px 25px rgba(gray(5), .25);
   $bs-2          : 0 20px 40px -15px rgba(gray(5), .25);
   $bsh           : 0px 0px 10px 2px rgba(gray(5), .15); // box shadow hover
-  $br            : 7px;
+  $br            : 3px;
   $ls            : 2px;
   $ts            : 0 2px 5px rgba(gray(5), .18);
   $section-margin: 0rem;
 
   $spacer: 2em;
 
-$breakpoints: (
-small: 768px,
-big: 980px,
-);
+  $breakpoints: (xs: 576px, small: 850px, medium: 990px, big: 1500px);
 
-$box-shadow: 0 0 .5em rgba(gray(3), .65);
+  $box-shadow: 0 0 .5em rgba(gray(3), .65);
 
   // Navigation Variables
   $nav-height: 60px;
   $nav-bg    : $clr-primary; // Set the $nav-color to transparent if don't want a background color.
-  $nav-text  : gray(1); 
+  $nav-text  : gray(1);
   $nav-hover : $clr-accent;
 
-  $nav-bg-opacity: 0; 
+  $nav-bg-opacity: 0;
   $nav-text      : gray(1);
   $nav-accent    : $clr-accent;
   $nav-height    : 60px;
@@ -66,7 +63,7 @@ $box-shadow: 0 0 .5em rgba(gray(3), .65);
   // Layout Variables
   $max-container-width: 1200px;
 
-// Font Variables
+  // Font Variables
   $fw-l: 400;
   $fw-n: 400;
   $fw-m: 600;
@@ -76,9 +73,10 @@ $box-shadow: 0 0 .5em rgba(gray(3), .65);
   serif;
   $ff-sans-body: 'Open Sans',
   sans-serif;
-  $ff-sans-headings: 'Montserrat', sans-serif;
+  $ff-sans-headings: 'Montserrat',
+  sans-serif;
 
-  
+
 
 
   /* 
@@ -109,73 +107,74 @@ $box-shadow: 0 0 .5em rgba(gray(3), .65);
   /* Color RGB Components */
   :root {
 
-      --clr-primary     : #{$clr-primary};
-      --clr-primary-rgb : #{hexToRGB($clr-primary)};
+    --clr-primary     : #{$clr-primary};
+    --clr-primary-rgb : #{hexToRGB($clr-primary)};
 
-      --clr-primary-dark     : #{$clr-primary-dark};
-      --clr-primary-dark-rgb : #{hexToRGB($clr-primary-dark)};
+    --clr-primary-dark     : #{$clr-primary-dark};
+    --clr-primary-dark-rgb : #{hexToRGB($clr-primary-dark)};
 
-      --clr-primary-light    : #{$clr-primary-light};
-      --clr-primary-light-rgb: #{hexToRGB($clr-primary-light)};
+    --clr-primary-light    : #{$clr-primary-light};
+    --clr-primary-light-rgb: #{hexToRGB($clr-primary-light)};
 
-      --clr-secondary     : #{$clr-secondary};
-      --clr-secondary-rgb : #{hexToRGB($clr-secondary)};
+    --clr-secondary     : #{$clr-secondary};
+    --clr-secondary-rgb : #{hexToRGB($clr-secondary)};
 
-      --clr-accent     : #{$clr-accent};
-      --clr-accent-rgb : #{hexToRGB($clr-accent)};
+    --clr-accent     : #{$clr-accent};
+    --clr-accent-rgb : #{hexToRGB($clr-accent)};
 
-      --clr-accent-dark : #{$clr-accent-dark};
-      --clr-accent-rgb  : #{hexToRGB($clr-accent-dark)};
+    --clr-accent-dark : #{$clr-accent-dark};
+    --clr-accent-rgb  : #{hexToRGB($clr-accent-dark)};
 
-      --clr-accent-light : #{$clr-accent-light};
-      --clr-accent-rgb   : #{hexToRGB($clr-accent-light)};
+    --clr-accent-light : #{$clr-accent-light};
+    --clr-accent-rgb   : #{hexToRGB($clr-accent-light)};
 
-      --clr-dark-text     : #{$clr-dark-text};
-      --clr-dark-text-rgb : #{hexToRGB($clr-dark-text)};
+    --clr-dark-text     : #{$clr-dark-text};
+    --clr-dark-text-rgb : #{hexToRGB($clr-dark-text)};
 
-      --clr-white     : #{$clr-white};
-      --clr-white-rgb : #{hexToRGB($clr-white)};
+    --clr-white     : #{$clr-white};
+    --clr-white-rgb : #{hexToRGB($clr-white)};
 
-      --clr-black     : #{$clr-black};
-      --clr-black-rgb : #{hexToRGB($clr-black)};
+    --clr-black     : #{$clr-black};
+    --clr-black-rgb : #{hexToRGB($clr-black)};
 
-      --clr-grey-dark     : #{$clr-grey-dark};
-      --clr-grey-dark-rgb : #{hexToRGB($clr-grey-dark)};
+    --clr-grey-dark     : #{$clr-grey-dark};
+    --clr-grey-dark-rgb : #{hexToRGB($clr-grey-dark)};
 
-      --clr-grey-medium     : #{$clr-grey-medium};
-      --clr-grey-medium-rgb : #{hexToRGB($clr-grey-medium)};
+    --clr-grey-medium     : #{$clr-grey-medium};
+    --clr-grey-medium-rgb : #{hexToRGB($clr-grey-medium)};
 
-      --clr-grey-light     : #{$clr-grey-light};
-      --clr-grey-light-rgb : #{hexToRGB($clr-grey-light)};
+    --clr-grey-light     : #{$clr-grey-light};
+    --clr-grey-light-rgb : #{hexToRGB($clr-grey-light)};
 
-      /* Default Element Styles */
-      --bs            : #{$bs}; // Box Shadow    
-      --bs-1          : #{$bs-1}; // Box Shadow 1 
-      --bs-2          : #{$bs-2}; // Box Shadow 1 
-      --bsh           : #{$bsh}; // Box Shadow Hover
-      --br            : #{$br}; // Border Radius 
-      --ls            : #{$ls}; // Letter spacing 
-      --ts            : #{$ts}; // Text Shadow 
-      --section-margin: #{$section-margin}; // Spacing between sections
+    /* Default Element Styles */
+    --bs            : #{$bs}; // Box Shadow    
+    --bs-1          : #{$bs-1}; // Box Shadow 1 
+    --bs-2          : #{$bs-2}; // Box Shadow 1 
+    --bsh           : #{$bsh}; // Box Shadow Hover
+    --br            : #{$br}; // Border Radius 
+    --ls            : #{$ls}; // Letter spacing 
+    --ts            : #{$ts}; // Text Shadow 
+    --section-margin: #{$section-margin}; // Spacing between sections
+    --spacer        : #{$spacer};
 
-      /*  Navigation Styles */
-      --nav-height    : #{$nav-height};
-      --nav-bg        : #{$nav-bg};
-      --nav-bg-opacity: #{$nav-bg-opacity};
-      --nav-text      : #{$nav-text};
-      --nav-hover     : #{$nav-hover};
-      --nav-accent    : #{$nav-accent};
-      /* Layout Variables */
-      --max-width     : #{$max-container-width};
+    /*  Navigation Styles */
+    --nav-height    : #{$nav-height};
+    --nav-bg        : #{$nav-bg};
+    --nav-bg-opacity: #{$nav-bg-opacity};
+    --nav-text      : #{$nav-text};
+    --nav-hover     : #{$nav-hover};
+    --nav-accent    : #{$nav-accent};
+    /* Layout Variables */
+    --max-width     : #{$max-container-width};
 
-      /* Font Families */
-      --ff-serif         : #{$ff-serif};
-      --ff-sans-body     : #{$ff-sans-body};
-      --ff-sans-headings : #{$ff-sans-headings};
+    /* Font Families */
+    --ff-serif         : #{$ff-serif};
+    --ff-sans-body     : #{$ff-sans-body};
+    --ff-sans-headings : #{$ff-sans-headings};
 
-      /* Font Weights */
-      --fw-l: #{$fw-l}; //Fontweight light
-      --fw-n: #{$fw-n}; //Fontweight normal
-      --fw-m: #{$fw-m}; //Fontweight medium
-      --fw-b: #{$fw-b}; //Fontweight bold
+    /* Font Weights */
+    --fw-l: #{$fw-l}; //Fontweight light
+    --fw-n: #{$fw-n}; //Fontweight normal
+    --fw-m: #{$fw-m}; //Fontweight medium
+    --fw-b: #{$fw-b}; //Fontweight bold
   }

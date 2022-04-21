@@ -1,1 +1,36 @@
- 
+.btn {
+  padding-inline: 2em;
+  padding-block : 1em;
+
+  color          : gray(1);
+  border-color   : gray(1);
+  letter-spacing : $ls;
+  text-align     : center;
+  text-decoration: none;
+  cursor         : pointer;
+  font-size      : .75rem;
+  font-weight    : var(--fw-b);
+  background     : none;
+  border         : 2px solid gray(1);
+  overflow       : hidden;
+  font-family    : inherit;
+  text-transform : uppercase;
+  border-radius  : var(--br);
+
+  display: inline-block;
+
+  position: relative;
+
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    background: var(--clr-accent);
+  }
+&__cta {
+
+  font-size: 1rem;
+  &:hover {
+    color: gray(1);
+  }
+  }
+}
