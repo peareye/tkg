@@ -13,6 +13,10 @@
                     "value": "default"
                 },
                 {
+                    "name": "TK Green",
+                    "value": "tkg"
+                },
+                {
                     "name": "Theme",
                     "value": "theme"
                 }
