@@ -12,7 +12,7 @@
   .nav-toggle-label {
     margin: 0;
     cursor: pointer;
-    height: var(--nav-height);
+    height: $nav-height;
  
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
  
     position: absolute;
     top: 0;
-    right: calc(var(--spacer) / 4);
+    right: calc($spacer / 4);
     z-index: 1000;
    
     @include mq(small) {
@@ -30,10 +30,10 @@
     span,
     span::before,
     span::after {
-      width : calc(#{var(--nav-height)}/ 2);
+      width : calc(#{$nav-height}/ 2);
       height: 2px;
       border-radius: $br;
-      background: $clr-white;
+      background: neutral(1);
  
       position: relative;
     }
@@ -58,7 +58,7 @@
   .nav.scroll * label>span,
   .nav.scroll * label>span::before,
   .nav.scroll * label>span::after {
-    background-color: $clr-white;
+    background-color: neutral(1);
   }
  
   // Nav Toggle Animation

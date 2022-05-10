@@ -2,15 +2,15 @@
 
 .footer {
   margin-block-start: auto;
-  background-color: var(--clr-primary);
+  background-color: color(primary);
 
   a {
     text-decoration: none;
-    color          : gray(2);
-    font-weight    : var(--fw-n);
+    color          : neutral(2);
+    font-weight    : $fw-n;
 
     &:hover {
-      color: var(--clr-accent);
+      color: color(accent);
     }
   }
 
@@ -33,16 +33,14 @@
     >* {
 
       display            : flex;
-      // align-items     : flex-start;
-      // justify-content : center;
       gap                : 1rem;
     }
   }
 
   &-title {
-    font-family     : var(--ff-sans-headings);
+    font-family     : $ff-sans-headings;
     margin          : 0;
-    margin-block-end: 1rem;
+    margin-block-end: .25rem;
     padding         : 0;
     font-size       : 1rem;
   }
@@ -56,10 +54,10 @@
     margin-inline   : auto;
     padding-block   : 1em;
     font-size       : .9rem;
-    background-color: var(--clr-primary);
-    color           : var(--clr-white);
+    background-color: color(primary);
+    color           : neutral(1);
 
-    width: min(calc(100% - var(--spacer)), var(--max-width));
+    width: min(calc(100% - $spacer), $max-container-width);
 
     display              : grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -67,9 +65,9 @@
     grid-auto-flow       : dense;
 
     >* {
-      background-color: var(--clr-primary-light);
+      background-color:color(primary-light);
       padding         : .5em;
-      border-radius   : var(--br);
+      border-radius   : $br;
     }
 
   }
@@ -77,8 +75,8 @@
 
 .footer2 {
   width           : 100%;
-  background-color: var(--clr-primary-dark);
-  color           : var(--clr-white);
+  background-color: color(primary-dark);
+  color           : neutral(1);
   padding-block   : .5em;
   font-size       : .9em;
 

@@ -2,20 +2,20 @@
   padding-inline: 2em;
   padding-block : 1em;
 
-  color          : gray(1);
-  border-color   : gray(1);
+  color          : neutral(1);
+  border-color   : neutral(1);
   letter-spacing : $ls;
   text-align     : center;
   text-decoration: none;
   cursor         : pointer;
   font-size      : .75rem;
-  font-weight    : var(--fw-b);
+  font-weight    : $fw-b;
   background     : none;
-  border         : 2px solid gray(1);
+  border         : 2px solid neutral(1);
   overflow       : hidden;
   font-family    : inherit;
   text-transform : uppercase;
-  border-radius  : var(--br);
+  border-radius  : $br;
 
   display: inline-block;
 
@@ -24,13 +24,13 @@
   transition: all 125ms ease-in-out;
 
   &:hover {
-    background: var(--clr-accent);
+    background: color(accent);
   }
 &__cta {
 
   font-size: 1rem;
   &:hover {
-    color: gray(1);
+    color: neutral(1);
   }
   }
 }

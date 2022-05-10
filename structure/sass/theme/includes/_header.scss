@@ -1,9 +1,8 @@
 .header {
-  padding-inline  : 1rem;
-  padding-block   : 1rem;
-  background-color: var(--clr-primary);
-  color           : gray(2);
-  text-align      : center;
+  padding-inline: 1rem;
+  padding-block : 1rem;
+  @include dc(color(primary));
+  text-align: center;
 
   display        : flex;
   flex-direction : column;
@@ -12,30 +11,27 @@
   align-items    : center;
 
   .logo {
- 
-
-    @include mq(small){
+    @include mq(small) {
       font-size: 1rem;
     }
   }
 
   a {
-    color          : gray(2);
+    color          : inherit;
     text-decoration: none;
   }
 
   .location,
-  .phone,
- {
+  .phone {
     font-size  : .9rem;
-    font-weight: var(--fw-l);
+    font-weight: $fw-l;
   }
 
   .meta-details {
     margin-inline-start: auto;
     display            : flex;
-    gap                : calc(var(--spacer)/4);
-    color              : gray(2);
+    gap                : calc($spacer/4);
+    color              : neutral(2);
 
     display: flex;
     gap    : 1em;
@@ -57,6 +53,10 @@
 
   @include mq(small) {
     flex-direction: row;
+  }
+
+  .btn {
+    border-color: inherit;
   }
 
 }

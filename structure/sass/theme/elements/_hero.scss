@@ -1,20 +1,20 @@
 // Hero style
 .hero {
-  --hero-height    : 75vh;
-  --hero-min-height: 100%;
-  height           : min(var(--hero-height), var(--hero-min-height));
-  position         : relative;
-  z-index          : 100;
-  font-size        : 2rem;
+  --hero-height       : 85vh;
+  --hero-min-height   : 100%;
+  height              : min(var(--hero-height), var(--hero-min-height));
+  position            : relative;
+  z-index             : 100;
+  // font-size        : 2rem;
 
   @include mq(small) {
-    // --hero-height: 100%;
-    // --hero-min-height: 800px; 
+    --hero-height    : 100%;
+    --hero-min-height: 800px;
   }
 
   @include mq(big) {
-    // --hero-height    : 80vh;
-    // --hero-min-height: 2000px;
+    --hero-height    : 80vh;
+    --hero-min-height: 2000px;
   }
 
   &__overlay {
@@ -27,13 +27,15 @@
   }
 
   &__content {
-    width        : min(100% - var(--spacer), 60ch);
+    width        : min(100% - $spacer, 60ch);
     margin-inline: auto;
+    padding-block: calc($spacer * 2);
+    // background: pink;
     text-align   : center;
-    color        : var(--clr-white);
+    color        : neutral(1);
 
     display        : flex;
-    gap            : calc(var(--spacer) / 4);
+    gap            : calc($spacer / 4);
     flex-direction : column;
     align-items    : center;
     justify-content: center;
@@ -41,12 +43,14 @@
     position: absolute;
     inset   : 0;
     z-index : 102;
+
     &-title {
       line-height: 1;
-      font-size: 3rem;
-      font-weight: var(--fw-l);
-      @include mq(small){
-        font-weight: var(--fw-b)
+      font-size  : 3rem;
+      font-weight: $fw-b;
+
+      @include mq(small) {
+        font-weight: $fw-b;
       }
     }
 

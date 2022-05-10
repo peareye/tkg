@@ -1,46 +1,70 @@
 // Extract RGB values from variables in scss to be used in css variables
 // https://www.techhive.io/our-insights/how-to-use-css-variables-with-sass-mixins
 
-@function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
 // How to use in CSS Variables
 
 // :root {  
 //  --color: #{$color};
 // }
 
-@mixin underline ($bg: currentColor, $margin: $spacer, $height: 1px, $width: 25%){
+@function hexToRGB($hex) {
+  @return red($hex),
+  green($hex),
+  blue($hex);
+}
+
+
+// Underline divider
+@mixin underline ($bg: currentColor, $margin: $spacer, $height: 1px, $width: 25%) {
   &::after {
-    content: '';
-    display: block;
-    margin: $margin auto;
+    content   : '';
+    display   : block;
+    margin    : $margin auto;
     background: $bg;
-    height: $height;
-    width: $width;
+    height    : $height;
+    width     : $width;
     @content;
   }
 }
 
 // Media Queries
 @mixin mq($size) {
-$value: map-get($breakpoints, $size);
-@media only screen and (min-width: $value){
-  @content;
-}
-}
+  $value: map-get($breakpoints, $size);
 
-@mixin limit-width() { 
-    max-width: 450px;
-    margin: 0 auto;
+  @media only screen and (min-width: $value) {
     @content;
+  }
+}
+
+@mixin limit-width() {
+  max-width: 450px;
+  margin   : 0 auto;
+  @content;
 
 }
 
-@mixin grid($cols: 3){
-  display: grid;
-  grid: auto-flow / repeat($cols, 1fr);
-  gap: 1rem;
+@mixin grid($cols: 3) {
+  display  : grid;
+  grid     : auto-flow / repeat($cols, 1fr);
+  gap      : 1rem;
   max-width: 1200px;
+}
+
+// Dynamic Colors
+@mixin dc($color) {
+  background-color: $color;
+  color     : dynamic-color($color);
+}
+
+
+@mixin underline($bg: currentColor, $margin: $spacer, $height: 1px, $width: 25%) {
+  &::after {
+    content   : '';
+    display   : block;
+    margin    : $margin auto;
+    background: $bg;
+    height    : $height;
+    width     : $width;
+    @content;
+  }
 }

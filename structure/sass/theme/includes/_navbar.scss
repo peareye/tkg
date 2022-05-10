@@ -1,9 +1,9 @@
 /* Navigation Styles w/sub navigation dropdown and responsive toggles */
 
 .navbar {
-  background-color   : var(--clr-accent);
-  min-height         : var(--nav-height);
-  max-height      : var(--nav-height);
+  background-color: color(accent);
+  min-height      : $nav-height;
+  max-height      : $nav-height;
 
   position: relative;
   z-index : 1001;
@@ -11,12 +11,12 @@
   .nav {
     margin          : 0;
     padding         : 0;
-    background-color: lighten($clr-primary, 10%);
+    background-color: color(primary-light);
     text-align      : center;
 
     transform       : scaleY($scale); //Set to zero for animation
     opacity         : $scale; //Set to zero for animation
-    transition      : transform .2s ease, opacity 250ms ease-out;
+    transition      : transform all .2s ease-in;
     transform-origin: top;
 
     @include mq(small) {
@@ -39,9 +39,9 @@
       position      : relative;
       font-size     : 1.5rem;
       font-weight   : $fw-l;
-      letter-spacing: var(--ls);
-      border-bottom : solid $clr-grey-light 1px;
-      min-height: var(--nav-height);
+      letter-spacing: $ls;
+      border-bottom : solid neutral(2) 1px;
+      min-height    : $nav-height;
 
       @include mq(small) {
         padding-inline: .5rem;
@@ -55,13 +55,13 @@
       a {
         padding-inline : 1rem;
         padding-block  : 1rem;
-        height         : var(--nav-height);
+        height         : $nav-height;
         text-decoration: none;
-        color          : gray(1);
+        color          : neutral(1);
         display        : block;
 
         &:hover {
-          background-color: var(--clr-primary-dark);
+          background-color: color(primary-dark);
         }
       }
     }
@@ -89,11 +89,12 @@
   transform: scaleY(1);
   opacity  : 1;
   height   : auto;
- 
+
 }
 
 .nav-toggle:checked~.nav {
   transform : scaleY(1);
   opacity   : 1;
   min-height: calc(100vh - 60px);
+  height: auto;
 }

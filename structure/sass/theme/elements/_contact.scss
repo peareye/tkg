@@ -15,7 +15,7 @@
   }
 
   ::placeholder {
-    color: rgba(var(--clr-grey-dark-rgb), .75);
+    color: rgba(neutral(4), .75);
   }
 
 
@@ -39,8 +39,8 @@ textarea {
  
   padding-block: .75em;
   padding-inline: 1em;
-  border       : 1px solid var(--clr-grey-medium);
-  border-radius: var(--br);
+  border       : 1px solid neutral(3);
+  border-radius: $br;
   grid-column  : 2 / 3;
   font-size    : 1rem;
   transition   : all 125ms ease-in-out;
@@ -50,6 +50,6 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-  border : 2px dashed var(--clr-accent);
+  border : 2px dashed color(accent);
   outline: none;
 }

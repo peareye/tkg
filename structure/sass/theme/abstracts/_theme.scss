@@ -1,180 +1,79 @@
   // Color Pallette
+  $clr-red    : hsl(2, 67%, 43%);
+  $clr-blue   : hsl(231, 58%, 37%);
+  $clr-orange : hsl(24, 100%, 56%);
+  $clr-green  : hsl(120, 100%, 22%);
+  $clr-pink: hsl(350, 100%, 84%);
 
-  $grays: (1: hsl(0, 0%, 100%),
-    2: hsl(0, 0%, 95%),
-    3: hsl(0, 0%, 62%),
-    4: hsl(0, 0%, 36%),
-    5: hsl(0, 0%, 20%),
-  );
+  // Neutral Pallette
+  $neutral-1: hsl(0, 4%, 100%);
+  $neutral-2: hsl(0, 4%, 94%);
+  $neutral-3: hsl(0,4%,50%);
+  $neutral-4: hsl(0,4%,30%);
+  $neutral-5: hsl(0, 4%, 13%);
 
-  $clr-red    : rgb(184, 41, 37);
-  $clr-blue   : rgb(40, 57, 149);
-  $clr-orange : rgb(255, 120, 31);
-  $clr-green  : rgb(0, 112, 0);
-
-  $clr-grey-light : gray(2);
-  $clr-grey-medium: gray(3);
-  $clr-grey-dark  : gray(4);
-
-  // Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
+ 
 
   $clr-primary      : $clr-blue;
-  $clr-primary-dark : darken($clr-primary, 10);
-  $clr-primary-light: lighten($clr-primary, 20);
   $clr-secondary    : adjust-hue($clr-primary, -20);
   $clr-accent       : $clr-red;
-  $clr-accent-dark  : darken($clr-accent, 10);
-  $clr-accent-light : lighten($clr-accent, 20);
-  $clr-dark-text    : gray(5);
-  $clr-light-text   : gray(1);
-  $clr-white        : gray(1);
-  $clr-black        : gray(5);
+
+ // Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
+  $neutrals: (
+    1: $neutral-1,
+    2: $neutral-2,
+    3: $neutral-3,
+    4: $neutral-4,
+    5: $neutral-5,
+  );
+
+  $clrs: (
+    primary: $clr-primary,
+    primary-dark: darken($clr-primary, 20%),
+    primary-light: lighten($clr-primary, 10%),
+    secondary: $clr-secondary,
+    secondary-dark: darken($clr-secondary, 20%),
+    secondary-light: lighten($clr-secondary, 10%),
+    accent: $clr-accent,
+    accent-dark: darken($clr-accent, 20%),
+    accent-light: lighten($clr-accent, 10%),
+  );
 
 
   // Default Element Styles 
-  $bg-primary    : $clr-primary;
-  $bs            : 0 0 25px rgba(gray(5), .25);
-  $bs-1          : 0 10px 25px rgba(gray(5), .25);
-  $bs-2          : 0 20px 40px -15px rgba(gray(5), .25);
-  $bsh           : 0px 0px 10px 2px rgba(gray(5), .15); // box shadow hover
-  $br            : 3px;
+ 
+  $bs            : 0 0 25px rgba(neutral(5), .25);
+  $bs-1          : 0 10px 25px rgba(neutral(5), .25);
+  $bs-2          : 0 20px 40px -15px rgba(neutral(5), .25);
+  $bsh           : 0px 0px 10px 2px rgba(neutral(5), .15); // box shadow hover
+  $br            : 7px;
   $ls            : 2px;
-  $ts            : 0 2px 5px rgba(gray(5), .18);
-  $section-margin: 0rem;
+  $ts            : 0 2px 5px rgba(neutral(5), .18);
 
   $spacer: 2em;
 
-  $breakpoints: (xs: 576px, small: 768px, medium: 850px, big: 1500px);
+  $breakpoints: (
+      xs: 576px, 
+      small: 768px, 
+      medium: 850px, 
+      big: 1500px);
 
-  $box-shadow: 0 0 .5em rgba(gray(3), .65);
-
-  // Navigation Variables
+// Navigation Variables
   $nav-height: 60px;
-  $nav-bg    : $clr-primary; // Set the $nav-color to transparent if don't want a background color.
-  $nav-text  : gray(1);
-  $nav-hover : $clr-accent;
-
-  $nav-bg-opacity: 0;
-  $nav-text      : gray(1);
-  $nav-accent    : $clr-accent;
-  $nav-height    : 60px;
   $scale         : 0; // Scales the navigation. valid #'s 0 -> 1. Zero value is collapsed.
 
   // Layout Variables
-  $max-container-width: 1200px;
+  $max-container-width: 60rem;
 
   // Font Variables
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400;600;700&family=PT+Serif:wght@400;700&display=swap');
+  
   $fw-l: 300;
   $fw-n: 400;
   $fw-m: 600;
   $fw-b: 700;
 
-  $ff-serif: 'PT Serif',
-  serif;
-  $ff-sans-body: 'Open Sans',
-  sans-serif;
-  $ff-sans-headings: 'Montserrat',
-  sans-serif;
-
-
-
-
-  /* 
-      CSS VARIABLES 
- 
-      DO NOT CHANGE THE VARIABLE NAME INSIDE OF THE :ROOT.
-      IF YOU ARE USING SASS, CHANGE THE PROPERTY IN THE _THEME.SCSS
-      PARTIAL FILE.
- 
-      IF YOU ARE USING CSS ONLY, CHANGE THE PROPERTY OF THE VARIABLE 
-      INSIDE THE MAIN.CSS AND LOGIN.CSS FILES.
- 
-      THE -RGB IS THE RED/GREEN/BLUE IDENTIFIER OF THE COLOR IT
-      REPRESENTS. THIS IS USED FOR COLORS THAT USE AN ALPHA CHANNEL.
-      IF YOU UPDATE A BASE COLOR, YOU SHOULD ALSO FIND THE RGB VALUE AND REPLACE
-      THE 3 NUMBERS. THERE ARE TOOLS IN CODE EDITORS FOR THIS, OR IT IS EASILY
-      GOOGLED.
- 
-      IE 
- 
-      --CLR-PRIMARY: #336699; // == RGB(51, 102, 153)
-      --CLR-PRIMARY-RGB: 51,102,153;
- 
-  */
-
-  /* Color Theme */
-  /* Color base */
-  /* Color RGB Components */
-  :root {
-
-    --clr-primary     : #{$clr-primary};
-    --clr-primary-rgb : #{hexToRGB($clr-primary)};
-
-    --clr-primary-dark     : #{$clr-primary-dark};
-    --clr-primary-dark-rgb : #{hexToRGB($clr-primary-dark)};
-
-    --clr-primary-light    : #{$clr-primary-light};
-    --clr-primary-light-rgb: #{hexToRGB($clr-primary-light)};
-
-    --clr-secondary     : #{$clr-secondary};
-    --clr-secondary-rgb : #{hexToRGB($clr-secondary)};
-
-    --clr-accent     : #{$clr-accent};
-    --clr-accent-rgb : #{hexToRGB($clr-accent)};
-
-    --clr-accent-dark : #{$clr-accent-dark};
-    --clr-accent-rgb  : #{hexToRGB($clr-accent-dark)};
-
-    --clr-accent-light : #{$clr-accent-light};
-    --clr-accent-rgb   : #{hexToRGB($clr-accent-light)};
-
-    --clr-dark-text     : #{$clr-dark-text};
-    --clr-dark-text-rgb : #{hexToRGB($clr-dark-text)};
-
-    --clr-white     : #{$clr-white};
-    --clr-white-rgb : #{hexToRGB($clr-white)};
-
-    --clr-black     : #{$clr-black};
-    --clr-black-rgb : #{hexToRGB($clr-black)};
-
-    --clr-grey-dark     : #{$clr-grey-dark};
-    --clr-grey-dark-rgb : #{hexToRGB($clr-grey-dark)};
-
-    --clr-grey-medium     : #{$clr-grey-medium};
-    --clr-grey-medium-rgb : #{hexToRGB($clr-grey-medium)};
-
-    --clr-grey-light     : #{$clr-grey-light};
-    --clr-grey-light-rgb : #{hexToRGB($clr-grey-light)};
-
-    /* Default Element Styles */
-    --bs            : #{$bs}; // Box Shadow    
-    --bs-1          : #{$bs-1}; // Box Shadow 1 
-    --bs-2          : #{$bs-2}; // Box Shadow 1 
-    --bsh           : #{$bsh}; // Box Shadow Hover
-    --br            : #{$br}; // Border Radius 
-    --ls            : #{$ls}; // Letter spacing 
-    --ts            : #{$ts}; // Text Shadow 
-    --section-margin: #{$section-margin}; // Spacing between sections
-    --spacer        : #{$spacer};
-
-    /*  Navigation Styles */
-    --nav-height    : #{$nav-height};
-    --nav-bg        : #{$nav-bg};
-    --nav-bg-opacity: #{$nav-bg-opacity};
-    --nav-text      : #{$nav-text};
-    --nav-hover     : #{$nav-hover};
-    --nav-accent    : #{$nav-accent};
-    /* Layout Variables */
-    --max-width     : #{$max-container-width};
-
-    /* Font Families */
-    --ff-serif         : #{$ff-serif};
-    --ff-sans-body     : #{$ff-sans-body};
-    --ff-sans-headings : #{$ff-sans-headings};
-
-    /* Font Weights */
-    --fw-l: #{$fw-l}; //Fontweight light
-    --fw-n: #{$fw-n}; //Fontweight normal
-    --fw-m: #{$fw-m}; //Fontweight medium
-    --fw-b: #{$fw-b}; //Fontweight bold
-  }
+  $ff-serif: 'PT Serif', serif;
+  $ff-sans-body: 'Lato', sans-serif;
+  $ff-sans-headings: 'Montserrat', sans-serif;
