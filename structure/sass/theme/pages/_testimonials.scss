@@ -1,0 +1,34 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacer;
+  text-align: center;
+}
+
+.testimonials {
+    margin-top: $spacer;
+}
+
+.testimonial {
+    box-shadow      : $bs-3;
+    border-radius: $br;
+    margin-bottom   : $spacer;
+
+    &__body {
+        padding: $spacer;
+    }
+
+    &__credit {
+        background: neutral(2);
+        padding   : $spacer;
+    }
+
+    &__name {
+        font-weight: $fw-b;
+        color: neutral(3);
+        margin: 0;
+    }
+
+
+
+}

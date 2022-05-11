@@ -1,0 +1,22 @@
+{# Testimonials Template Page #}
+
+{% extends 'pages/_base_layout.html' %}
+
+{% block navbar %}
+
+    {{ include('includes/_navbar.html') }}
+
+{% endblock navbar %}
+
+{% block about %}
+
+<section id="testimonials" class="section section--testimonials">
+<div class="container">
+  <h1 class="section__title">{{ page.title }}</h1>
+  <div class=" testimonials"> 
+    {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+</div>
+</div>
+ </section>
+
+{% endblock about %}

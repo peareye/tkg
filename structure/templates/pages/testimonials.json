@@ -1,0 +1,16 @@
+{
+    "templateName": "Testimonials",
+    "templateDescription": "Testimonials Page",
+    "showFeaturedImage": true,
+    "templateType": "page",
+    "blocks": [
+        {
+            "name": "Content",
+            "key": "contentBlock",
+            "description": "Content for Testimonials",
+            "elementTypeOptions": [
+                "testimonials/testimonials"
+              ]
+        }
+    ]
+}

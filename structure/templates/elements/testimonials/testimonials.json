@@ -1,0 +1,15 @@
+{
+    "elementName": "Testimonial",
+    "elementDescription": "Only use this element with Testimonials",
+    "enableInput": "image",
+    "settings": [
+        {
+            "category": "element",
+            "label": "Client Name",
+            "key": "client",
+            "value": "",
+            "inputType": "text",
+            "help": "Enter client first name & first initial of last name."
+        }
+    ]
+}
