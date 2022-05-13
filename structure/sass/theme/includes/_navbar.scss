@@ -2,11 +2,13 @@
 
 .navbar {
   background-color: color(accent);
-  min-height      : $nav-height;
-  max-height      : $nav-height;
+  height          : $nav-height;
+  position        : relative;
+  z-index         : 1001;
 
-  position: relative;
-  z-index : 1001;
+  @include mq(small) {
+    height: auto;
+  }
 
   .nav {
     margin          : 0;
@@ -41,24 +43,22 @@
       font-weight   : $fw-l;
       letter-spacing: $ls;
       border-bottom : solid neutral(2) 1px;
-      min-height    : $nav-height;
 
       @include mq(small) {
         padding-inline: .5rem;
-        height        : calc(#{$nav-height} / 2);
-        line-height   : calc(#{$nav-height} / 2);
         font-size     : 1rem;
+        font-weight: $fw-m;
         width         : auto;
         border        : none;
       }
 
       a {
-        padding-inline : 1rem;
-        padding-block  : 1rem;
-        height         : $nav-height;
-        text-decoration: none;
-        color          : neutral(1);
-        display        : block;
+        padding-inline    : 1rem;
+        padding-block     : 1rem;
+        // height         : $nav-height;
+        text-decoration   : none;
+        color             : neutral(1);
+        display           : block;
 
         &:hover {
           background-color: color(primary-dark);
@@ -96,5 +96,5 @@
   transform : scaleY(1);
   opacity   : 1;
   min-height: calc(100vh - 60px);
-  height: auto;
+  height    : auto;
 }

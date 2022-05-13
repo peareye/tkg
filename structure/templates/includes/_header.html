@@ -1,16 +1,14 @@
 <header class="header">
 
-  <div class="logo">
+  <h1 class="logo">
+    <a href="{{ pathFor('home') }}">
+      {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
+    </a>
+  </h1>
 
-    <h1 class="logo">
-      <a href="{{ pathFor('home') }}">
-        {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
-      </a>
-    </h1>
-  </div>
 
   <div class="phone">
-    <i class="fas fa-phone" style="display: inline-block"></i> 
+    <i class="fas fa-phone" style="display: inline-block"></i>
     <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
   </div>
 
@@ -20,8 +18,8 @@
 
   {{ include("includes/_social.html") }}
 
-  <div class="contact"> 
-    <a href="/{{ site.settings.ctaURL }}" class="btn">Schedule Now</a>
-  </div>
+  
+    <a href="/{{ site.settings.ctaURL }}" class="contact btn">Schedule Now</a>
+
 
 </header>

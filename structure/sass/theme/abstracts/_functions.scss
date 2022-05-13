@@ -20,9 +20,9 @@
 
 @function dynamic-color($color){
   @if lightness($color) > 50% {
-    @return rgba(neutral(5), .75);
+    @return rgba(neutral(5), 1);
   } @else {
-    @return rgba(neutral(1), .75);
+    @return rgba(neutral(1), 1);
   }
 }
 
