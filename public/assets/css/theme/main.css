@@ -96,6 +96,12 @@ select {
   font-weight: 300;
 }
 
+.text-danger {
+  color: #b72924;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
 /* Default Styles - Global */
 html {
   scroll-behavior: smooth;
