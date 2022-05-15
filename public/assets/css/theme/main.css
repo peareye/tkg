@@ -158,6 +158,13 @@ p {
   margin-block-start: 1rem;
 }
 
+figcaption {
+  color: #504949;
+  font-size: 0.8rem;
+  padding-block-start: 0.5em;
+  font-style: italic;
+}
+
 .container {
   --max-width: 60rem;
   --padding: 2em;
@@ -406,6 +413,7 @@ textarea:focus {
 }
 @media only screen and (min-width: 768px) {
   .hero .btn {
+    margin-block-start: 2em;
     display: inline-block;
   }
 }
@@ -452,6 +460,8 @@ textarea:focus {
 @media only screen and (min-width: 768px) {
   .header {
     padding-block: 1em;
+    width: min(100%, 60rem);
+    margin-inline: auto;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -501,6 +511,11 @@ textarea:focus {
   .header .social {
     font-size: 1rem;
   }
+}
+
+.header-wrapper {
+  width: 100%;
+  background-color: #283895;
 }
 
 .nav-toggle, .toggle {

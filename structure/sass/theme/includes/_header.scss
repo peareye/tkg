@@ -13,6 +13,8 @@
   // media query for header 
   @include mq(small) {
     padding-block: 1em;
+    width: min(100%, 60rem);
+    margin-inline: auto; 
 
     flex-direction : row;
     justify-content: space-between;
@@ -66,5 +68,10 @@
       font-size: 1rem;
     }
   }
+  
 
+}
+.header-wrapper { 
+  width: 100%; 
+  background-color: color(primary);
 }

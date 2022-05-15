@@ -1,25 +1,27 @@
-<header class="header">
-
-  <h1 class="logo">
-    <a href="{{ pathFor('home') }}">
-      {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
-    </a>
-  </h1>
-
-
-  <div class="phone">
-    <i class="fas fa-phone" style="display: inline-block"></i>
-    <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
-  </div>
-
-  <div class="location">
-    <i class="fa-solid fa-location-dot"></i> Honolulu, Hawaii
-  </div>
-
-  {{ include("includes/_social.html") }}
-
+<div class="header-wrapper">
+  <header class="header">
   
-    <a href="/{{ site.settings.ctaURL }}" class="contact btn">Schedule Now</a>
-
-
-</header>
+    <h1 class="logo">
+      <a href="{{ pathFor('home') }}">
+        {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
+      </a>
+    </h1>
+  
+  
+    <div class="phone">
+      <i class="fas fa-phone" style="display: inline-block"></i>
+      <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+    </div>
+  
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i> Honolulu, Hawaii
+    </div>
+  
+    {{ include("includes/_social.html") }}
+  
+    
+      <a href="/{{ site.settings.ctaURL }}" class="contact btn">Schedule Now</a>
+  
+  
+  </header>
+</div>
