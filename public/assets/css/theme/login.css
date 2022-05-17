@@ -332,30 +332,20 @@ textarea:focus {
 }
 
 .hero {
-  --hero-height: 85vh;
-  --hero-min-height: 100%;
+  --hero-height: 90vh;
+  --hero-min-height: 27rem;
   height: min(var(--hero-height), var(--hero-min-height));
   position: relative;
   z-index: 100;
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    --hero-height: 100%;
     --hero-min-height: 800px;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  .hero {
-    --hero-height: 80vh;
-    --hero-min-height: 2000px;
   }
 }
 .hero__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 101;
 }
 .hero__content {

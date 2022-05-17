@@ -1,28 +1,18 @@
 // Hero style
 .hero {
-  --hero-height       : 85vh;
-  --hero-min-height   : 100%;
-  height              : min(var(--hero-height), var(--hero-min-height));
-  position            : relative;
-  z-index             : 100;
-  // font-size        : 2rem;
+  --hero-height    : 90vh;
+  --hero-min-height: 27rem;
+  height           : min(var(--hero-height), var(--hero-min-height));
+  position         : relative;
+  z-index          : 100;
 
   @include mq(small) {
-    --hero-height    : 100%;
     --hero-min-height: 800px;
-  }
-
-  @include mq(big) {
-    --hero-height    : 80vh;
-    --hero-min-height: 2000px;
   }
 
   &__overlay {
     position: absolute;
-    top     : 0;
-    left    : 0;
-    right   : 0;
-    bottom  : 0;
+    inset   : 0;
     z-index : 101;
   }
 
@@ -30,7 +20,6 @@
     width        : min(100% - $spacer, 60ch);
     margin-inline: auto;
     padding-block: calc($spacer * 2);
-    // background: pink;
     text-align   : center;
     color        : neutral(1);
 
@@ -73,7 +62,7 @@
 
     @include mq(small) {
       margin-block-start: $spacer;
-      display: inline-block;
+      display           : inline-block;
     }
   }
 
