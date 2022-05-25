@@ -1,9 +1,14 @@
 {# Contact Form Element #}
 {% import "includes/_macros.html" as pitonMacro %}
 
-
-<section>
-  <div class="container">
+<div class="cols">
+  <div class="">
+    <h2 class="element-title">Contact Us Here</h2>
+    <p>Call us at <a href="tel:+15555551212">(555)555-1212</a></p>
+    <p>Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vel nesciunt repudiandae veritatis reiciendis hic facilis, minima adipisci autem, ipsum, dignissimos distinctio maiores commodi explicabo?</p>
+  </div>
+  <div class="">
     <h2 class="element__title">{{ element.title }}</h2>
     {{ element.content }}
   
@@ -39,6 +44,10 @@
       {{ pitonMacro.contactHoneypot() }}
     </form>
   </div>
-</section>
+
+</div>
+
+   
+
 
 

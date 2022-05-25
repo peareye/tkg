@@ -3,9 +3,6 @@
 {# Get the collection summary set. The second argument is the number of items to return per page #}
 {% set collection = getCollectionPagesWithPagination(element.collection_id, 6) %}
 
-
-<section>
-  <div class="container">
     <h2>{{ element.title }}</h2>
     {{ element.content }}
   
@@ -39,6 +36,5 @@
     {# Print pagination navigation #}
     {{ pagination() }}
   
-  </div>
-</section>
+
  
