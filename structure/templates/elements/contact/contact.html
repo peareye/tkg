@@ -1,53 +1,46 @@
 {# Contact Form Element #}
 {% import "includes/_macros.html" as pitonMacro %}
+<h2 class="element__title">{{ element.title }}</h2>
+<div class="offset-columns">
 
-<div class="cols">
-  <div class="">
-    <h2 class="element-title">Contact Us Here</h2>
-    <p>Call us at <a href="tel:+15555551212">(555)555-1212</a></p>
+  <div class="column-narrow">
+
+    <p>Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
     <p>Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vel nesciunt repudiandae veritatis reiciendis hic facilis, minima adipisci autem, ipsum, dignissimos distinctio maiores commodi explicabo?</p>
-  </div>
-  <div class="">
-    <h2 class="element__title">{{ element.title }}</h2>
     {{ element.content }}
-  
+  </div>
+
+  <div class="column-wide">
     <form class="contact-form" id="contact-form" method="post" accept-charset="utf-8" data-contact-form="true">
       <input type="hidden" name="{{ site.environment.csrfTokenName }}" value="{{ site.environment.csrfTokenValue }}">
       <input type="hidden" name="context" value="{{ page.title }}">
-  
+
       <div class="input-group">
         <label>Your Name</label>
         <input type="text" class="contact-form__form-control" name="name" maxlength="100" placeholder="Name"
           autocomplete="off">
       </div>
-  
+
       <div class="input-group">
         <label>Your Email<span class="text-danger"> *</span></label>
         <input type="email" class="contact-form__form-control" name="email" maxlength="100" placeholder="Email address"
           required autocomplete="off">
       </div>
-  
+
       <div class="input-group span">
         <label>Message<span class="text-danger"> *</span></label>
         <textarea class="contact-form__form-control" rows="5" name="message" required></textarea>
       </div>
-  
+
       <div class="input-group span">
-        <button class="btn btn-submit" type="submit">Submit</button>
+        <button class="btn btn__submit" type="submit">Submit</button>
       </div>
-  
+
       <div class="input-group span">
         <p><span class="text-danger">* </span>Required</p>
       </div>
-  
+
       {{ pitonMacro.contactHoneypot() }}
     </form>
   </div>
-
 </div>
-
-   
-
-
-

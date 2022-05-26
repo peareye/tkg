@@ -1,14 +1,17 @@
 {# Media Element #}
 
 
-   <div class="imageElement">
-        <div class="imageElement__image">
-          {{ getMediaSrcSet(element.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
-        </div>
+   <div class="imageElement offset-columns">
+     <div class="imageElement__image">
+       
+            {{ getMediaSrcSet(element.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
+     
+     </div>
     
-        <div class="imageElement__content">
+        <div class="imageElement__content column-wide">
           <h2 class="element__title">{{ element.title }}</h2>
           {{ element.content }}
+        
         </div>
    </div>
 

@@ -1,12 +1,11 @@
 {# Media Group Element #}
 
-<section>
-  <div class="container">
+
     <h2 class="element__title">{{ element.title }}</h2>
 
     {{ element.content }}
 
-    <div class="gallery-wrapper">
+    <div class="grid-even-columns">
       {% for g in getGallery(element.gallery_id) %}
       <a data-fancybox="gallery" class="gallery-img {{ g.orientation }} {{ g.featured }}" data-caption="{{ g.caption }}"
         href="{{ getMediaPath(g.filename, 'large') }}">
@@ -14,7 +13,6 @@
       </a>
       {% endfor %}
     </div>
-  </div>
-</section>
+
   
 

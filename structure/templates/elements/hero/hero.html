@@ -21,11 +21,10 @@
     {% set positionStyle = 'object-position: ' ~ element.settings.placement ?? 'center' %}
     {{ getMediaSrcSet(element.media.filename, element.media.caption, {'style': positionStyle, 'sizes': '100vw'}) }}
     {% endif %}
+
   </div>
 
   {% if element.settings.overlay %}
-  <div class="hero__overlay"
-    style="background-color: rgba({{element.settings.overlayColor}},{{element.settings.overlay }}%)">
-  </div>
+  <div class="hero__overlay" style="background-color: rgba({{element.settings.overlayColor}},{{element.settings.overlay }}%)"></div>
   {% endif %}
 </div>

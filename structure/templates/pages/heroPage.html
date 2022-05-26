@@ -1,3 +1,26 @@
+{# {% extends 'pages/_base_layout.html' %}
+
+{% block hero %}
+{{ getBlockElementsHtml(page.blocks.heroBlock) }}
+{% endblock hero %}
+
+{% block body %}
+
+
+<section id="military" class="section section--military">
+    <div class="militaryBlock">   {{ getBlockElementsHtml(page.blocks.militaryBlock) }}</div>
+   </section>
+   
+   <section id="meet" class="section section--services">
+       {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
+   </section>
+   
+   <section id="testimonials" class="section section--testimonials">
+       <h2 class="section__title">Testimonials</h2>
+      <div class="testimonials"> {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}</div>
+   </section>
+{% endblock body %} #}
+
 {% extends 'pages/_base_layout.html' %}
 
 {% block hero %}
@@ -5,5 +28,17 @@
 {% endblock hero %}
 
 {% block body %}
-{{ getBlockElementsHtml(page.blocks.contentBlock) }}
+<section id="military" class="section section--military">
+ <div class="militaryBlock">   {{ getBlockElementsHtml(page.blocks.militaryBlock) }}</div>
+</section>
+
+<section id="meet" class="section section--services">
+    {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
+</section>
+
+<section id="testimonials" class="section section--testimonials">
+    <h2 class="section__title">Testimonials</h2>
+   <div class="testimonials"> {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}</div>
+</section>
+
 {% endblock body %}

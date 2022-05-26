@@ -1,32 +1,17 @@
  // Image Element
  .imageElement {
-    &__image {
-      max-height: 450px;
- 
-      img {
-        border-radius: $br;
-        box-shadow   : $bs-1;
-        max-height   : 450px;
-        object-fit   : cover;
-      }
-    }
-    &__content {
+   &__image {
+     max-height: 450px;
 
-      margin-block-start: 1rem;
-    }
- 
-  }
-  .pageMedia{
+     img {
+       aspect-ratio : 16 / 9;
+       border-radius: $br;
+       box-shadow   : $bs;
+       width        : 100%;
+       height       : min(100%, 450px);
+       object-fit   : cover;
+     }
+   }
 
-    margin-block-start: 1rem;
-    img{
-     border-radius: $br;
-     box-shadow   : $bs-1;
-      max-height: 450px;
-      object-fit: cover;
-    }
-  }
-  .imageElement__image+.imageElement__content{
-
-    margin-block-start: 2rem;
-  }
+  //  &__content {}
+ }

@@ -14,9 +14,20 @@
       "elementCountLimit": 1
     },
     {
-      "name": "Content",
-      "key": "contentBlock",
-      "description": "Page Content Blocks"
-    }
+      "name": "Military",
+      "key": "militaryBlock",
+      "description": "Our Military Commitment",
+      "elementTypeOptions": [
+          "image/image"
+        ]
+  },
+  {
+      "name": "Testimonials",
+      "key": "testimonialsBlock",
+      "description": "Simple text areas",
+      "elementTypeOptions": [
+          "testimonials/testimonials"
+        ]
+  }
   ]
 }
