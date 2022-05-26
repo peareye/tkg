@@ -118,8 +118,6 @@ h2,
 h3,
 h4,
 h5 {
-  background-color: white;
-  color: #222020;
   font-family: "Montserrat", sans-serif;
   line-height: 1.1;
   letter-spacing: 2px;
@@ -150,8 +148,6 @@ h6 {
 }
 
 p {
-  background-color: white;
-  color: #222020;
   font-size: 1rem;
 }
 
@@ -180,7 +176,6 @@ figcaption {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .grid-section {
-  grid-template-columns: minmax(1em, 1fr) auto minmax(1em, 1fr);
   grid-template-columns: 1px auto 1px;
 }
 .grid-section > * {
@@ -190,7 +185,7 @@ figcaption {
 }
 
 .section {
-  padding-block: 2em;
+  padding-block: 5em;
   width: 100%;
 }
 .section:nth-child(even) {
@@ -202,21 +197,22 @@ figcaption {
 .section--textBlock > * {
   width: min(100%, 40rem);
 }
+.section--aboutBlock {
+  gap: 5em;
+}
 
 .offset-columns {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 2em;
 }
-
+.offset-columns:nth-child(even) {
+  flex-direction: row-reverse;
+}
 .offset-columns > * {
   flex-grow: 1;
   flex-basis: calc((50rem - 100%) * 999);
-}
-
-.offset-columns > :nth-last-child(n+3),
-.offset-columns > :nth-last-child(n+3) ~ * {
-  flex-basis: 100%;
 }
 
 .column-wide {

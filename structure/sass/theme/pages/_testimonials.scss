@@ -1,8 +1,7 @@
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: $spacer;
-  text-align: center;
 }
 
 .testimonials {
@@ -14,19 +13,45 @@
     border-radius: $br;
     margin-bottom   : $spacer;
 
+    display: flex;
+    flex-direction: column;
+
     &__body {
-        padding: $spacer;
+        padding-inline: $spacer;
+        padding-block: $spacer;
+        
+        >*+*{
+         margin-block-start: $spacer;
+        }
+        // &::after {
+        //     padding-block: $spacer;
+        //     content: "Read More";
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     z-index: 2;
+        //    background-color: rgba(neutral(3), 50%);
+        //    color: neutral(1);
+        //     backdrop-filter: blur(2px);
+        //     text-align: center
+        // }
     }
 
     &__credit {
-        background: neutral(2);
+        margin-block-start: auto;
+    @include dc(neutral(2));
         padding   : $spacer;
     }
 
-    &__name {
-        font-weight: $fw-b;
-        color: neutral(3);
+    &__name, &__date {
+        font-weight: $fw-n;
+        @include dc(neutral(2));
         margin: 0;
+    }
+
+    &__date {
+        font-weight: $fw-l;
     }
 
 

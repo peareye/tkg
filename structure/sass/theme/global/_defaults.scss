@@ -44,7 +44,7 @@ h2,
 h3,
 h4,
 h5 {
-  @include dc(neutral(1));
+ 
   font-family   : $ff-sans-headings;
   line-height   : 1.1;
   letter-spacing: $ls;
@@ -75,7 +75,7 @@ h6 {
 }
 
 p {
-  @include dc(neutral(1));
+  
   font-size: 1rem;
 }
 

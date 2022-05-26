@@ -5,11 +5,11 @@
     "settings": [
         {
             "category": "element",
-            "label": "Client Name",
-            "key": "client",
+            "label": "Inspection Date",
+            "key": "inspectionDate",
             "value": "",
             "inputType": "text",
-            "help": "Enter client first name & first initial of last name."
+            "help": "Enter Month & Year of Inspection"
         }
     ]
 }

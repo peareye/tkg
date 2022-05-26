@@ -1,20 +1,27 @@
 {# About Element #}
 
-  <div class="switcher">
-    <figure class="switcher__image">
-      {{ getMediaSrcSet(element.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px,
-      93.43vw'}) }}
+<div class="imageElement offset-columns">
+    <figure class="imageElement__image">
+    
+      {{ getMediaSrcSet(element.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
+
       <figcaption class="figcaption__name">
         {{ element.title }}
       </figcaption>
+    
     </figure>
     
-    <div class="switcher__content">
-      <h2 class="switcher__title">
+    <div class="imageElement__content">
+    
+      <h2 class="element__title">
         {{ element.title }}
       </h2>
 
       {{ element.content }}
+  
     </div>
+  
   </div>
+ 
+
 

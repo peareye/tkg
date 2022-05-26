@@ -16,20 +16,21 @@
     }
 
     &section {
-        grid-template-columns: minmax($spacer, 1fr) auto minmax($spacer, 1fr);
         grid-template-columns: 1px auto 1px;
+
 
         >* {
             grid-column  : 2 / 3;
             width        : min(100%, $max-container-width);
             margin-inline: auto;
+
         }
     }
 }
 
 // Section Layout
 .section {
-    padding-block: calc($spacer * 2);
+    padding-block: calc($spacer * 5);
     width        : 100%;
 
     &:nth-child(even) {
@@ -55,6 +56,10 @@
     // &--galleryBlock {}
 
     // &--embeddedBlock {}
+
+    &--aboutBlock {
+        gap: calc($spacer * 5);
+    }
 }
 
 // Offset Column layout
@@ -62,19 +67,19 @@
 
 .offset-columns {
     display  : flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap      : $spacer;
+    gap      : calc($spacer * 2);
+    &:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    >* {
+        flex-grow : 1;
+        flex-basis: calc((50rem - 100%) * 999);
+    }
 }
 
-.offset-columns>* {
-    flex-grow : 1;
-    flex-basis: calc((50rem - 100%) * 999);
-}
-
-.offset-columns> :nth-last-child(n+ 3),
-.offset-columns> :nth-last-child(n+ 3)~* {
-    flex-basis: 100%;
-}
 
 .column-wide {
     flex: 2;
