@@ -34,7 +34,8 @@
   // All href within header
   a {
     text-decoration: none;
-    color          : inherit;
+    @include dc(color(primary));
+    // color          : inherit;
     &:hover, &:focus {
       color: color(accent-light);
     }

@@ -3,38 +3,41 @@
 {# Get the collection summary set. The second argument is the number of items to return per page #}
 {% set collection = getCollectionPagesWithPagination(element.collection_id, 6) %}
 
-    <h2>{{ element.title }}</h2>
-    {{ element.content }}
-  
-    <ul class="cards">
-      {% for detail in collection %}
-      <a href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}">
-        <li class="card">
-  
-  
-          {% if detail.media.filename %}
-          <div class="card__image">
-            <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}">
-          </div>
-          {% endif %}
-  
-          <div class="card__title">
-            <h3>{{ detail.title }}</h3>
-          </div>
-          <p class="card__text">
-            {{ detail.meta_description }}
-          </p>
-  
-  
-  
-        </li>
-      </a>
-  
-      {% endfor %}
-    </ul>
-  
-    {# Print pagination navigation #}
-    {{ pagination() }}
-  
+<h2 class="element__title">{{ element.title }}</h2>
+<div class="element__content">
+  {{ element.content }}
+</div>
 
- 
+
+<ul class="cards grid-even-columns">
+
+  {% for detail in collection %}
+  
+  <a class="card" href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}">
+    
+    <li class="card-inner">
+    
+      {% if detail.media.filename %}
+        <div class="card__image">
+          <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}">
+        </div>
+      
+        {% endif %}
+
+      <div class="card__title">
+        <h3>{{ detail.title }}</h3>
+      </div>
+      <p class="card__text">
+        {{ detail.meta_description }}
+      </p>
+
+
+
+    </li>
+  </a>
+
+  {% endfor %}
+</ul>
+
+{# Print pagination navigation #}
+{{ pagination() }}
