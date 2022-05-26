@@ -1,8 +1,11 @@
 /* Default Styles - Global */
-
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
 html {
   scroll-behavior: smooth;
-  
+
 }
 
 html,
@@ -15,37 +18,37 @@ body {
 
 
 body {
-    background: neutral(1);
-    font-family: $ff-sans-body;
-    font-size: 1rem;
-    line-height: 1.6;
+  background : neutral(1);
+  font-family: $ff-sans-body;
+  font-size  : 1rem;
+  line-height: 1.6;
 
-    display: flex;
-    flex-direction: column;
+  display       : flex;
+  flex-direction: column;
 
-    // > 576px
-    @include mq(xs){
-   
-    }
-    // > 850px
-    @include mq(small){
-    
-    }
-    // > 990px
-    @include mq(medium){
-  
-    }
-    // > 1500px
-    @include mq(big){
+  // > 576px
+  @include mq(xs) {}
 
-    }
+  // > 850px
+  @include mq(small) {}
+
+  // > 990px
+  @include mq(medium) {}
+
+  // > 1500px
+  @include mq(big) {}
 }
 
-h1, h2, h3, h4, h5 {
-   font-family: $ff-sans-headings;
-   line-height: 1.1;
-   letter-spacing: $ls;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family   : $ff-sans-headings;
+  line-height   : 1.1;
+  letter-spacing: $ls;
 }
+
 h1 {
   font-size: 3rem;
 }
@@ -69,13 +72,20 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
 p {
   font-size: 1rem;
-  margin-block-start: 1rem;
 }
+
 figcaption {
-  color: neutral(4);
-  font-size: .8rem;
+  color              : neutral(4);
+  font-size          : .8rem;
   padding-block-start: .5em;
-  font-style: italic;
+  font-style         : italic;
+}
+
+.element__title {
+
+  text-align : center;
+  line-height: 1.1;
 }

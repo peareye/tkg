@@ -1,8 +1,118 @@
-.container {
-    --max-width  : #{$max-container-width};
-    --padding    : #{$spacer};
-    width        : min(100% - var(--padding), var(--max-width));
-    margin-inline: auto;
-    padding-block: $spacer;
-    background   : neutral(1);
+.section {
+    //     padding-block   : calc($spacer * 2);
+    //     background-color: neutral(1);
+
+    //     display: grid;
+    //     gap    : 1rem;
+
+
+    //     >* {
+    //         grid-column  : 2 / 3;
+    //         width        : min($full-container-width, $max-container-width);
+    //         margin-inline: auto;
+    //     }
+
+    //     >*+* {
+    //         margin-block-start: 1em;
+    //     }
+
+}
+
+// Grid Layout
+
+[class*="grid-"] {
+    display: grid;
+    gap    : 1em;
+}
+
+.grid- {
+    &offset-columns {
+        grid-template-columns: 1fr min(100%, $narrow-container-width);
+        align-items          : flex-start;
+    }
+
+    &even-columns {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    &section {
+        grid-template-columns: minmax($spacer, 1fr) auto minmax($spacer, 1fr);
+        grid-template-columns: 1px auto 1px;
+
+        >* {
+            grid-column  : 2 / 3;
+            width        : min(100%, $max-container-width);
+            margin-inline: auto;
+        }
+    }
+}
+
+// Section Layout
+.section {
+    padding-block: calc($spacer * 2);
+    width        : 100%;
+
+    &:nth-child(even) {
+        background: neutral(2);
+    }
+
+    &:first-of-type {
+        margin-block-start: 0;
+    }
+
+    // &--imageBlock {}
+
+    // &--contactBlock {}
+
+    // &--collectionBlock {}
+
+    &--textBlock {
+        >* {
+            width: min(100%, $narrow-container-width);
+        }
+    }
+
+    // &--galleryBlock {}
+
+    // &--embeddedBlock {}
+}
+
+// Offset Column layout
+
+
+.offset-columns {
+    display  : flex;
+    flex-wrap: wrap;
+    gap      : $spacer;
+}
+
+.offset-columns>* {
+    flex-grow : 1;
+    flex-basis: calc((50rem - 100%) * 999);
+}
+
+.offset-columns> :nth-last-child(n+ 3),
+.offset-columns> :nth-last-child(n+ 3)~* {
+    flex-basis: 100%;
+}
+
+.column-wide {
+    flex: 2;
+
+    >*+* {
+        margin-block-start: 1em;
+
+    }
+
+}
+
+.column-narrow {
+
+    color: neutral(4);
+
+    // font-weight: $fw-l;
+    >*+* {
+        margin-block-start: 1em;
+
+    }
 }

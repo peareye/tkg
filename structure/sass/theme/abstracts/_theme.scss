@@ -51,7 +51,7 @@
   $ls   : 2px;
   $ts   : 0 2px 5px rgba(neutral(5), .18);
 
-  $spacer: 2em;
+  $spacer: 1em;
 
   $breakpoints: (
     xs: 576px,
@@ -65,6 +65,9 @@
 
   // Layout Variables
   $max-container-width: 60rem;
+  $wide-container-width: 60rem;
+  $narrow-container-width: 40rem;
+  $full-container-width: calc(100% - $spacer);
 
   // Font Variables
 
