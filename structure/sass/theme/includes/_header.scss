@@ -1,3 +1,8 @@
+.header-wrapper {
+  width           : 100%;
+  background-color: color(primary);
+}
+
 .header {
   padding-inline: 1em;
   padding-block : 1em;
@@ -13,8 +18,8 @@
   // media query for header 
   @include mq(small) {
     padding-block: 1em;
-    width: min(100%, 60rem);
-    margin-inline: auto; 
+    width        : min(100%, 60rem);
+    margin-inline: auto;
 
     flex-direction : row;
     justify-content: space-between;
@@ -22,7 +27,7 @@
   }
 
   // Header Logo
-  .logo {
+  &__logo {
     font-size: 2rem;
 
     //media query for header logo
@@ -32,47 +37,45 @@
   }
 
   // All href within header
-  a {
+  &__link {
     text-decoration: none;
-    @include dc(color(primary));
-    // color          : inherit;
-    &:hover, &:focus {
+    color          : neutral(1);
+
+    &:hover,
+    &:focus {
       color: color(accent-light);
     }
   }
 
   // All Meta Blocks 
-  .phone,
-  .location,
+  &__phone,
+  &__location,
   .social,
-  .contact {
+  &__contact {
     font-size: 1rem;
-    @include mq(small){
+
+    @include mq(small) {
       font-size: .8rem;
     }
   }
 
-  .contact {
+  &__contact {
     padding-block: .35em;
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       color: neutral(1);
     }
   }
 
   .social {
-    display: grid;
+    display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
-    font-size: 1.25rem;
-    @include mq(small){
+    gap                  : .75em;
+    font-size            : 1.25rem;
+
+    @include mq(small) {
       font-size: 1rem;
     }
   }
-  
-
-}
-.header-wrapper { 
-  width: 100%; 
-  background-color: color(primary);
 }

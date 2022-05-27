@@ -21,6 +21,14 @@
           "image/image"
         ]
   },
+    {
+      "name": "Services",
+      "key": "servicesBlock",
+      "description": "Our Services",
+      "elementTypeOptions": [
+          "service/service"
+        ]
+  },
   {
       "name": "Testimonials",
       "key": "testimonialsBlock",

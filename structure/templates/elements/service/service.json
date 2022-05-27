@@ -1,0 +1,14 @@
+{
+    "elementName": "Service",
+    "elementDescription": "Add a block of text with title and icon to highlight services.",
+    "settings": [
+        {
+            "category": "element",
+            "label": "Font Awesome Icon",
+            "key": "icon",
+            "value": "",
+            "inputType": "text",
+            "help": "Enter the text provided with the icon you want to use. Do not include the .fas-."
+        }
+    ]
+}

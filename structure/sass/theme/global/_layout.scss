@@ -26,6 +26,10 @@
 
         }
     }
+    
+    &three-columns {
+        grid-template-columns: repeat(3, 1fr);;
+    }
 }
 
 // Section Layout
@@ -41,30 +45,19 @@
         margin-block-start: 0;
     }
 
-    // &--imageBlock {}
-
-    // &--contactBlock {}
-
-    // &--collectionBlock {}
-
     &--textBlock {
         >* {
             width: min(100%, $narrow-container-width);
         }
     }
 
-    // &--galleryBlock {}
-
-    // &--embeddedBlock {}
-
     &--aboutBlock {
         gap: calc($spacer * 5);
     }
+   
 }
 
 // Offset Column layout
-
-
 .offset-columns {
     display  : flex;
     flex-direction: row;

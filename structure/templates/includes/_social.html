@@ -1,16 +1,16 @@
 <div class="social">
 
     {% if site.settings.facebookLink %}
-    <a href="{{ site.settings.facebookLink }}"><i class="social-icon fab fa-facebook"></i></a>
+    <a class="header__link" href="{{ site.settings.facebookLink }}"><i class="social-icon fab fa-facebook"></i></a>
     {% endif %}
 
 
     {% if site.settings.linkedInLink %}
-    <a href="{{ site.settings.linkedIn }}"><i class="social-icon fab fa-linkedin"></i></a>
+    <a class="header__link" href="{{ site.settings.linkedIn }}"><i class="social-icon fab fa-linkedin"></i></a>
     {% endif %}
 
     {% if site.settings.ctaURL %}
-    <a href="/{{ site.settings.ctaURL }}"><i class="social-icon fa-solid fa-envelope"></i></a>
+    <a class="header__link" href="/{{ site.settings.ctaURL }}"><i class="social-icon fa-solid fa-envelope"></i></a>
     {% endif %}
 
 </div>

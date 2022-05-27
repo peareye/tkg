@@ -1,36 +1,74 @@
-.btn {
-  padding-inline: 2em;
-  padding-block : 1em;
+// .btn {
 
-  color          : neutral(1);
-  border-color   : neutral(1);
-  letter-spacing : $ls;
-  text-align     : center;
-  text-decoration: none;
-  cursor         : pointer;
-  font-size      : .75rem;
-  font-weight    : $fw-b;
-  background     : none;
-  border         : 2px solid neutral(1);
-  overflow       : hidden;
-  font-family    : inherit;
-  text-transform : uppercase;
-  border-radius  : $br;
+
+//   border-color    : neutral(1);
+
+
+
+
+//   background      : none;
+//   border          : 2px solid neutral(1);
+//   overflow        : hidden;
+
+
+
+
+
+
+
+//   &__cta {
+
+//     font-size: 1rem;
+
+//     &:hover {
+//       color: neutral(1);
+//     }
+//   }
+//   &__submit {
+//     background: $clr-primary;
+//   }
+// } 
+
+.btn {
+  padding-inline  : 1.5em;
+  padding-block   : 1em;
+  background-color: color(accent);
+  text-align      : center;
+  text-decoration : none;
+  @include dc(color(accent));
+  border-radius : $br;
+  text-transform: uppercase;
+  letter-spacing: $ls;
+  cursor        : pointer;
+  font-size     : .75rem;
+  font-weight   : $fw-b;
+  font-family   : inherit;
+  transform: scale(1);
 
   display: inline-block;
 
   position: relative;
 
-  transition: all 125ms ease-in-out;
+  transition: all 125ms ease-in;
 
   &:hover {
-    background: color(accent);
+    background: color(accent-dark);
+    transform: scale(1.1);
   }
-&__cta {
 
-  font-size: 1rem;
-  &:hover {
-    color: neutral(1);
+  &__cta {
+    font-size: 1rem;
+    background-color: transparent;
+    border: solid neutral(1) 3px;
+    font-weight: $fw-b;
+
   }
+
+  &__header {
+    background-color: color(accent-light);
+    font-weight: $fw-b;
+  }
+  &__submit {
+    border: none;
   }
 }
