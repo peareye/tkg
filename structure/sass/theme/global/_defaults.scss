@@ -22,6 +22,7 @@ body {
   font-family: $ff-sans-body;
   font-size  : 1rem;
   line-height: 1.6;
+  text-align: center;
 
   display       : flex;
   flex-direction: column;
@@ -59,7 +60,8 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-family: $ff-sans-body;
 }
 
 h4 {
@@ -87,7 +89,14 @@ figcaption {
 }
 
 .element__title {
-
+  @include dc(neutral(1));
   text-align : center;
   line-height: 1.1;
+
+  &:nth-of-type(even) {
+    @include dc(neutral(2));
+  }
+}
+.section__title {
+  @include dc(neutral(1));
 }
