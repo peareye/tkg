@@ -1,24 +1,28 @@
 {% extends 'pages/_base_layout.html' %}
 
-{% block hero %}
+{# {% block hero %}
 {{ getBlockElementsHtml(page.blocks.heroBlock) }}
-{% endblock hero %}
+{% endblock hero %} #}
 
 {% block body %}
 <section id="military" class="section grid-section section--militaryBlock">
-    <div class="grid-stacked-layers">
-        {{ getBlockElementsHtml(page.blocks.militaryBlock) }}
+    {{ getBlockElementsHtml(page.blocks.militaryBlock) }}
+</section>
+
+<section class="section grid-section section--servicesBlock">
+    <div class="grid-three-columns">
+        {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
     </div>
 </section>
 
-<section class="section grid-section section--collectionBlock">
-    <div class="grid-even-columns">{{ getBlockElementsHtml(page.blocks.servicesBlock) }}</div>
-</section>
-
 <section class="section grid-section section--testimonialsBlock">
+
     <h2 class="section__title">What our Customers are Saying</h2>
-  
-    <div class="grid-three-columns">{{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}</div>
-  </section> 
+
+    <div class="grid-three-columns">
+        {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
+    </div>
+
+</section>
 
 {% endblock body %}

@@ -11,3 +11,9 @@
     font-weight: $fw-b;
     font-size: 1.25rem;
 }
+
+.text-muted {
+    background-color: neutral(1);
+    color           : neutral(3);
+    font-weight: $fw-l;
+}

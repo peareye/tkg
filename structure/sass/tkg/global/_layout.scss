@@ -18,11 +18,12 @@
     }
 
     &even-columns {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        width                : min(100%, $wide-container-width);
+        // children will no expand to fill space. They will maintain a 250px width at full screen.
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
     &three-columns {
+        // children will expand to fill space if there are not enough items to fill full screen space. Should not be more than 3 items total.
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
@@ -71,5 +72,11 @@
 
     &--aboutBlock {
         row-gap: calc($spacer * 4);
+    }
+
+    &--militaryBlock {
+        
+        @include dc(purple);
+       
     }
 }

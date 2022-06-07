@@ -36,6 +36,7 @@
     primary: $clr-primary,
     primary-dark: darken($clr-primary, 20%),
     primary-light: lighten($clr-primary, 10%),
+    primary-lighter: lighten($clr-primary, 50%),
     secondary: $clr-secondary,
     secondary-dark: darken($clr-secondary, 20%),
     secondary-light: lighten($clr-secondary, 10%),
