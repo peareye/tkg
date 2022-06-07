@@ -3,8 +3,9 @@
     @include dc(neutral(1));
     width: 100%;
     border-radius: $br;
+    overflow: hidden;
     margin-bottom: $spacer;
-    border       : neutral(2) 1px solid;
+    // border       : neutral(5) 1px solid;
 
     display       : flex;
     flex-direction: column;
