@@ -2,33 +2,39 @@
 
 [class*="grid-"] {
     display: grid;
-    gap    : 1em;
+    gap    : calc($spacer * 2);
 }
 
 .grid- {
-    &offset-columns {
-        grid-template-columns: 1fr min(100%, $narrow-container-width);
-        align-items          : flex-start;
-    }
-
-    &even-columns {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-
+ 
+   &even-columns {
+   
+   }
     &section {
-        grid-template-columns: 1px auto 1px;
-
+        grid-template-columns: minmax($spacer, 1fr) auto minmax($spacer, 1fr);
+        gap                  : 0;
 
         >* {
             grid-column  : 2 / 3;
             width        : min(100%, $max-container-width);
             margin-inline: auto;
-
         }
     }
-    
+
     &three-columns {
-        grid-template-columns: repeat(3, 1fr);;
+        grid-template-columns: repeat(3, 1fr);
+            }
+
+    &testimonials {
+        grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+        margin-block-start: calc($spacer * 2);
+        gap: $spacer;
+    }
+    &stacked-layers {
+        >* {
+            grid-column: 1 / 2;
+        }
+       
     }
 }
 
@@ -39,6 +45,11 @@
 
     &:nth-child(even) {
         background: neutral(2);
+
+        .element__title {
+            background-color: inherit;
+            color           : inherit;
+        }
     }
 
     &:first-of-type {
@@ -52,18 +63,19 @@
     }
 
     &--aboutBlock {
-        gap: calc($spacer * 5);
+        row-gap: calc($spacer * 5);
     }
-   
+
 }
 
 // Offset Column layout
 .offset-columns {
-    display  : flex;
+    display       : flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap      : calc($spacer * 2);
-    &:nth-child(even){
+    flex-wrap     : wrap;
+    gap           : calc($spacer * 2);
+
+    &:nth-child(even) {
         flex-direction: row-reverse;
     }
 
@@ -73,24 +85,19 @@
     }
 }
 
-
 .column-wide {
-    flex: 2;
+    // flex: 2;
 
     >*+* {
-        margin-block-start: 1em;
-
+        margin-block-start: $spacer;
     }
-
 }
 
 .column-narrow {
-
     color: neutral(4);
 
-    // font-weight: $fw-l;
     >*+* {
-        margin-block-start: 1em;
+        margin-block-start: $spacer;
 
     }
 }
@@ -100,5 +107,7 @@
 .element {
     &__content {
         width: min(100%, $narrow-container-width);
+        margin-inline: auto;
+        background: pink;
     }
 }

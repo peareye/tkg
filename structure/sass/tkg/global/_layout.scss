@@ -1,0 +1,75 @@
+// Grid Layout
+
+[class*="grid-"] {
+    display: grid;
+    gap    : calc($spacer * 2);
+}
+
+.grid- {
+    &section {
+        grid-template-columns: calc($spacer / 2) auto calc($spacer / 2);
+
+        >* {
+            width        : min(100%, $wide-container-width);
+            margin-inline: auto;
+
+            grid-column: 2 / 3;
+        }
+    }
+
+    &even-columns {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width                : min(100%, $wide-container-width);
+    }
+
+    &three-columns {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+// Flex Layout
+[class*="flex-"] {
+    display: flex; 
+    gap    : calc($spacer * 2);
+}
+
+.flex- {
+    &two-columns {
+        flex-direction: row;
+        flex-wrap     : wrap;
+        gap           : calc($spacer * 1.5);
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        >* {
+            flex: 1 1 25rem;
+        }
+    }
+}
+
+
+// Section Styles
+
+.section {
+    padding-block: calc($spacer * 5);
+    width        : 100%;
+
+    &:nth-child(even) {
+        @include dc(neutral(2));
+
+        .element__title {
+            background-color: inherit;
+            color           : inherit;
+        }
+    }
+
+    &:first-of-type {
+        margin-block-start: 0;
+    }
+
+    &--aboutBlock {
+        row-gap: calc($spacer * 4);
+    }
+}

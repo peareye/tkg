@@ -4,19 +4,12 @@
 
 {% block navbar %}
 
-    {{ include('includes/_navbar.html') }}
+{{ include('includes/_navbar.html') }}
 
 {% endblock navbar %}
 
-{% block about %}
-
-<section id="testimonials" class="section section--testimonials">
-<div class="container">
   <h1 class="section__title">{{ page.title }}</h1>
-  <div class=" testimonials"> 
+  <div class="testimonials grid-even-columns-stretch">
     {{ getBlockElementsHtml(page.blocks.contentBlock) }}
-</div>
-</div>
- </section>
-
-{% endblock about %}
+  </div>
+ 

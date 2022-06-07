@@ -1,0 +1,14 @@
+ // Image Element
+ .imageElement {
+  //  gap: 1em;
+
+   img {
+     aspect-ratio : 16 / 9;
+     object-fit   : cover;
+     min-height   : 100%;
+     border-radius: $br;
+     box-shadow   : $bs;
+   }
+
+ 
+ }

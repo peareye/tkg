@@ -1,0 +1,11 @@
+// Gallery Element
+
+.section--galleryBlock {
+    img {
+      border-radius: $br;
+      box-shadow   : $bs;
+      height       : 250px;
+      width        : 100%;
+      object-fit   : cover;
+    }
+  }

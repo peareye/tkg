@@ -1,14 +1,12 @@
-{# Media Element #}
+{# Image Element #}
 
+   <div class="imageElement flex-two-columns">
 
-   <div class="imageElement offset-columns">
-     <div class="imageElement__image">
-       
+     <figure class="imageElement__image">
             {{ getMediaSrcSet(element.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
-     
-     </div>
+     </figure>
     
-        <div class="imageElement__content column-wide">
+        <div class="imageElement__content">
           <h2 class="element__title">{{ element.title }}</h2>
           <div class="element__content">{{ element.content }}</div>
         

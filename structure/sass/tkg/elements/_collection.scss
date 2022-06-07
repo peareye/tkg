@@ -1,0 +1,60 @@
+.cards {
+    margin-block-start: $spacer;
+    gap: calc($spacer *2);
+  }
+  
+  .card {
+    @include dc(neutral(1));
+    text-decoration: none;
+    box-shadow     : $bs;
+    border-radius  : $br;
+    overflow: hidden;
+  
+    &-inner {
+      list-style: none;
+  
+    }
+  
+    &__image {
+   
+      img {
+        aspect-ratio: 16 / 9;
+        width       : 100%;
+        object-fit  : cover;
+        filter: brightness(90%);
+        transition: filter 125ms ease-in;
+        &:hover {
+          filter: brightness(100%);
+        }
+      }
+    }
+  
+    &__title {
+      padding-inline  : calc($spacer *1);
+      padding-block-start   : calc($spacer *1);
+      padding-block-end   : calc($spacer *1);
+      @include dc(neutral(2));
+    
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+  
+      h3 {
+        @include dc(neutral(2));
+        text-align : center;
+        font-family: $ff-sans-body;
+        font-size  : 1.2rem;
+        font-weight: $fw-n;
+        line-height: 1.1;
+      }
+  
+    }
+  
+    &__text {
+      padding-inline: calc($spacer *1);
+      padding-block : calc($spacer *1);
+      font-size: .9rem;
+      font-weight: $fw-l;
+    }
+  
+  }
