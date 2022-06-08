@@ -1,7 +1,7 @@
 // Hero style
 .hero {
-    --hero-height    : 90vh;
-    --hero-min-height: 27rem;
+    --hero-height    : 80vh;
+    --hero-min-height: 27em;
     height           : min(var(--hero-height), var(--hero-min-height));
     position         : relative;
     z-index          : 100;
