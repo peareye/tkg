@@ -2,6 +2,17 @@
 
 
  .contact-form {
+   p {
+     grid-column: 1 / -1;
+     text-align: left;
+     font-weight: $fw-n;
+     border-radius: $br;
+     box-shadow: $bs;
+     font-size: 1.3rem !important;
+     border: solid color(secondary) .25em;
+    @include dc(neutral(2));
+    padding: $spacer;
+   }
 
     // margin-block-start: 1rem;
     display              : grid;

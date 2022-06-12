@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-::selection {
+p::selection {
   @include dc(color(accent));
 }
 
@@ -87,21 +87,21 @@ p {
 }
 
 a {
+font-size: 1.1rem;
+font-weight: $fw-b;
   color          : neutral(5);
-  padding-inline: .25em;
+  padding-inline : .25em;
   text-decoration: none;
-  box-sizing: content-box;
- 
-  display: inline-block;
-  border-bottom: 2px neutral(5) dashed;
+  outline        : none;
+  transition     : outline 125ms ease-in;
 
-  transition: all 125ms ease-in;
-  
-  &:hover, &:focus {
-    @include dc(color(accent));
-    border-bottom-color: transparent;
-
+  &:hover,
+  &:focus {
+    outline: dashed color(accent) 2px;
+    outline-offset: $ls;
   }
-
-
 }
+
+// a {
+//   @include dc(inherit);
+// }

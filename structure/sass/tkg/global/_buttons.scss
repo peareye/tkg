@@ -20,7 +20,7 @@
   
     transition: all 125ms ease-in;
   
-    &:hover {
+    &:hover, &:focus {
       background: color(accent-dark);
       transform: scale(1.1);
     }
@@ -34,7 +34,7 @@
     }
   
     &__header {
-      background-color: color(accent-light);
+      @include dc(color(accent));
       font-weight: $fw-b;
     }
     &__submit {

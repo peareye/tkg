@@ -49,6 +49,27 @@
                 {
                     "name": "Bottom",
                     "value": "bottom"
+                },
+
+                {
+                    "name": "Right Top",
+                    "value": "right top"
+                },
+             
+
+                {
+                    "name": "Left Top",
+                    "value": "left top"
+                },
+
+                {
+                    "name": "Right Bottom",
+                    "value": "right bottom"
+                },
+
+                {
+                    "name": "Left Bottom",
+                    "value": "left bottom"
                 }
             ]
         },

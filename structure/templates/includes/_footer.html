@@ -13,7 +13,7 @@
                     {# This example footer nav does not display drop down nav links #}
                     {% for navItem in getNavigator('footer') %}
                     <li class="{% if navItem.currentPage %}active{% endif %}">
-                        <a href="{{ getNavigationLink(navItem) }}">{{ navItem.title }}</a>
+                        <a class="styled-link" href="{{ getNavigationLink(navItem) }}">{{ navItem.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -36,7 +36,7 @@
         <div class="contactPhone">
             <h5 class="footer-title">Phone</h5>
             <p><i class="fa-solid fa-phone"></i>
-             <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
+             <a class="styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
         </div>
         {% endif %}
 
@@ -46,8 +46,8 @@
         <p>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</p>
         {% if site.settings.footerAuthor %}
         <p class="text-small">Built with
-            <a href="http://pitoncms.com" target="_blank">PitonCMS </a> by <a
-                href="{{ site.settings.footerAuthorURL }} " target="_blank">{{
+            <a class="styled-link" href="http://pitoncms.com" target="_blank">PitonCMS </a> by 
+            <a class="styled-link" href="{{ site.settings.footerAuthorURL }} " target="_blank">{{
                 site.settings.footerAuthor }}</a>
         </p>
         {% endif %}

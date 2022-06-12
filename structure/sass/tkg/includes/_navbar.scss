@@ -1,7 +1,7 @@
 /* Navigation Styles w/sub navigation dropdown and responsive toggles */
 
 .navbar {
-    background-color: color(accent);
+    background-color: color(primary);
     height          : $nav-height;
     position        : relative;
     z-index         : 1001;
@@ -63,6 +63,9 @@
           &:hover {
             background-color: color(primary-dark);
           }
+        }
+        &--link {
+          background-color: transparent;
         }
       }
   

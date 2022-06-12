@@ -1,5 +1,6 @@
 {# Contact Form Element #}
 {% import "includes/_macros.html" as pitonMacro %}
+
 <h2 class="element__title">{{ element.title }}</h2>
 <div class="flex-two-columns">
 
@@ -33,11 +34,11 @@
       </div>
 
       <div class="input-group span">
-        <button class="btn btn__submit" type="submit">Submit</button>
+        <button class="btn btn__submit styled-link" type="submit">Submit</button>
       </div>
 
       <div class="input-group span">
-        <p><span class="text-danger">* </span>Required</p>
+        <div><span class="text-danger">* </span>Required</div>
       </div>
 
       {{ pitonMacro.contactHoneypot() }}

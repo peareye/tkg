@@ -1,26 +1,40 @@
 <div class="header-wrapper">
   <header class="header">
+   
   
-    <h1 class="header__logo">
-      <a class="header__link" href="{{ pathFor('home') }}">
+        <div class="logo">
+          <a class="header__link styled-link" href="{{ pathFor('home') }}">
+            <img src="assets/img/tkg1.svg" alt="TK Green Home Inspection Services">
+          </a>
+        </div>
+  
+ 
+  
+    {# <h1 class="header__logo">
+    
         {{ site.settings.siteName|default('Piton<span>CMS</span>') }}
-      </a>
-    </h1>
+    
+    </h1> #}
   
   
     <div class="header__phone">
       <i class="fas fa-phone" style="display: inline-block"></i>
-      <a class="header__link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
-    </div>
+      <a class="header__link styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+    </div>  
   
     <div class="header__location">
-      <i class="fa-solid fa-location-dot"></i> Honolulu, Hawaii</div>
+      <i class="fa-solid fa-location-dot"></i> Honolulu, Hawaii
+    </div> 
   
-    {{ include("includes/_social.html") }}
+    {{ include("includes/_social.html") }} 
   
     
-      <a class="btn btn__header" href="/{{ site.settings.ctaURL }}" >Schedule Now</a>
+      <a class="btn  btn__header styled-link" href="/{{ site.settings.ctaURL }}" >Schedule Now</a> 
   
-  
-  </header>
+    </header>
+
+  {{ include("includes/_navbar.html") }}
+ 
+
+
 </div>

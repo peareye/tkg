@@ -1,19 +1,39 @@
 .span {
     grid-column: 1 / -1;
 }
+
 .text-small {
-    font-size: .8rem;
+    font-size  : .8rem;
     font-weight: $fw-l;
 }
 
 .text-danger {
-    color: $clr-red;
+    color      : $clr-red;
     font-weight: $fw-b;
-    font-size: 1.25rem;
+    font-size  : 1.25rem;
 }
 
 .text-muted {
     background-color: neutral(1);
     color           : neutral(3);
-    font-weight: $fw-l;
+    font-weight     : $fw-l;
+}
+
+inline-text {
+    display: inline-block;
+}
+
+/*removes default styles from a link that is part of another element */
+.styled-link {
+    font-size       : 1rem;
+    font-weight     : $fw-n;
+    background-color: transparent;
+    padding-inline  : 0;
+    outline         : none;
+    transition      : none;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
 }

@@ -70,7 +70,7 @@
 
     &:nth-child(even) {
        
-        @include dc(color(secondary));
+        @include dc(neutral(2));
 
         .element__title {
             background-color: inherit;
