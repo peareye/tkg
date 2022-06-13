@@ -1,0 +1,74 @@
+{
+    "templateName": "Demo Page",
+    "templateDescription": "Page with all elements in their own content blocks.",
+    "showFeaturedImage": true,
+    "templateType": "page",
+    "blocks": [
+        {
+            "name": "Text",
+            "key": "textBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "text/text"
+              ]
+        },
+
+        {
+            "name": "Collection",
+            "key": "collectionBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "collection/collection"
+              ]
+        },
+        {
+            "name": "Contact",
+            "key": "contactBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "contact/contact"
+              ]
+        },
+        {
+            "name": "Embedded",
+            "key": "embeddedBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "embedded/embedded"
+              ]
+        },
+        {
+            "name": "Gallery",
+            "key": "galleryBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "gallery/gallery"
+              ]
+        },
+        {
+            "name": "Image",
+            "key": "imageBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "image/image"
+              ]
+        },
+    
+        {
+            "name": "Testimonials",
+            "key": "testimonialsBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "testimonials/testimonials"
+              ]
+        },
+        {
+            "name": "About",
+            "key": "aboutBlock",
+            "description": "Simple text areas",
+            "elementTypeOptions": [
+                "about/about"
+              ]
+        }
+    ]
+}

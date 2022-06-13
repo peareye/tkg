@@ -1,0 +1,46 @@
+{% extends 'pages/_base_layout.html' %}
+{% block navbar %}
+{{ include('includes/_navbar.html') }}
+
+{% endblock navbar %}
+
+
+{% block body %}
+
+<section class="section grid-section section--textBlock">
+  {{ getBlockElementsHtml(page.blocks.textBlock) }}
+</section>
+
+<section class="section grid-section section--testimonialsBlock">
+  <h2 class="section__title">What our Customers are Saying</h2>
+  <div class="element__content">
+    <p>The Testimonial block is made up of individual elements. If you want to add content text to the block element, you will need to add it at the template level, until I figure out how to add it via a custom setting.</p>
+  </div>
+  <div class="grid-three-columns">{{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}</div>
+</section>   
+
+<section class="section grid-section section--collectionBlock">
+  {{ getBlockElementsHtml(page.blocks.collectionBlock) }}
+</section>
+
+<section class="section grid-section section--aboutBlock">
+    {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
+</section>  
+
+<section class="section grid-section section--imageBlock section--militaryBlock">
+  {{ getBlockElementsHtml(page.blocks.imageBlock) }}
+</section>
+
+<section class="section grid-section section--embeddedBlock">
+  {{ getBlockElementsHtml(page.blocks.embeddedBlock) }}
+</section>
+
+<section class="section grid-section section--galleryBlock">
+  {{ getBlockElementsHtml(page.blocks.galleryBlock) }}
+</section>
+
+<section class="section grid-section section--contactBlock">
+  {{ getBlockElementsHtml(page.blocks.contactBlock) }}
+</section>
+
+{% endblock body %}
