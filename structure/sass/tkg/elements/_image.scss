@@ -8,8 +8,11 @@
      border-radius: $br;
      box-shadow   : $bs;
    }
-
+&__content {
+  margin-block-start: $spacer;
+}
    .element__content {
      margin-block-start: $spacer;
+ 
    }
  }

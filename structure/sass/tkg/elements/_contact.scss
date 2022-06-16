@@ -3,6 +3,7 @@
 
  .contact-form {
 
+
    // This styles the thank you paragraph after form submission.
    p {
 
@@ -67,14 +68,17 @@
  }
 
  .contact-info {
-   padding-inline: $spacer;
-   padding-block: $spacer;
-  background-color: color(primary-lighter);
+   padding-inline  : $spacer;
+   padding-block   : $spacer;
+   text-align: left;
+  //  background-color: color(primary-lighter);
 
    display       : grid;
    grid-auto-rows: calc($spacer *2);
+   align-items: baseline;
+   justify-content: baseline;
 
-   @include mq(small){
-    padding-block-start : calc($spacer * 3);
+   @include mq(small) {
+     padding-block-start: calc($spacer * 3);
    }
  }

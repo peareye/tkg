@@ -648,12 +648,11 @@ a:hover, a:focus {
 }
 .footer-social {
   font-size: 1.3rem;
+  text-align: left;
 }
 .footer-social > * {
   display: flex;
   gap: 1rem;
-  align-items: center;
-  justify-content: center;
 }
 .footer-title {
   font-family: "Roboto", sans-serif;
@@ -812,9 +811,11 @@ textarea:focus {
 .contact-info {
   padding-inline: 1em;
   padding-block: 1em;
-  background-color: #a2ade6;
+  text-align: left;
   display: grid;
   grid-auto-rows: 2em;
+  align-items: baseline;
+  justify-content: baseline;
 }
 @media only screen and (min-width: 768px) {
   .contact-info {
@@ -920,6 +921,9 @@ textarea:focus {
   min-height: 100%;
   border-radius: 7px;
   box-shadow: 0 0 25px rgba(35, 31, 32, 0.25);
+}
+.imageElement__content {
+  margin-block-start: 1em;
 }
 .imageElement .element__content {
   margin-block-start: 1em;
