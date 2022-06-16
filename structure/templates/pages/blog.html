@@ -1,18 +1,19 @@
 {% extends 'pages/_base_layout.html' %}
 
 {% block body %}
-<div class="pageMedia">
+{# <div class="pageMedia">
   {{ getMediaSrcSet(page.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
-</div>
+</div> #}
 
-    <h2 class="element-title">{{ page.title }}</h2>
+    {# <h2 class="element-title">{{ page.title }}</h2> #}
 
 
-{{ getBlockElementsHtml(page.blocks.contentBlock) }}
+
+<section class="section grid-section section--imageBlock">
+  {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+  <button class="btn btn__back" onclick="history.back()">Go Back</button>
+</section>
+
+
 
 {% endblock body %}
-
-{% block sidebar %}
-
-
-{% endblock sidebar %}

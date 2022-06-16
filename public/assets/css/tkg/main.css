@@ -296,11 +296,13 @@ a:hover, a:focus {
   border-radius: 7px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
   cursor: pointer;
   font-size: 0.75rem;
   font-weight: 700;
   font-family: inherit;
   transform: scale(1);
+  width: max-content;
   display: inline-block;
   position: relative;
   transition: all 125ms ease-in;
@@ -322,6 +324,9 @@ a:hover, a:focus {
 }
 .btn__submit {
   border: none;
+}
+.btn__back {
+  margin-inline: auto 1em;
 }
 
 .header-wrapper {
