@@ -4,21 +4,21 @@
 <h2 class="element__title">{{ element.title }}</h2>
 <div class="flex-two-columns">
 
-  <div class="column-narrow contact-info">
+  <div class="contact-info">
 
-   <div class="contact-info__phone">
-    Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
-  </div>
+    <div class="contact-info__phone">
+      Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+    </div>
 
     <div class="contact-info__email">
       Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a>
     </div>
 
-    <div class="element__content contact-info__content">{{ element.content }}</div>
-    
+    <div class="contact-info__content">{{ element.content }}</div>
+
   </div>
 
-  <div class="column-wide">
+ 
     <form class="contact-form" id="contact-form" method="post" accept-charset="utf-8" data-contact-form="true">
       <input type="hidden" name="{{ site.environment.csrfTokenName }}" value="{{ site.environment.csrfTokenValue }}">
       <input type="hidden" name="context" value="{{ page.title }}">
@@ -50,5 +50,5 @@
 
       {{ pitonMacro.contactHoneypot() }}
     </form>
-  </div>
+
 </div>

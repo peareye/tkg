@@ -68,17 +68,18 @@
  }
 
  .contact-info {
+   height          : auto;
    padding-inline  : $spacer;
    padding-block   : $spacer;
-   text-align: left;
-  //  background-color: color(primary-lighter);
+   padding-block-start: calc($spacer * 2);
+   margin-block: calc($spacer * 2);
+   
+   border-radius   : $br;
+   box-shadow      : $bs-4;
+   background-color: neutral(2);
+   border: solid rgba(neutral(2), .5) 1px;
 
-   display       : grid;
-   grid-auto-rows: calc($spacer *2);
-   align-items: baseline;
-   justify-content: baseline;
-
-   @include mq(small) {
-     padding-block-start: calc($spacer * 3);
+   &__content {
+    margin-block: calc($spacer * 2);
    }
  }

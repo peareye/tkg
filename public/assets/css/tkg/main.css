@@ -809,18 +809,18 @@ textarea:focus {
 }
 
 .contact-info {
+  height: auto;
   padding-inline: 1em;
   padding-block: 1em;
-  text-align: left;
-  display: grid;
-  grid-auto-rows: 2em;
-  align-items: baseline;
-  justify-content: baseline;
+  padding-block-start: 2em;
+  margin-block: 2em;
+  border-radius: 7px;
+  box-shadow: 0 0.5rem 1rem rgba(35, 31, 32, 0.15);
+  background-color: #eff0f0;
+  border: solid rgba(239, 240, 240, 0.5) 1px;
 }
-@media only screen and (min-width: 768px) {
-  .contact-info {
-    padding-block-start: 3em;
-  }
+.contact-info__content {
+  margin-block: 2em;
 }
 
 .video-container {
