@@ -5,8 +5,8 @@
     "templateType": "page",
     "blocks": [
         {
-            "name": "Content",
-            "key": "contentBlock",
+            "name": "About  Us",
+            "key": "aboutBlock",
             "description": "Simple text areas"
         }
     ]
