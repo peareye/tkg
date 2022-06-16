@@ -68,6 +68,7 @@
             "key": "aboutBlock",
             "description": "Simple text areas",
             "elementTypeOptions": [
+                "text/text",
                 "about/about"
               ]
         }

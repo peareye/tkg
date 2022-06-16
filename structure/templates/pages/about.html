@@ -1,20 +1,13 @@
 {% extends 'pages/_base_layout.html' %}
 {% block navbar %}
 {{ include('includes/_navbar.html') }}
-
 {% endblock navbar %}
 
 {% block about %}
 
-<section>
-  <div class="container">
-    <div class="about-wrapper">
-
-      {{ getBlockElementsHtml(page.blocks.contentBlock) }}
-    </div>
-  </div>
-
-</section>
+<section class="section grid-section section--aboutBlock">
+  {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
+</section> 
 
 
 {% endblock about %}
