@@ -2,65 +2,79 @@
 
 
  .contact-form {
+
+   // This styles the thank you paragraph after form submission.
    p {
-     grid-column: 1 / -1;
-     text-align: left;
-     font-weight: $fw-n;
+
+     grid-column  : 1 / -1;
+     text-align   : left;
+     font-weight  : $fw-n;
      border-radius: $br;
-     box-shadow: $bs;
-     font-size: 1.3rem !important;
-     border: solid color(secondary) .25em;
-    @include dc(neutral(2));
-    padding: $spacer;
+     box-shadow   : $bs;
+     font-size    : 1.3rem !important;
+     border       : solid color(secondary) .25em;
+     @include dc(neutral(2));
+     padding: $spacer;
    }
 
-    // margin-block-start: 1rem;
-    display              : grid;
-    grid-template-columns: 1fr;
-    gap                  : 1rem;
- 
- 
-    @include mq(small) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
- 
-  ::placeholder {
-    color: rgba(neutral(4), .75);
-  }
- 
- 
-  .input-group {
-    display    : flex;
-    flex-flow  : column nowrap;
-    align-items: baseline;
- 
-  }
- 
-  /* Add styles to 'label' selector */
-  label {
-    font-size: 1.2em;
-  }
- 
-  /* Add styles to 'input' and 'textarea' selectors */
-  input[type=text],
-  input[type=email],
-  textarea {
-    width: 100%;
- 
-    padding-block : .75em;
-    padding-inline: 1em;
-    border        : 1px solid neutral(3);
-    border-radius : $br;
-    grid-column   : 2 / 3;
-    font-size     : 1rem;
-    transition    : all 125ms ease-in-out;
-  }
- 
-  /* Add styles to show 'focus' of selector */
-  input[type=text]:focus,
-  input[type=email]:focus,
-  textarea:focus {
-    border : 2px dashed color(accent);
-    outline: none;
-  }
+
+   margin-block-start   : 1rem;
+   display              : grid;
+   grid-template-columns: 1fr;
+   gap                  : 1rem;
+
+   @include mq(small) {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
+
+ ::placeholder {
+   color: rgba(neutral(4), .75);
+ }
+
+ .input-group {
+   display    : flex;
+   flex-flow  : column nowrap;
+   align-items: baseline;
+ }
+
+ /* Add styles to 'label' selector */
+ label {
+   font-size: 1.2em;
+ }
+
+ /* Add styles to 'input' and 'textarea' selectors */
+ input[type=text],
+ input[type=email],
+ textarea {
+   width           : 100%;
+   padding-block   : .75em;
+   padding-inline  : 1em;
+   border          : 1px solid neutral(3);
+   background-color: neutral(1);
+   border-radius   : $br;
+   grid-column     : 2 / 3;
+   font-size       : 1rem;
+   transition      : all 125ms ease-in-out;
+ }
+
+ /* Add styles to show 'focus' of selector */
+ input[type=text]:focus,
+ input[type=email]:focus,
+ textarea:focus {
+   border : 2px dashed color(accent);
+   outline: none;
+ }
+
+ .contact-info {
+   padding-inline: $spacer;
+   padding-block: $spacer;
+  background-color: color(primary-lighter);
+
+   display       : grid;
+   grid-auto-rows: calc($spacer *2);
+
+   @include mq(small){
+    padding-block-start : calc($spacer * 3);
+   }
+ }

@@ -23,11 +23,10 @@ p::selection {
 }
 
 body {
-  background : neutral(1);
-  font-family: $ff-sans-body;
-  font-size  : 1rem;
-  line-height: 1.6;
-  text-align : center;
+  background    : neutral(1);
+  font-family   : $ff-sans-body;
+  font-size     : 1rem;
+  line-height   : 1.6;
 
   display       : flex;
   flex-direction: column;
@@ -50,7 +49,6 @@ h2,
 h3,
 h4,
 h5 {
-
   font-family   : $ff-sans-headings;
   line-height   : 1.1;
   letter-spacing: $ls;
@@ -82,26 +80,25 @@ h6 {
 }
 
 p {
+  font-size: 1rem;
+}
+
+p+p {
   margin-block-start: 1em;
-  font-size         : 1rem;
 }
 
 a {
-font-size: 1.1rem;
-font-weight: $fw-b;
-  color          : neutral(5);
-  padding-inline : .25em;
-  text-decoration: none;
-  outline        : none;
-  transition     : outline 125ms ease-in;
+  font-size         : 1.1rem;
+  font-weight       : $fw-b;
+  color             : neutral(5);
+  text-decoration   : none;
+  outline           : none;
+  transition        : outline 125ms ease-in;
 
   &:hover,
   &:focus {
-    outline: dashed color(accent) 2px;
+    outline       : dashed color(accent) 2px;
     outline-offset: $ls;
   }
 }
 
-// a {
-//   @include dc(inherit);
-// }

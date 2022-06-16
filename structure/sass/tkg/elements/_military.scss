@@ -1,14 +1,13 @@
 .militaryElement {
-
-
     &__image {
+        width   : min(100%, $wide-container-width);
         z-index      : -1;
         border-radius: $br;
         box-shadow   : $bs;
         overflow     : hidden;
 
         img {
-            min-width   : 100%;
+            width   : min(100%, $wide-container-width);
             min-height: 100%;
             aspect-ratio: 16/9;
             object-fit  : cover;
@@ -17,39 +16,12 @@
 
     &__content {
         padding         : calc($spacer * 2);
-        // padding: min();
         align-self      : center;
         justify-self    : center;
-        width           : min(100%, 30em);
-        // height: 100%;
+        width           : min(100%, $narrow-container-width);
         background-color: rgba(neutral(1), .35);
         border-radius   : $br;
         box-shadow      : $bs;
     }
 
 }
-
-
-//     &__content {
-//         width            : min(100%, 30em);
-
-//         padding-block    : 1em;
-
-
-
-//         align-self  : center;
-//         justify-self: center;
-
-//         @include dc(rgba(neutral(2), .35));
-
-//         p {
-//             margin-block-start: 0;
-//             font-size         : 1.3rem;
-//         }
-
-//         grid-row: 2 / 3;
-
-//         @include mq(xs) {
-//             grid-row: 1 / 2;
-//         }
-//     }

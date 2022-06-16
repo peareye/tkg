@@ -4,11 +4,18 @@
 <h2 class="element__title">{{ element.title }}</h2>
 <div class="flex-two-columns">
 
-  <div class="column-narrow">
+  <div class="column-narrow contact-info">
 
-    <p>Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
-    <p>Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a></p>
-    <div class="element__content">{{ element.content }}</div>
+   <div class="contact-info__phone">
+    Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+  </div>
+
+    <div class="contact-info__email">
+      Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a>
+    </div>
+
+    <div class="element__content contact-info__content">{{ element.content }}</div>
+    
   </div>
 
   <div class="column-wide">

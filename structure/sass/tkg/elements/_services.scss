@@ -4,6 +4,13 @@
     border-radius: $br;
     box-shadow   : $bs;
 
+    &__title {
+        text-align: center;
+    }
+    &__content {
+        margin-block-start: $spacer;
+    }
+
     &__icon {
 
         height            : 4.5em;

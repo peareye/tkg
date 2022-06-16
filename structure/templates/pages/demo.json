@@ -59,6 +59,7 @@
             "key": "testimonialsBlock",
             "description": "Simple text areas",
             "elementTypeOptions": [
+                "text/text",
                 "testimonials/testimonials"
               ]
         },

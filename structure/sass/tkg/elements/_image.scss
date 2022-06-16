@@ -1,6 +1,5 @@
  // Image Element
  .imageElement {
-  //  gap: 1em;
 
    img {
      aspect-ratio : 16 / 9;
@@ -10,5 +9,7 @@
      box-shadow   : $bs;
    }
 
- 
+   .element__content {
+     margin-block-start: $spacer;
+   }
  }

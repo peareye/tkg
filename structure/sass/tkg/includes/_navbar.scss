@@ -27,7 +27,6 @@
         flex-flow      : row nowrap;
         justify-content: center;
   
-  
         transform: scaleY(1); //Scale set to 1 for desktop navigation
         opacity  : 1; //Opacity set to 1 for desktop navigation
         position : static; //Position static for desktop navigation
@@ -45,9 +44,9 @@
         border-bottom : solid neutral(2) 1px;
   
         @include mq(small) {
-          padding-inline: .5rem;
+          padding-inline: .75rem;
           font-size     : 1rem;
-          font-weight: $fw-m;
+          font-weight: $fw-l;
           width         : auto;
           border        : none;
         }
@@ -55,7 +54,6 @@
         a {
           padding-inline    : 1rem;
           padding-block     : 1rem;
-          // height         : $nav-height;
           text-decoration   : none;
           color             : neutral(1);
           display           : block;
@@ -67,8 +65,7 @@
         &--link {
           background-color: transparent;
         }
-      }
-  
+      }  
     }
   }
   
@@ -82,10 +79,6 @@
       left            : 0;
     }
   }
-  
-  
-  
-  
   
   /* Toggle States */
   .toggle:checked~.subnav {
