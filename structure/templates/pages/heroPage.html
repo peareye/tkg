@@ -8,18 +8,21 @@
 <section id="military" class="section grid-section section--militaryBlock">
     {{ getBlockElementsHtml(page.blocks.militaryBlock) }}
 </section>
-
+{% if page.blocks.servicesBlock %}
 <section class="section grid-section section--servicesBlock">
     <div class="grid-three-columns">
         {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
     </div>
 </section>
 
+{% endif %}
+
+{% if page.blocks.testimonialsBlock %}
 <section class="section grid-section section--testimonialsBlock">
   
     <div class="grid-three-columns testimonials">
         {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
     </div>
 </section>
-
+{% endif %}
 {% endblock body %}
