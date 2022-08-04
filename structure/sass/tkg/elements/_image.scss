@@ -11,11 +11,12 @@
    }
 
    &__content {
-     margin-block-start: $spacer;
+    //  margin-block-start: $spacer;
    }
 
    .element__content {
      margin-block-end: $spacer;
+     margin-block-start: $spacer;
 
    }
  }
