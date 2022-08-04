@@ -6,39 +6,55 @@
 
 
 {% block body %}
-
+{% if page.blocks.textBlock %}
 <section class="section grid-section section--textBlock">
   {{ getBlockElementsHtml(page.blocks.textBlock) }}
 </section>
+{% endif %}
 
+{% if page.blocks.aboutBlock %}
+<section class="section grid-section section--aboutBlock">
+  {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
+</section>  
+{% endif %}
+
+{% if page.blocks.testimonialsBlock %}
 <section class="section grid-section section--testimonialsBlock">
   <div class="grid-three-columns testimonials">
     {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
   </div>
 </section>   
+{% endif %}
 
+{% if page.blocks.collectionBlock %}
 <section class="section grid-section section--collectionBlock">
   {{ getBlockElementsHtml(page.blocks.collectionBlock) }}
 </section>
+{% endif %}
 
-<section class="section grid-section section--aboutBlock">
-    {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
-</section>  
-
+{% if page.blocks.imageBlock %}
 <section class="section grid-section section--imageBlock">
   {{ getBlockElementsHtml(page.blocks.imageBlock) }}
 </section>
+{% endif %}
 
+{% if page.blocks.embeddedBlock %}
 <section class="section grid-section section--embeddedBlock">
   {{ getBlockElementsHtml(page.blocks.embeddedBlock) }}
 </section>
+{% endif %}
 
+{% if page.blocks.galleryBlock %}
 <section class="section grid-section section--galleryBlock">
   {{ getBlockElementsHtml(page.blocks.galleryBlock) }}
 </section>
+{% endif %}
 
+{% if page.blocks.contactBlock %}
 <section class="section grid-section section--contactBlock">
   {{ getBlockElementsHtml(page.blocks.contactBlock) }}
 </section>
+{% endif %}
 
 {% endblock body %}
+

@@ -1,5 +1,9 @@
 .aboutElement {
-
+    // outline: dashed purple 3px;
+>* {
+    // outline: dashed red 3px;
+    margin-block-start: $spacer;
+}
     .element__title + p {
         margin-block-start: $spacer;
     }

@@ -58,6 +58,14 @@
       font-weight       : $fw-b;
     }
   }
+  // Location Block
+  &__location,
+  .social {
+    display: none;
+    @include mq(small){
+      display: block;
+    }
+  }
 
   // All Meta Blocks 
   &__phone,

@@ -102,3 +102,19 @@ a {
   }
 }
 
+.image {
+  width: 50%;
+  // height: auto;
+  float: left;
+  margin-block-start: $spacer;
+  margin-inline-end: $spacer;
+  border: solid 1px neutral(3);
+  box-shadow: $bs-4;
+  img{
+    max-width: 100%;
+  }
+  figcaption {
+    display: none;
+  }
+
+}
