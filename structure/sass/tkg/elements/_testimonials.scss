@@ -7,7 +7,7 @@
 }
 
 .testimonial {
-    // outline: dashed 3px red;
+   
 
     box-shadow: $bs-4;
     @include dc(neutral(1));
@@ -27,7 +27,7 @@
     }
 
     &__body {
-        // outline: dashed 3px blue;
+      
 
         padding-inline     : calc($spacer / 2);
         padding-block-start: $spacer;
