@@ -14,14 +14,6 @@
       "elementCountLimit": 1
     },
     {
-      "name": "Military",
-      "key": "militaryBlock",
-      "description": "Our Military Commitment",
-      "elementTypeOptions": [
-          "military/military"
-        ]
-  },
-    {
       "name": "Services",
       "key": "servicesBlock",
       "description": "Our Services",
