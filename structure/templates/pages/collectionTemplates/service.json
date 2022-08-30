@@ -1,7 +1,7 @@
 {
- "templateName": "Simple Blog Post",
- "templateDescription": "A simple blog post with a wall of text",
- "showSubTitle": false,
+ "templateName": "Service Detail",
+ "templateDescription": "A page of services provided",
+ "showSubTitle": true,
  "showFeaturedImage": true,
  "templateType": "collection",
  "blocks": [
