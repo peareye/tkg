@@ -14,6 +14,22 @@
       "elementCountLimit": 1
     },
     {
+      "name": "Intro",
+      "key": "introBlock",
+      "description": "Introduction Section",
+      "elementTypeOptions": [
+          "image/image"
+        ]
+  },
+    {
+      "name": "Element Header Services",
+      "key": "elementHeaderServicesBlock",
+      "description": "Element Header Intro",
+      "elementTypeOptions": [
+          "elementHeader/elementHeader"
+        ]
+  },
+    {
       "name": "Services",
       "key": "servicesBlock",
       "description": "Our Services",
@@ -21,6 +37,14 @@
           "service/service"
         ]
   },
+  {
+    "name": "Element Header Testimonials",
+    "key": "elementHeaderTestimonialsBlock",
+    "description": "Element Header Intro",
+    "elementTypeOptions": [
+        "elementHeader/elementHeader"
+      ]
+},
   {
       "name": "Testimonials",
       "key": "testimonialsBlock",

@@ -105,6 +105,13 @@ select {
   background-color: hsl(0deg, 4%, 100%);
   color: hsl(0deg, 4%, 50%);
   font-weight: 300;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-italic {
+  font-style: italic;
 }
 
 inline-text {
@@ -273,7 +280,7 @@ a:hover, a:focus {
 }
 
 .section {
-  padding-block: 4em;
+  padding-block: 8em;
   width: 100%;
 }
 .section:nth-child(even) {
@@ -290,8 +297,13 @@ a:hover, a:focus {
 .section--aboutBlock {
   row-gap: 2em;
 }
+.section--servicesBlock {
+  background-color: #a2ade6;
+}
+
 .element__title {
   text-align: center;
+  background-color: transparent !important;
 }
 .element__content {
   width: min(100%, 40rem);
@@ -346,6 +358,7 @@ a:hover, a:focus {
   width: 100%;
   display: grid;
   gap: 1em;
+  border-top: 0.75em solid hsl(231deg, 58%, 37%);
 }
 
 .header {
@@ -967,29 +980,36 @@ textarea:focus {
   background-color: hsl(0deg, 4%, 100%);
   color: rgba(35, 31, 32, 0.99);
   padding: 1em;
-  border-radius: 7px;
-  box-shadow: 0 0 25px rgba(35, 31, 32, 0.25);
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: #b82925;
+  box-shadow: 0 0 15px rgba(133, 122, 122, 0.15);
+  display: flex;
+  gap: 1em;
 }
 .service__title {
   text-align: center;
+  color: hsl(231deg, 58%, 37%);
 }
 .service__content {
   margin-block-start: 1em;
+  background-color: hsl(0deg, 4%, 100%);
+  color: rgba(35, 31, 32, 0.99);
+}
+.service__content p {
+  line-height: 1.2;
+  margin-block-start: 1em;
 }
 .service__icon {
-  height: 4.5em;
-  width: 4.5em;
-  border-radius: 14px;
+  height: 5em;
+  width: 5em;
   margin-inline: auto;
-  margin-block-start: 1.5em;
   margin-block-end: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
-  background-color: #a2ade6;
   color: #3247bd;
-  border: #3247bd 1px solid;
 }
 .service__icon .fas {
   transform: rotate(-45deg);
