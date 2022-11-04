@@ -1253,10 +1253,16 @@ details summary::-webkit-details-marker {
   border-radius: 7px;
   grid-auto-rows: 1fr;
 }
-.resources .resource a {
+.resources .resource__content {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.resources .resource__content a {
   text-decoration: underline;
   color: hsl(231deg, 58%, 37%);
   margin-block-start: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
