@@ -18,7 +18,7 @@
     }
 
     &even-columns {
-        // children will no expand to fill space. They will maintain a 250px width at full screen.
+        // children will not expand to fill space. They will maintain a 250px width at full screen.
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     }
@@ -65,7 +65,7 @@
 
 // Section Styles
 .section {
-    padding-block: $spacer * 4;
+    padding-block: $spacer * 8;
     width        : 100%;
 
     &:nth-child(even) {
@@ -88,6 +88,10 @@
             // border: dashed 5px green;
         }
     }
+    &--servicesBlock {
+        background-color: color(primary-lighter);
+        
+    }
 }
 
 // Default Element Styles
@@ -95,6 +99,7 @@
 .element {
     &__title {
       text-align: center;
+      background-color: transparent !important;
     
     }
   

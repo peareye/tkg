@@ -2,6 +2,7 @@
   width  : 100%;
   display: grid;
   gap    : $spacer;
+  border-top: .75em solid color(primary);
 }
 
 .header {
@@ -10,6 +11,7 @@
   padding-block-start: $spacer;
   padding-inline     : $spacer;
   width              : min(100%, $wide-container-width);
+ 
 
   display        : flex;
   flex-direction : column;

@@ -1,31 +1,47 @@
 .service {
+
     @include dc(neutral(1));
-    padding      : $spacer;
-    border-radius: $br;
-    box-shadow   : $bs;
+    padding: $spacer;
+
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: color(accent);
+    box-shadow: 0 0 15px rgba(neutral(3),.15);
+
+    display: flex;
+    gap    : $spacer;
 
     &__title {
         text-align: center;
+
+        color: color(primary);
     }
+
     &__content {
         margin-block-start: $spacer;
+        @include dc(neutral(1));
+
+        p {
+            line-height       : 1.2;
+            margin-block-start: $spacer;
+        }
     }
 
     &__icon {
 
-        height            : 4.5em;
-        width             : 4.5em;
-        border-radius     : calc($br * 2);
-        margin-inline     : auto;
-        margin-block-start: calc($spacer * 1.5);
-        margin-block-end  : calc($spacer * 2);
-        display           : flex;
-        align-items       : center;
-        justify-content   : center;
-        transform         : rotate(45deg);
-        background-color  : color(primary-lighter);
-        color             : color(primary-light);
-        border            : color(primary-light) 1px solid;
+        height               : 5em;
+        width                : 5em;
+        // border-radius     : calc($br * 2);
+        margin-inline        : auto;
+        // margin-block-start: calc($spacer * 1.5);
+        margin-block-end     : calc($spacer * 2);
+        display              : flex;
+        align-items          : center;
+        justify-content      : center;
+        transform            : rotate(45deg);
+        // background-color  : color(primary-lighter);
+        color                : color(primary-light);
+        // border            : color(primary-light) 1px solid;
 
         .fas {
             transform: rotate(-45deg);

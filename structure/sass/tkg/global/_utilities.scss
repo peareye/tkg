@@ -17,6 +17,13 @@
     background-color: neutral(1);
     color           : neutral(3);
     font-weight     : $fw-l;
+    line-height: 1.3;
+    font-size: .9rem;
+    font-family: $ff-sans-headings;
+}
+
+.text-italic {
+font-style: italic;
 }
 
 inline-text {
