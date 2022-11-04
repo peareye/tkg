@@ -1,0 +1,35 @@
+{# FAQ Template Page #}
+
+{% extends 'pages/_base_layout.html' %}
+
+{% block navbar %}
+
+{{ include('includes/_navbar.html') }}
+
+{% endblock navbar %}
+
+
+
+
+{% block body %}
+<section class="section grid-section section--faqBlock">
+  <h2 class="element__title">{{ page.title }}</h2>
+
+  <div class="faqs">
+    {{ getBlockElementsHtml(page.blocks.faqsBlock) }}
+  </div>
+</section>
+
+<section class="section grid-section  section--resourceBlock">
+  {% if page.blocks.elementHeaderResourcesBlock %}
+      {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
+  {% endif %}
+
+  <div class="resources grid-three-columns">
+      {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
+  </div>
+</section>
+
+
+
+{% endblock body %}

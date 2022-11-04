@@ -1,0 +1,32 @@
+{
+    "templateName": "FAQs",
+    "templateDescription": "FAQs Page",
+    "showFeaturedImage": true,
+    "templateType": "page",
+    "blocks": [
+        {
+            "name": "FAQs",
+            "key": "faqsBlock",
+            "description": "Content for FAQs",
+            "elementTypeOptions": [
+                "faq/faq"
+              ]
+        },
+        {
+            "name": "Element Header Resources",
+            "key": "elementHeaderResourcesBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
+        {
+            "name": "Resources",
+            "key": "resourcesBlock",
+            "description": "Content for Resources",
+            "elementTypeOptions": [
+                "resources/resources"
+            ]
+        }
+    ]
+}

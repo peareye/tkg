@@ -1,0 +1,22 @@
+{
+    "elementName": "FAQ",
+    "elementDescription": "Add a question/answer to website.",
+    "settings": [
+        {
+            "category": "element",
+            "label": "FAQ Question",
+            "key": "faq",
+            "value": "",
+            "inputType": "text",
+            "help": "Enter the FAQ question."
+        },
+        {
+            "category": "element",
+            "label": "FAQ Answer",
+            "key": "faqAnswer",
+            "value": "",
+            "inputType": "textarea",
+            "help": "Enter the FAQ answer."
+        }
+    ]
+}

@@ -65,7 +65,7 @@
 
 // Section Styles
 .section {
-    padding-block: $spacer * 8;
+    padding-block: $spacer * 4;
     width        : 100%;
 
     &:nth-child(even) {
@@ -82,11 +82,8 @@
     }
 
     &--aboutBlock {
-        // border: dashed 3px blue;
         row-gap: calc($spacer * 2);
-        >* {
-            // border: dashed 5px green;
-        }
+    
     }
     &--servicesBlock {
         background-color: color(primary-lighter);
