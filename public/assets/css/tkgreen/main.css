@@ -209,6 +209,9 @@ p + p {
 .section:first-of-type {
   padding-block-start: 2em;
 }
+.section:first-of-type > * + * {
+  margin-block-start: 4em;
+}
 .section--aboutBlock {
   row-gap: 2em;
 }
