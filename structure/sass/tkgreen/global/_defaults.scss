@@ -1,0 +1,104 @@
+/* Default Styles - Global */
+*,
+*::before,
+*::after {
+    margin : 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width     : 100vw;
+    height    : 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+p::selection {
+    @include dc(color(accent));
+}
+
+body {
+    background : neutral(1);
+    font-family: $ff-sans-body;
+    font-size  : 1rem;
+    line-height: 1.6;
+
+    display       : flex;
+    flex-direction: column;
+
+    // > 576px
+    @include mq(xs) {}
+
+    // > 850px
+    @include mq(small) {}
+
+    // > 990px
+    @include mq(medium) {}
+
+    // > 1500px
+    @include mq(big) {}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family   : $ff-sans-headings;
+    line-height   : 1.1;
+    letter-spacing: $ls;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+p+p {
+    margin-block-start: $spacer;
+}
+
+// Element Globals
+
+.element {
+    // background: orange;
+
+    &__title {
+        // outline: dashed 1px blue;
+        // @include dc(color(primary));
+
+    }
+
+    &__content {
+        width        : min(100%, $wide-container-width);
+        margin-inline: auto;
+    }
+}

@@ -1,0 +1,101 @@
+.header-wrapper {
+  width  : 100%;
+  display: grid;
+  gap    : $spacer;
+  border-top: .75em solid color(primary);
+}
+
+.header {
+  --header-font-size : 1rem;
+  margin-inline      : auto;
+  padding-block-start: $spacer;
+  padding-inline     : $spacer;
+  width              : min(100%, $wide-container-width);
+ 
+
+  display        : flex;
+  flex-direction : column;
+  gap            : $spacer;
+  align-items    : center;
+  justify-content: center;
+
+  >* {
+    flex: 1;
+  }
+
+  // media query for header 
+  @include mq(small) {
+    flex-direction : row;
+    justify-content: space-between;
+    gap            : calc($spacer * .25);
+  }
+
+  // Header Logo
+  .logo {
+    align-self: center;
+    max-width : fit-content;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width        : min(100%, 20em);
+    height       : auto;
+    margin-inline: auto;
+
+  }
+
+  // All href within header
+  &__link {
+    text-decoration: none;
+    font-size      : var(--header-font-size);
+    transition     : all 125ms ease-in;
+
+    &:hover,
+    &:focus {
+      --header-font-size: 1.1rem;
+      color             : color(accent-light);
+      font-weight       : $fw-b;
+    }
+  }
+  // Location Block
+  &__location,
+  .social {
+    display: none;
+    @include mq(small){
+      display: block;
+    }
+  }
+
+  // All Meta Blocks 
+  &__phone,
+  &__location,
+  .social {
+    font-size : var(--header-font-size);
+    text-align: center;
+
+
+    @include mq(small) {
+      --header-font-size: .9rem;
+    }
+  }
+
+  .social {
+    display        : flex;
+    gap            : $spacer;
+    justify-content: center;
+    align-items    : center;
+
+    >* {
+      --header-font-size: 2rem;
+
+      &:hover,
+      &:focus {
+        color             : color(accent);
+        --header-font-size: 2.1rem;
+      }
+    }
+  }
+}

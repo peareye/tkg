@@ -1,0 +1,84 @@
+ // Contact Styles
+
+ .contact-form {
+   display: grid;
+   gap    : $spacer;
+
+   @include mq(small) {
+     margin-block-start: 0;
+   }
+
+   ::placeholder {
+     color    : rgba(neutral(4), .75);
+     font-size: .9em;
+   }
+
+   .input-group {
+     display    : flex;
+     flex-flow  : column nowrap;
+     align-items: baseline;
+   }
+
+   /* Add styles to 'label' selector */
+   label {
+     font-weight: $fw-l;
+     font-size  : .9em;
+     padding-block-end: .2em
+   }
+
+   /* Add styles to 'input' and 'textarea' selectors */
+   input[type=text],
+   input[type=email],
+   textarea {
+     padding         : .5em;
+     width           : 100%;
+     box-shadow      : $bs;
+     background-color: neutral(2);
+     border-radius   : $br;
+     border          : none;
+
+     grid-column: 2 / 3;
+
+     transition: all 125ms ease-in-out;
+   }
+
+   /* Add styles to show 'focus' of selector */
+   input[type=text]:focus,
+   input[type=email]:focus,
+   textarea:focus {
+     border : 1px dashed color(accent);
+     outline: none;
+   }
+
+   // This styles the thank you paragraph after form submission.
+   p {
+     padding      : $spacer;
+     font-weight  : $fw-n;
+     border-radius: $br;
+     box-shadow   : $bs;
+     font-size    : 1.3rem !important;
+     border       : solid color(secondary) .05em;
+
+     grid-column: 1 / -1;
+   }
+ }
+
+ .contact-info+.contact-form:has(> p) {
+   display: none;
+ }
+
+ .contact-info {
+   padding-inline  : $spacer;
+   padding-block   :$spacer;
+   margin-block-start: calc($spacer * 1.5);
+
+   border-radius   : $br;
+   box-shadow      : $bs;
+   background-color: neutral(2);
+
+  align-self: start;
+
+   &__phone {
+    margin-block-start: $spacer
+   }
+ }

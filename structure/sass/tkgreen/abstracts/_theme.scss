@@ -1,0 +1,92 @@
+// Theme
+
+// Color Pallette
+$clr-red    : #b82925;
+$clr-blue   : hsl(231, 58%, 37%);
+$clr-orange : #ff781f;
+$clr-green  : #25b82a;
+$clr-pink   : #ffadbb;
+
+// Neutral Pallette
+$neutral-1: hsl(0, 4%, 100%);
+$neutral-2: hsl(180, 3%, 94%);
+$neutral-3: hsl(0, 4%, 50%);
+$neutral-4: hsl(208, 7%, 46%);
+$neutral-5: hsl(345, 6%, 13%);
+
+
+$neutral-1     : hsl(231, 15%, 100%);
+$neutral-2     : hsl(231, 15%, 97%);
+$neutral-3     : hsl(231, 15%, 65%);
+$neutral-4     : hsl(231, 15%, 46%);
+$neutral-5     : hsl(233, 15%, 16%);
+$clr-primary   : $clr-blue;
+$clr-secondary : adjust-hue($clr-primary, -30);
+$clr-accent    : $clr-red;
+
+
+// Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
+
+$neutrals: (1: $neutral-1,
+  2: $neutral-2,
+  3: $neutral-3,
+  4: $neutral-4,
+  5: $neutral-5,
+);
+
+$clrs: (primary: $clr-primary,
+  primary-dark: darken($clr-primary, 20%),
+  primary-light: lighten($clr-primary, 10%),
+  primary-lighter: lighten($clr-primary, 40%),
+  secondary: $clr-secondary,
+  secondary-dark: darken($clr-secondary, 20%),
+  secondary-light: lighten($clr-secondary, 10%),
+  secondary-lighter: lighten($clr-secondary, 60%),
+  accent: $clr-accent,
+  accent-dark: darken($clr-accent, 20%),
+  accent-light: lighten($clr-accent, 10%),
+);
+
+// Default Element Styles 
+
+// border-radius
+$br    : 7px;
+// line spacing
+$ls    : 2px;
+// default spacer
+$spacer: 1em;
+// box shadow(s)
+$bs1: 0 .5em 1em rgba(neutral(5), .15);
+$bs2: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+$bs: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+
+// Font Variables
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=PT+Serif+Caption&family=Patua+One&family=Roboto:wght@300;400;700&display=swap');
+$fw-l             : 300;
+$fw-n             : 400;
+$fw-m             : 600;
+$fw-b             : 700;
+
+$ff-serif: 'PT Serif',
+serif;
+$ff-sans-body: 'Lato',
+sans-serif;
+$ff-sans-headings: 'Roboto',
+sans-serif;
+
+// Layout Variables
+$wide-container-width  : 60rem;
+$narrow-container-width: 40rem;
+$full-container-width  : calc(100% - $spacer);
+
+$breakpoints: (
+  xs: 36rem,
+  small: 48rem,
+  medium: 1025px,
+  big: 90rem);
+
+// Navigation Variables
+$nav-height: 3.75em;
+$scale     : 0; // Scales the navigation. valid #'s 0 -> 1. Zero value is collapsed.

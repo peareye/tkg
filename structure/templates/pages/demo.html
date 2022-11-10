@@ -6,29 +6,61 @@
 
 
 {% block body %}
+
+{% if page.blocks.contactBlock %}
+<section class="section grid-section section--contactBlock">
+  {{ getBlockElementsHtml(page.blocks.contactBlock) }}
+</section>
+{% endif %}
+
+{% if page.blocks.aboutBlock %}
+<section class="section grid-section section--aboutBlock">
+
+  {% if page.blocks.elementHeaderAboutBlock %}
+  {{ getBlockElementsHtml(page.blocks.elementHeaderAboutBlock) }}
+  {% endif %}
+
+  {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
+</section>
+{% endif %}
+
 {% if page.blocks.textBlock %}
 <section class="section grid-section section--textBlock">
   {{ getBlockElementsHtml(page.blocks.textBlock) }}
 </section>
 {% endif %}
 
-{% if page.blocks.aboutBlock %}
-<section class="section grid-section section--aboutBlock">
-  {{ getBlockElementsHtml(page.blocks.aboutBlock) }}
-</section>  
+{% if page.blocks.servicesBlock %}
+<section class="section grid-section section--servicesBlock">
+
+  {% if page.blocks.elementHeaderServicesBlock %}
+  {{ getBlockElementsHtml(page.blocks.elementHeaderServicesBlock) }}
+  {% endif %}
+
+  <div class="grid-three-columns">
+    {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
+  </div>
+</section>
 {% endif %}
+
+
+{# NOTE:  Testimonials needs to be worked on in such a way that on the home page there are 3 of the most recent testimonials, with a read more button at bottom that takes you to the page of all testimonials...all details, looped into one page. 
+  
+There also needs to be a limit to how long a testimonial can be so that it doesn't stretch too far down the page. There should be a see more, read more..something like that... link within each of the testimonials that will also link to the testimonials page.#}
 
 {% if page.blocks.testimonialsBlock %}
 <section class="section grid-section section--testimonialsBlock">
+
+  {% if page.blocks.elementHeaderTestimonialsBlock %}
+  {{ getBlockElementsHtml(page.blocks.elementHeaderTestimonialsBlock) }}
+  {% endif %}
+
   <div class="grid-three-columns testimonials">
     {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
   </div>
-</section>   
-{% endif %}
-
-{% if page.blocks.collectionBlock %}
-<section class="section grid-section section--collectionBlock">
-  {{ getBlockElementsHtml(page.blocks.collectionBlock) }}
+  <div class="readMore">
+    <a href="/testimonials" class="btn">Read More</a>
+  </div>
 </section>
 {% endif %}
 
@@ -50,11 +82,10 @@
 </section>
 {% endif %}
 
-{% if page.blocks.contactBlock %}
-<section class="section grid-section section--contactBlock">
-  {{ getBlockElementsHtml(page.blocks.contactBlock) }}
+{% if page.blocks.collectionBlock %}
+<section class="section grid-section section--collectionBlock">
+  {{ getBlockElementsHtml(page.blocks.collectionBlock) }}
 </section>
 {% endif %}
 
 {% endblock body %}
-

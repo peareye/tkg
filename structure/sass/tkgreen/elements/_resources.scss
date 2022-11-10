@@ -1,0 +1,33 @@
+.resources {
+    margin-block-start: calc($spacer * 2);
+
+    .resource {
+        padding-inline  : $spacer;
+        padding-block   : calc($spacer / 2);
+        background      : neutral(1);
+        box-shadow      : $bs;
+        background-color: neutral(1);
+        border          : solid 1px neutral(2);
+        border-radius   : $br;
+
+        grid-auto-rows: 1fr;
+
+
+
+
+  
+
+        &__content {
+height: 100%;
+        display  : flex;
+        flex-flow: column;
+            a {
+                text-decoration   : underline;
+                color             : color(primary);
+                margin-block-start: auto;
+                display           : block;
+               
+            } 
+        }
+    }
+}

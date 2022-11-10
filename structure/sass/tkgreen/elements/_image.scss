@@ -1,0 +1,26 @@
+ // Image Element
+ .imageElement {
+  
+   img {
+     aspect-ratio : 16 / 9;
+     object-fit   : cover;
+     min-height   : 100%;
+     border-radius: $br;
+     box-shadow   : $bs;
+     margin-block-end: $spacer;
+   }
+
+   &__content {
+    padding-block-start: $spacer;
+
+    // Adjust the spacing between Image and Title when stacked.
+     @include mq(medium){
+     padding-block-start: 0;
+     }
+   }
+
+   .element__content {
+     margin-block-end: $spacer;
+     margin-block-start: $spacer;
+   }
+ }

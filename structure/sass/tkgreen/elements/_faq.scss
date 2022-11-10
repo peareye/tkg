@@ -1,0 +1,56 @@
+details {
+    font-size   : 1rem;
+    margin-block: $spacer;
+    box-shadow  : $bs;
+    border-radius: $br;
+    position     : relative;
+
+    .summary-title {
+        user-select: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .summary-content {
+        border-top : 1px solid neutral(2);
+        cursor     : default;
+        padding    : $spacer;
+        font-weight: $fw-l;
+    }
+
+    summary {
+        list-style: none;
+        padding   : $spacer;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover .summary-chevron-up svg {
+            opacity: 1;
+        }
+    }
+
+    .summary-chevron-up svg {
+        opacity: 0.5;
+    }
+
+    .summary-chevron-up,
+    .summary-chevron-down {
+        pointer-events: none;
+        position      : absolute;
+        top           : 0.75em;
+        right         : $spacer;
+        background    : #ffffff;
+
+        svg {
+            display: block;
+        }
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+}

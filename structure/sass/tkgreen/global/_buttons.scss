@@ -1,0 +1,51 @@
+.btn {
+  padding-inline  : 1.25em;
+  padding-block   : 1em;
+  background-color: color(accent);
+  text-align      : center;
+  text-decoration : none;
+  @include dc(color(accent));
+  border-radius : $br;
+  text-transform: uppercase;
+  letter-spacing: $ls;
+  border: none;
+  cursor        : pointer;
+  font-size     : .75rem;
+  font-weight   : $fw-b;
+  font-family   : inherit;
+  transform     : scale(1);
+  width   : max-content;
+
+  display: inline-block;
+
+  position: relative;
+
+  transition: all 125ms ease-in;
+
+  &:hover,
+  &:focus {
+    background: color(accent-dark);
+    transform : scale(1.1);
+  }
+
+  &__cta {
+    font-size       : 1rem;
+    background-color: transparent;
+    border          : solid neutral(1) 3px;
+    font-weight     : $fw-b;
+
+  }
+
+  &__header {
+    @include dc(color(accent));
+    font-weight: $fw-b;
+  }
+
+  &__submit {
+    border: none;
+  }
+&__back {
+ margin-inline: auto $spacer;
+ 
+}
+}

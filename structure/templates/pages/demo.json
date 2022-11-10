@@ -7,16 +7,23 @@
         {
             "name": "Text",
             "key": "textBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
                 "text/text"
               ]
         },
-
+        {
+            "name": "Element Header Collection",
+            "key": "elementHeaderCollectionBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
         {
             "name": "Collection",
             "key": "collectionBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
                 "collection/collection"
               ]
@@ -24,7 +31,7 @@
         {
             "name": "Contact",
             "key": "contactBlock",
-            "description": "Simple text areas",
+            "description": "Contact Element",
             "elementTypeOptions": [
                 "contact/contact"
               ]
@@ -32,7 +39,7 @@
         {
             "name": "Embedded",
             "key": "embeddedBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
                 "embedded/embedded"
               ]
@@ -40,7 +47,7 @@
         {
             "name": "Gallery",
             "key": "galleryBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
                 "gallery/gallery"
               ]
@@ -48,28 +55,59 @@
         {
             "name": "Image",
             "key": "imageBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
                 "image/image"
+              ]
+        },
+        {
+            "name": "Element Header Testimonials",
+            "key": "elementHeaderTestimonialsBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
               ]
         },
     
         {
             "name": "Testimonials",
             "key": "testimonialsBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
-                "text/text",
                 "testimonials/testimonials"
+              ]
+        },
+        {
+            "name": "Element Header About",
+            "key": "elementHeaderAboutBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
               ]
         },
         {
             "name": "About",
             "key": "aboutBlock",
-            "description": "Simple text areas",
+            "description": "Update Description Here",
             "elementTypeOptions": [
-                "text/text",
                 "about/about"
+              ]
+        },
+        {
+            "name": "Element Header Services",
+            "key": "elementHeaderServicesBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
+        {
+            "name": "Services",
+            "key": "servicesBlock",
+            "description": "Services Block",
+            "elementTypeOptions": [
+        
+                "service/service"
               ]
         }
     ]

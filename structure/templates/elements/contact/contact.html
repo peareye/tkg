@@ -2,10 +2,10 @@
 {% import "includes/_macros.html" as pitonMacro %}
 
 <h2 class="element__title">{{ element.title }}</h2>
-<div class="flex-two-columns">
 
+<div class="flex-two-columns contactElement">
   <div class="contact-info">
-
+    <div class="contact-info__content">{{ element.content }}</div>
     <div class="contact-info__phone">
       Call us at <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
     </div>
@@ -13,42 +13,41 @@
     <div class="contact-info__email">
       Email us at <a href="mailto:info@tkgreen.com">Info@TKGreen.com</a>
     </div>
-
-    <div class="contact-info__content">{{ element.content }}</div>
-
   </div>
+  
+  <form class="contact-form" id="contact-form" method="post" accept-charset="utf-8" data-contact-form="true">
+
+    <input type="hidden" name="{{ site.environment.csrfTokenName }}" value="{{ site.environment.csrfTokenValue }}">
+    <input type="hidden" name="context" value="{{ page.title }}">
+
+    <div class="input-group">
+      <label>Your Name</label>
+      <input type="text" class="contact-form__form-control" name="name" maxlength="100" placeholder="Name"
+        autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label>Your Email<span class="text-danger"> *</span></label>
+      <input type="email" class="contact-form__form-control" name="email" maxlength="100" placeholder="Email address"
+        required autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label>Message<span class="text-danger"> *</span></label>
+      <textarea class="contact-form__form-control" rows="5" name="message" required></textarea>
+    </div>
+
+    <div class="input-group">
+      <button class="btn btn__submit styled-link" type="submit">Submit</button>
+    </div>
+
+    <div class="input-group">
+      <div><span class="text-danger">* </span>Required</div>
+    </div>
+
+    {{ pitonMacro.contactHoneypot() }}
+  </form>
+
 
  
-    <form class="contact-form" id="contact-form" method="post" accept-charset="utf-8" data-contact-form="true">
-      <input type="hidden" name="{{ site.environment.csrfTokenName }}" value="{{ site.environment.csrfTokenValue }}">
-      <input type="hidden" name="context" value="{{ page.title }}">
-
-      <div class="input-group">
-        <label>Your Name</label>
-        <input type="text" class="contact-form__form-control" name="name" maxlength="100" placeholder="Name"
-          autocomplete="off">
-      </div>
-
-      <div class="input-group">
-        <label>Your Email<span class="text-danger"> *</span></label>
-        <input type="email" class="contact-form__form-control" name="email" maxlength="100" placeholder="Email address"
-          required autocomplete="off">
-      </div>
-
-      <div class="input-group span">
-        <label>Message<span class="text-danger"> *</span></label>
-        <textarea class="contact-form__form-control" rows="5" name="message" required></textarea>
-      </div>
-
-      <div class="input-group span">
-        <button class="btn btn__submit styled-link" type="submit">Submit</button>
-      </div>
-
-      <div class="input-group span">
-        <div><span class="text-danger">* </span>Required</div>
-      </div>
-
-      {{ pitonMacro.contactHoneypot() }}
-    </form>
-
 </div>

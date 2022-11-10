@@ -8,33 +8,39 @@
 
 {% if page.blocks.introBlock %}
 <section class="section grid-section section--introBlock">
+
     <div class="grid-three-columns">
         {{ getBlockElementsHtml(page.blocks.introBlock) }}
     </div>
+
 </section>
 {% endif %}
 
 {% if page.blocks.servicesBlock %}
 <section class="section grid-section section--servicesBlock">
+
     {% if page.blocks.elementHeaderServicesBlock %}
-       {{ getBlockElementsHtml(page.blocks.elementHeaderServicesBlock) }}
+    {{ getBlockElementsHtml(page.blocks.elementHeaderServicesBlock) }}
     {% endif %}
 
     <div class="grid-three-columns">
         {{ getBlockElementsHtml(page.blocks.servicesBlock) }}
     </div>
+
 </section>
 {% endif %}
 
 {% if page.blocks.testimonialsBlock %}
 <section class="section grid-section section--testimonialsBlock">
+
     {% if page.blocks.elementHeaderTestimonialsBlock %}
-        {{ getBlockElementsHtml(page.blocks.elementHeaderTestimonialsBlock) }}
+    {{ getBlockElementsHtml(page.blocks.elementHeaderTestimonialsBlock) }}
     {% endif %}
 
     <div class="grid-three-columnsss grid-even-columns testimonials">
         {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
     </div>
+
 </section>
 {% endif %}
 

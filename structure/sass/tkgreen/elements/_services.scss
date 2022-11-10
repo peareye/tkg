@@ -1,0 +1,44 @@
+.service {
+    @include dc(neutral(1));
+    padding            : $spacer;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: color(accent);
+    box-shadow         : $bs;
+    border-radius      : $br;
+
+    display: flex;
+    gap    : $spacer;
+
+    .element__title {
+        // text-align: center;
+        color     : color(primary);
+    }
+
+    &__content {
+        padding-inline-start: $spacer * 1;
+
+        p {
+            line-height       : 1.2;
+            margin-block-start: $spacer;
+            color             : neutral(4);
+            font-size         : .9rem;
+        }
+    }
+
+    &__icon {
+        height       : 5em;
+        width        : 5em;
+        margin-inline: auto;
+
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        transform      : rotate(45deg);
+        color          : color(primary);
+
+        .fas {
+            transform: rotate(-45deg);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/theme';
+@import 'abstracts/typography';
+
+@import 'global/reset';
+@import 'global/utilities';
+@import 'global/defaults';
+@import 'global/layout';
+@import 'global/buttons';
+
+@import 'includes/header';
+@import 'includes/hamburger';
+@import 'includes/navbar';
+@import 'includes/pagination';
+@import 'includes/social';
+@import 'includes/footer';
+
+@import 'elements/collection';
+@import 'elements/contact';
+@import 'elements/embedded';
+@import 'elements/gallery';
+@import 'elements/hero';
+@import 'elements/image';
+@import 'elements/about';
+@import 'elements/text';
+@import 'elements/services';
+@import 'elements/military';
+@import 'elements/testimonials';
+@import 'elements/testimonials';
+@import 'elements/faq';
+@import 'elements/resources';
+
+@import 'pages/home';
+@import 'pages/about';
+

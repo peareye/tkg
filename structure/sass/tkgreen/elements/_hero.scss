@@ -1,0 +1,69 @@
+// Hero style
+.hero {
+    --hero-height    : 80vh;
+    --hero-min-height: 27em;
+    height           : min(var(--hero-height), var(--hero-min-height));
+    position         : relative;
+    z-index          : 100;
+  
+    @include mq(small) {
+      --hero-min-height: 800px;
+    }
+  
+    &__overlay {
+      position: absolute;
+      inset   : 0;
+      z-index : 101;
+    }
+  
+    &__content {
+      width        : min(100% - $spacer, 60ch);
+      margin-inline: auto;
+      padding-block: calc($spacer * 2);
+      text-align   : center;
+      color        : neutral(1);
+  
+      display        : flex;
+      gap            : calc($spacer / 4);
+      flex-direction : column;
+      align-items    : center;
+      justify-content: center;
+  
+      position: absolute;
+      inset   : 0;
+      z-index : 102;
+  
+      &-title {
+        line-height: 1;
+        font-size  : 3rem;
+        font-weight: $fw-b;
+  
+        @include mq(small) {
+          font-weight: $fw-b;
+        }
+      }
+  
+    }
+  
+    &__image {
+      width : 100vw;
+      height: min(var(--hero-height), var(--hero-min-height));
+  
+      img {
+        width     : 100vw;
+        height    : min(var(--hero-height), var(--hero-min-height));
+        object-fit: cover;
+        z-index   : 100;
+      }
+    }
+  
+    .btn {
+      display: none;
+  
+      @include mq(small) {
+        margin-block-start: $spacer;
+        display           : inline-block;
+      }
+    }
+  
+  }

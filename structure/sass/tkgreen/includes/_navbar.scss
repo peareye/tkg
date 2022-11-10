@@ -1,0 +1,96 @@
+/* Navigation Styles w/sub navigation dropdown and responsive toggles */
+
+.navbar {
+    background-color: color(primary);
+    height          : $nav-height;
+    position        : relative;
+    z-index         : 1001;
+  
+    @include mq(small) {
+      height: auto;
+    }
+  
+    .nav {
+      margin          : 0;
+      padding         : 0;
+      background-color: color(primary-light);
+      text-align      : center;
+  
+      transform       : scaleY($scale); //Set to zero for animation
+      opacity         : $scale; //Set to zero for animation
+      transition      : transform all .2s ease-in;
+      transform-origin: top;
+  
+      @include mq(small) {
+        background     : unset;
+        display        : flex;
+        flex-flow      : row nowrap;
+        justify-content: center;
+  
+        transform: scaleY(1); //Scale set to 1 for desktop navigation
+        opacity  : 1; //Opacity set to 1 for desktop navigation
+        position : static; //Position static for desktop navigation
+        width    : auto; //Width Auto to break subnav outside of parent
+      }
+  
+      &-link {
+        padding-block : 0;
+        list-style    : none;
+        width         : 100%;
+        position      : relative;
+        font-size     : 1.5rem;
+        font-weight   : $fw-l;
+        letter-spacing: $ls;
+        border-bottom : solid neutral(2) 1px;
+  
+        @include mq(small) {
+          padding-inline: .75rem;
+          font-size     : 1rem;
+          font-weight: $fw-l;
+          width         : auto;
+          border        : none;
+        }
+  
+        a {
+          padding-inline    : 1rem;
+          padding-block     : 1rem;
+          text-decoration   : none;
+          color             : neutral(1);
+          display           : block;
+  
+          &:hover {
+            background-color: color(primary-dark);
+          }
+        }
+        &--link {
+          background-color: transparent;
+        }
+      }  
+    }
+  }
+  
+  // Navbar w/Hero
+  .hero {
+    .navbar {
+      background-color: transparent;
+      position        : absolute;
+      top             : 0;
+      right           : 0;
+      left            : 0;
+    }
+  }
+  
+  /* Toggle States */
+  .toggle:checked~.subnav {
+    transform: scaleY(1);
+    opacity  : 1;
+    height   : auto;
+  
+  }
+  
+  .nav-toggle:checked~.nav {
+    transform : scaleY(1);
+    opacity   : 1;
+    min-height: calc(100vh - 60px);
+    height    : auto;
+  }
