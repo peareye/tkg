@@ -44,6 +44,19 @@
     }
 
     &--contactBlock {}
+
+    &--inspectionBlock {
+      >* {
+        >*+* {
+            margin-block: calc($spacer * 3);
+        }
+        li {
+            margin-inline-start: $spacer;
+        }
+       
+      }
+   
+    }
 }
 
 

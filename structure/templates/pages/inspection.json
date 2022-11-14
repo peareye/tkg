@@ -1,0 +1,31 @@
+{
+    "templateName": "inspections",
+    "templateDescription": "Your Inspection Page",
+    "showFeaturedImage": true,
+    "templateType": "page",
+    "blocks": [
+        {
+            "name": "inspection",
+            "key": "inspectionBlock",
+            "description": "Content for inspections"
+        }, 
+        {
+            "name": "Element Header Components",
+            "key": "elementHeaderComponentsBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
+        {
+            "name": "components",
+            "key": "componentsBlock",
+            "description": "Your Inspection Components and Systems"
+        },
+        {
+            "name": "documents",
+            "key": "documentsBlock",
+            "description": "Your Inspection Documents"
+        }
+    ]
+}

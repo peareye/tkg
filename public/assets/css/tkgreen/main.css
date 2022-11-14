@@ -218,6 +218,13 @@ p + p {
 .section--imageBlock {
   gap: 3em !important;
 }
+.section--inspectionBlock > * > * + * {
+  margin-block: 3em;
+}
+.section--inspectionBlock > * li {
+  margin-inline-start: 1em;
+}
+
 [class*=grid-] {
   display: grid;
   gap: 1em 2em;
