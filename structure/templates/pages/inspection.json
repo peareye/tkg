@@ -23,6 +23,14 @@
             "description": "Your Inspection Components and Systems"
         },
         {
+            "name": "Element Header Documents",
+            "key": "elementHeaderDocumentsBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
+        {
             "name": "documents",
             "key": "documentsBlock",
             "description": "Your Inspection Documents"

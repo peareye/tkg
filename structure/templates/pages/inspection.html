@@ -36,6 +36,7 @@
 
 </section>
 {% endif %}
+
 {% if page.blocks.documentsBlock %}
 <section class="section grid-section section--documentsBlock">
 
@@ -49,39 +50,5 @@
 
 </section>
 {% endif %}
-
-
-
-
-
-{# <section class="section grid-section  section--resourceBlock">
-
-
-  {% if page.blocks.elementHeaderResourcesBlock %}
-  {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
-  {% endif %}
-
-
-
-  <div class="resources flex-two-columns">
-
-    <div class="resources__sidebar">
-      <ul class="resources__sidebar-ul">
-        {% for c in page.blocks.resourcesBlock %}
-        <li class="resources__sidebar-li">
-
-          <a class="resources__sidebar-link" href="#{{ c.title }}">
-            {{ c.title }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="resources__content">
-      {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
-    </div>
-  </div>
-</section> #}
 
 {% endblock body %}
