@@ -98,4 +98,10 @@
       }
     }
   }
+  .social {
+    >* {
+      color: $clr-primary;
+    }
+   
+  }
 }

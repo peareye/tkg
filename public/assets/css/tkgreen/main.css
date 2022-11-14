@@ -398,6 +398,9 @@ p + p {
   color: #b82925;
   --header-font-size: 2.1rem;
 }
+.header .social > * {
+  color: hsl(231deg, 58%, 37%);
+}
 
 .nav-toggle, .toggle {
   position: absolute;
