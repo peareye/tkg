@@ -1,14 +1,4 @@
 {
     "elementName": "Resources",
-    "elementDescription": "Add a resource to website.",
-    "settings": [
-        {
-            "category": "element",
-            "label": "Resource URL",
-            "key": "resourceURL",
-            "value": "",
-            "inputType": "text",
-            "help": "Enter the resource URL."
-        }
-    ]
+    "elementDescription": "Add a resource to website."
 }

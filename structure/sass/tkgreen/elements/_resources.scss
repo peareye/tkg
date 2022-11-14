@@ -1,33 +1,65 @@
 .resources {
-    margin-block-start: calc($spacer * 2);
+    @include word-wrap();
 
-    .resource {
-        padding-inline  : $spacer;
-        padding-block   : calc($spacer / 2);
-        background      : neutral(1);
-        box-shadow      : $bs;
-        background-color: neutral(1);
-        border          : solid 1px neutral(2);
-        border-radius   : $br;
+    &__sidebar {
+        display: none;
 
-        grid-auto-rows: 1fr;
+        @include mq(small) {
+            display  : block;
+            max-width: max-content;
 
+            &-li {
+                list-style: none;
+            }
 
+            &-link {
+                display        : block;
+                font-weight    : $fw-m;
+                color          : neutral(5);
+                text-decoration: none;
+            }
 
+            &-ul {
+                position: sticky;
+                top     : $spacer;
+            }
+        }
+    }
 
-  
+    &__content {
+        a {
+            position: relative;
 
-        &__content {
-height: 100%;
-        display  : flex;
-        flex-flow: column;
-            a {
-                text-decoration   : underline;
-                color             : color(primary);
-                margin-block-start: auto;
-                display           : block;
-               
-            } 
+            &::after {
+                content             : '';
+                font-family         : "Font Awesome 5 Free";
+                font-weight         : 900;
+                content             : "\f08e";
+                position            : absolute;
+                padding-inline-start: $spacer;
+
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p:has(> strong) {
+            margin-block-start: $spacer;
+        }
+
+        ul {
+            list-style         : none;
+            padding-block-start: calc($spacer /2);
+        }
+
+        &-title {
+            margin-block-start: $spacer;
+
+            &:nth-child(1) {
+                margin-block-start: 0;
+            }
         }
     }
 }
