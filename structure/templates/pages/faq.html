@@ -12,6 +12,7 @@
 
 
 {% block body %}
+
 <section class="section grid-section section--faqBlock">
   <h2 class="element__title">{{ page.title }}</h2>
 
@@ -21,15 +22,33 @@
 </section>
 
 <section class="section grid-section  section--resourceBlock">
-  {% if page.blocks.elementHeaderResourcesBlock %}
-      {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
-  {% endif %}
+ 
 
-  <div class="resources grid-three-columns">
-      {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
-  </div>
+        {% if page.blocks.elementHeaderResourcesBlock %}
+        {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
+        {% endif %}
+
+
+    
+    <div class="resources flex-two-columns">
+
+      <div class="resources__sidebar">
+        <ul class="resources__sidebar-ul">
+          {% for c in page.blocks.resourcesBlock %}
+          <li class="resources__sidebar-li">
+            {# Loop the element titles here #}
+            <a class="resources__sidebar-link" href="#{{ c.title }}">
+             {{ c.title }}
+            </a>
+          </li>  
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="resources__content">
+        {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
+        </div>
+     </div>
 </section>
-
-
 
 {% endblock body %}
