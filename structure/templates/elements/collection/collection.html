@@ -1,41 +1,57 @@
-{# Collection Element #}
-
-{# Get the collection summary set. The second argument is the number of items to return per page #}
-{% set collection = getCollectionPagesWithPagination(element.collection_id, 6) %}
+{# Collection Element #} {# Get the collection summary set. The second argument
+is the number of items to return per page #} {% set collection =
+getCollectionPagesWithPagination(element.collection_id, 6) %}
 
 <h2 class="element__title">{{ element.title }}</h2>
-<div class="element__content">
-  {{ element.content }}
-</div>
+<div class="element__content">{{ element.content }}</div>
 
-
-<ul class="cards grid-even-columns">
-
+<ul class="cards">
   {% for detail in collection %}
-  
-  <a class="card styled-link" href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}">
-    
-    <li class="card-inner">
-    
+
+  <li class="card">
+    <div class="card__title">
+      <h3>{{ detail.title }}</h3>
+    </div>
+
+    <div class="card__content">
+
       {% if detail.media.filename %}
-        <div class="card__image">
-          <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}">
-        </div>
+      <div class="card__image">
+        <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}" />
+      </div>
+      {% endif %}
+
+      <p class="card__text">{{ detail.first_element_content }}</p>
       
-        {% endif %}
+    </div>
+  </li>
+
+  {% endfor %}
+</ul>
+
+{#
+<ul class="cards grid-even-columns">
+  {% for detail in collection %}
+
+  <a
+    class="card styled-link"
+    href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}"
+  >
+    <li class="card-inner">
+      {% if detail.media.filename %}
+      <div class="card__image">
+        <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}" />
+      </div>
+
+      {% endif %}
 
       <div class="card__title">
         <h3>{{ detail.title }}</h3>
       </div>
-      <p class="card__text">
-        {{ detail.meta_description }}
-      </p>
-      
+      <p class="card__text">{{ detail.meta_description }}</p>
     </li>
   </a>
 
   {% endfor %}
 </ul>
-
-{# Print pagination navigation #}
-{{ pagination() }}
+#} {# Print pagination navigation #} {{ pagination() }}

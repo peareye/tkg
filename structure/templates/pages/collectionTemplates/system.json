@@ -1,0 +1,14 @@
+{
+ "templateName": "Systems Detail",
+ "templateDescription": "A page of Systems We Inspect",
+ "showSubTitle": true,
+ "showFeaturedImage": true,
+ "templateType": "collection",
+ "blocks": [
+         {
+         "name": "Systems",
+         "key": "systemBlock",
+         "description": "Systems Block"
+     }
+ ]
+}

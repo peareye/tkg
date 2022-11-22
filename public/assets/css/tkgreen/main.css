@@ -742,54 +742,34 @@ p + p {
 }
 
 .cards {
-  gap: 2em;
-}
-
-.card {
-  background-color: hsl(231deg, 15%, 100%);
-  color: rgba(35, 36, 47, 0.99);
-  text-decoration: none;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-  border-radius: 7px;
-  overflow: hidden;
-}
-.card-inner {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
-.card__image img {
-  aspect-ratio: 16/9;
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(90%);
-  transition: filter 125ms ease-in;
+.cards .card {
+  background: hsl(231deg, 15%, 100%);
+  border: solid 1px hsl(231deg, 15%, 97%);
+  border-radius: 7px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
-.card__image img:hover {
-  filter: brightness(100%);
+.cards .card__image {
+  max-width: 250px;
+  margin-inline-start: -1em;
 }
-.card__title {
-  padding-inline: 1em;
-  padding-block-start: 1em;
-  padding-block-end: 1em;
+.cards .card__title {
   background-color: hsl(231deg, 15%, 97%);
   color: rgba(35, 36, 47, 0.99);
+  padding: 1em;
+  font-family: ff-sans-headings;
+}
+.cards .card__content {
+  padding-inline: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.card__title h3 {
-  background-color: hsl(231deg, 15%, 97%);
-  color: rgba(35, 36, 47, 0.99);
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.card__text {
+.cards .card__text {
   padding-inline: 1em;
-  padding-block: 1em;
-  font-size: 0.9rem;
-  font-weight: 300;
+  padding-inline-start: 0;
 }
 
 .contact-form {
