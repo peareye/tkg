@@ -992,11 +992,12 @@ p + p {
   padding: 1em;
   border-bottom-width: 4px;
   border-bottom-style: solid;
-  border-bottom-color: #b82925;
+  border-bottom-color: rgba(184, 41, 37, 0.75);
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   border-radius: 7px;
   display: flex;
   gap: 1em;
+  position: relative;
 }
 .service .element__title {
   color: hsl(231deg, 58%, 37%);
@@ -1011,14 +1012,16 @@ p + p {
   font-size: 0.9rem;
 }
 .service__icon {
-  height: 5em;
-  width: 5em;
-  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
   color: hsl(231deg, 58%, 37%);
+  color: rgba(40, 56, 149, 0.15);
+  position: absolute;
+  left: 0.25em;
+  top: 0.3333333333em;
+  font-size: 2.5em;
 }
 .service__icon .fas {
   transform: rotate(-45deg);

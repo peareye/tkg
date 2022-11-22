@@ -1,8 +1,15 @@
 <li class="slider__slide current-slide">
   <div class="slider__slide--inner">
+
     {% if element.title %}
     <h3>{{ element.title }}</h3>
+    {% endif %} 
+    {% if element.settings.testimonialSubTitle %}
     <h4>{{ element.settings.testimonialSubTitle }}</h4>
-    {% endif %} {% if element.content %} {{ element.content }} {% endif %}
+    {% endif %}
+
+    {% if element.content %} 
+    {{ element.content }} 
+    {% endif %}
   </div>
 </li>

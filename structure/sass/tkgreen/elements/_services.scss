@@ -1,44 +1,48 @@
 .service {
-    @include dc(neutral(1));
-    padding            : $spacer;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-bottom-color: color(accent);
-    box-shadow         : $bs;
-    border-radius      : $br;
+ @include dc(neutral(1));
+ padding            : $spacer;
+ border-bottom-width: 4px;
+ border-bottom-style: solid;
+ border-bottom-color: rgba(color(accent), .75);
+ box-shadow         : $bs;
+ border-radius      : $br;
 
-    display: flex;
-    gap    : $spacer;
+ display: flex;
+ gap    : $spacer;
 
-    .element__title {
-        // text-align: center;
-        color     : color(primary);
-    }
+ position: relative;
 
-    &__content {
-        padding-inline-start: $spacer * 1;
+ .element__title {
+  color: color(primary);
+ }
 
-        p {
-            line-height       : 1.2;
-            margin-block-start: $spacer;
-            color             : neutral(4);
-            font-size         : .9rem;
-        }
-    }
+ &__content {
+  padding-inline-start: $spacer * 1;
 
-    &__icon {
-        height       : 5em;
-        width        : 5em;
-        margin-inline: auto;
+  p {
+   line-height       : 1.2;
+   margin-block-start: $spacer;
+   color             : neutral(4);
+   font-size         : .9rem;
+  }
+ }
 
-        display        : flex;
-        align-items    : center;
-        justify-content: center;
-        transform      : rotate(45deg);
-        color          : color(primary);
+ &__icon {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  transform      : rotate(45deg);
+  color          : color(primary);
 
-        .fas {
-            transform: rotate(-45deg);
-        }
-    }
+  color: rgba(color(primary), .15);
+
+  position : absolute;
+  left     : calc($spacer / 4);
+  top      : calc($spacer / 3);
+  font-size: 2.5em;
+
+  .fas {
+   transform: rotate(-45deg);
+  }
+ }
 }

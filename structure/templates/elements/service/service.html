@@ -1,19 +1,13 @@
 {# Custom Element - Services #}
 
 <div class="service">
+  <div class="service__icon">
+    <i class="fas fa-{{element.settings.icon}} fa-2x"></i>
+  </div>
 
-    <div class="service__icon">
-        <i class="fas fa-{{element.settings.icon}} fa-2x"></i>
-    </div>
+  <div class="service__content">
+    <h3 class="element__title">{{ element.title }}</h3>
 
-
-
-    <div class="service__content">
-        <h3 class="element__title">{{ element.title }}</h3>
-     
-        <div class="element__content">{{ element.content }}</div>
-     
-    
+    <div class="element__content">{{ element.content }}</div>
+  </div>
 </div>
-</div>
-
