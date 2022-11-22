@@ -90,6 +90,7 @@ figcaption {
 
 .element__title {
   @include dc(neutral(1));
+  text-transform: capitalize;
   text-align : center;
   line-height: 1.1;
 

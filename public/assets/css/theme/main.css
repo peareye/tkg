@@ -178,6 +178,7 @@ figcaption {
 .element__title {
   background-color: hsl(0deg, 4%, 100%);
   color: rgba(33, 37, 41, 0.9);
+  text-transform: capitalize;
   text-align: center;
   line-height: 1.1;
 }

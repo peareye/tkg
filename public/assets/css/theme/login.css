@@ -77,7 +77,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -106,7 +105,7 @@ body {
 }
 
 body {
-  background: white;
+  background: hsl(0deg, 4%, 100%);
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -155,25 +154,26 @@ p {
 }
 
 figcaption {
-  color: #6d767e;
+  color: hsl(208deg, 7%, 46%);
   font-size: 0.8rem;
   padding-block-start: 0.5em;
   font-style: italic;
 }
 
 .element__title {
-  background-color: white;
+  background-color: hsl(0deg, 4%, 100%);
   color: rgba(33, 37, 41, 0.9);
+  text-transform: capitalize;
   text-align: center;
   line-height: 1.1;
 }
 .element__title:nth-of-type(even) {
-  background-color: #f0efef;
+  background-color: hsl(0deg, 4%, 94%);
   color: rgba(33, 37, 41, 0.9);
 }
 
 .section__title {
-  background-color: white;
+  background-color: hsl(0deg, 4%, 100%);
   color: rgba(33, 37, 41, 0.9);
 }
 
@@ -208,7 +208,7 @@ figcaption {
   width: 100%;
 }
 .section:nth-child(even) {
-  background: #f0efef;
+  background: hsl(0deg, 4%, 94%);
 }
 .section:nth-child(even) .element__title {
   background-color: inherit;
@@ -243,7 +243,7 @@ figcaption {
 }
 
 .column-narrow {
-  color: #6d767e;
+  color: hsl(208deg, 7%, 46%);
 }
 .column-narrow > * + * {
   margin-block-start: 1em;
@@ -258,10 +258,10 @@ figcaption {
 .btn {
   padding-inline: 1.5em;
   padding-block: 1em;
-  background-color: #b72924;
+  background-color: hsl(2deg, 67%, 43%);
   text-align: center;
   text-decoration: none;
-  background-color: #b72924;
+  background-color: hsl(2deg, 67%, 43%);
   color: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
   text-transform: uppercase;
@@ -282,7 +282,7 @@ figcaption {
 .btn__cta {
   font-size: 1rem;
   background-color: transparent;
-  border: solid white 3px;
+  border: solid hsl(0deg, 4%, 100%) 3px;
   font-weight: 700;
 }
 .btn__header {
@@ -299,7 +299,7 @@ figcaption {
 }
 
 .card {
-  background-color: white;
+  background-color: hsl(0deg, 4%, 100%);
   color: rgba(33, 37, 41, 0.9);
   text-decoration: none;
   box-shadow: 0 0 25px rgba(33, 37, 41, 0.25);
@@ -323,14 +323,14 @@ figcaption {
   padding-inline: 1em;
   padding-block-start: 1em;
   padding-block-end: 1em;
-  background-color: #f0efef;
+  background-color: hsl(0deg, 4%, 94%);
   color: rgba(33, 37, 41, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .card__title h3 {
-  background-color: #f0efef;
+  background-color: hsl(0deg, 4%, 94%);
   color: rgba(33, 37, 41, 0.9);
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -378,7 +378,7 @@ textarea {
   width: 100%;
   padding-block: 0.75em;
   padding-inline: 1em;
-  border: 1px solid #857a7a;
+  border: 1px solid hsl(0deg, 4%, 50%);
   border-radius: 7px;
   grid-column: 2/3;
   font-size: 1rem;
@@ -389,7 +389,7 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-  border: 2px dashed #b72924;
+  border: 2px dashed hsl(2deg, 67%, 43%);
   outline: none;
 }
 
@@ -445,7 +445,7 @@ textarea:focus {
   margin-inline: auto;
   padding-block: 2em;
   text-align: center;
-  color: white;
+  color: hsl(0deg, 4%, 100%);
   display: flex;
   gap: 0.25em;
   flex-direction: column;
@@ -499,14 +499,14 @@ textarea:focus {
 
 .header-wrapper {
   width: 100%;
-  background-color: #283895;
+  background-color: hsl(231deg, 58%, 37%);
 }
 
 .header {
   padding-inline: 1em;
   padding-block: 1em;
   text-align: center;
-  background-color: #283895;
+  background-color: hsl(231deg, 58%, 37%);
   color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
@@ -533,7 +533,7 @@ textarea:focus {
 }
 .header__link {
   text-decoration: none;
-  color: white;
+  color: hsl(0deg, 4%, 100%);
 }
 .header__link:hover, .header__link:focus {
   color: #d73c37;
@@ -552,7 +552,7 @@ textarea:focus {
   padding-block: 0.35em;
 }
 .header__contact:hover, .header__contact:focus {
-  color: white;
+  color: hsl(0deg, 4%, 100%);
 }
 .header .social {
   display: grid;
@@ -597,7 +597,7 @@ textarea:focus {
   width: calc(60px/ 2);
   height: 2px;
   border-radius: 7px;
-  background: white;
+  background: hsl(0deg, 4%, 100%);
   position: relative;
 }
 .nav-toggle-label span::before,
@@ -617,7 +617,7 @@ textarea:focus {
 .nav.scroll * label > span,
 .nav.scroll * label > span::before,
 .nav.scroll * label > span::after {
-  background-color: white;
+  background-color: hsl(0deg, 4%, 100%);
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span {
@@ -640,7 +640,7 @@ textarea:focus {
 
 /* Navigation Styles w/sub navigation dropdown and responsive toggles */
 .navbar {
-  background-color: #b72924;
+  background-color: hsl(2deg, 67%, 43%);
   height: 60px;
   position: relative;
   z-index: 1001;
@@ -680,7 +680,7 @@ textarea:focus {
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 2px;
-  border-bottom: solid #f0efef 1px;
+  border-bottom: solid hsl(0deg, 4%, 94%) 1px;
 }
 @media only screen and (min-width: 768px) {
   .navbar .nav-link {
@@ -695,7 +695,7 @@ textarea:focus {
   padding-inline: 1rem;
   padding-block: 1rem;
   text-decoration: none;
-  color: white;
+  color: hsl(0deg, 4%, 100%);
   display: block;
 }
 .navbar .nav-link a:hover {
@@ -764,7 +764,7 @@ textarea:focus {
   color: var(--clr-white);
 }
 .pagination .page-link.disabled a {
-  color: #cccccc;
+  color: hsl(0deg, 0%, 80%);
   cursor: default;
   pointer-events: none;
 }
@@ -772,7 +772,7 @@ textarea:focus {
   background: white;
 }
 .pagination .page-link.disabled:hover a {
-  color: #cccccc;
+  color: hsl(0deg, 0%, 80%);
 }
 .pagination .page-link.active {
   background: var(--clr-primary);
@@ -785,15 +785,15 @@ textarea:focus {
 
 .footer {
   margin-block-start: auto;
-  background-color: #283895;
+  background-color: hsl(231deg, 58%, 37%);
 }
 .footer a {
   text-decoration: none;
-  color: #f0efef;
+  color: hsl(0deg, 4%, 94%);
   font-weight: 400;
 }
 .footer a:hover {
-  color: #b72924;
+  color: hsl(2deg, 67%, 43%);
 }
 .footer p {
   margin: 0;
@@ -827,8 +827,8 @@ textarea:focus {
   margin-inline: auto;
   padding-block: 1em;
   font-size: 0.9rem;
-  background-color: #283895;
-  color: white;
+  background-color: hsl(231deg, 58%, 37%);
+  color: hsl(0deg, 4%, 100%);
   width: min(100% - 1em, 60em);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -844,7 +844,7 @@ textarea:focus {
 .footer2 {
   width: 100%;
   background-color: #121a44;
-  color: white;
+  color: hsl(0deg, 4%, 100%);
   padding-block: 0.5em;
   font-size: 0.9em;
   display: flex;
