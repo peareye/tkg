@@ -754,11 +754,15 @@ p + p {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 .cards .card__image {
+  min-width: 250px;
   max-width: 250px;
   margin-inline-start: -1em;
 }
+.cards .card__image img {
+  object-fit: cover;
+}
 .cards .card__title {
-  background-color: hsl(231deg, 15%, 97%);
+  background-color: hsl(231deg, 15%, 100%);
   color: rgba(35, 36, 47, 0.99);
   padding: 1em;
   font-family: ff-sans-headings;
@@ -766,6 +770,7 @@ p + p {
 .cards .card__content {
   padding-inline: 1em;
   display: flex;
+  gap: 1em;
 }
 .cards .card__text {
   padding-inline: 1em;

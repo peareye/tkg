@@ -13,14 +13,17 @@
 
 
   &__image {
+   min-width: 250px;
    max-width          : 250px;
    margin-inline-start: -$spacer;
 
-   img {}
+   img {
+    object-fit: cover
+   }
   }
 
   &__title {
-   @include dc(neutral(2));
+   @include dc(neutral(1));
    padding    : $spacer;
    font-family: ff-sans-headings;
   }
@@ -29,6 +32,7 @@
    padding-inline: $spacer;
 
    display: flex;
+   gap: $spacer;
 
   }
 
