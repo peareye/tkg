@@ -13,7 +13,10 @@
  position: relative;
 
  .element__title {
-  color: color(primary);
+  color         : color(primary);
+  text-transform: capitalize;
+  font-weight   : $fw-m;
+  line-height: 1;
  }
 
  &__content {
@@ -37,9 +40,9 @@
   color: rgba(color(primary), .15);
 
   position : absolute;
-  left     : calc($spacer / 4);
-  top      : calc($spacer / 3);
-  font-size: 2.5em;
+  left     : calc($spacer / 5);
+  top      : calc($spacer / 5);
+  font-size: 3em;
 
   .fas {
    transform: rotate(-45deg);
