@@ -1,0 +1,15 @@
+{
+ "elementName": "Carousel",
+ "elementDescription": "Carousel/Slider Element",
+ "enableInput": "image",
+ "settings": [
+  {
+   "category": "element",
+   "label": "Testimonial Sub Title",
+   "key": "testimonialSubTitle",
+   "value": "",
+   "inputType": "text",
+   "help": "Enter subtitle desired for your testimonial"
+  }
+ ]
+}

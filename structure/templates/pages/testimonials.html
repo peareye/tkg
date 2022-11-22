@@ -1,15 +1,33 @@
-{# Testimonials Template Page #}
+{# Testimonials Template Page #} 
+{% extends 'pages/_base_layout.html' %} 
 
-{% extends 'pages/_base_layout.html' %}
+{% block navbar %} 
+{{ include('includes/_navbar.html') }} 
+{% endblock navbar %} 
 
-{% block navbar %}
+{% block body %} 
 
-{{ include('includes/_navbar.html') }}
-
-{% endblock navbar %}
+<section class="section grid-section section--testimonialsBlock">
 
   <h1 class="section__title">{{ page.title }}</h1>
-  <div class="testimonials">
-    {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+  <h2 class="section__subtitle">{{ page.subTitle }}</h2>
+
+  <div class="container__slider">
+    <div class="slider">
+      <div class="slider__track-container">
+        <ul class="slider__track">
+              {{ getBlockElementsHtml(page.blocks.carouselBlock) }}
+        </ul>
+      </div>
+      
+      <div class="slider__nav">
+       {% for e in page.blocks.carouselBlock %}
+        <button class="slider__indicator {% if loop.index==1 %}current-slide{% endif %}"></button>
+    {% endfor %}
+      </div>
+
+    </div>
   </div>
- 
+</section>
+
+{% endblock body %}

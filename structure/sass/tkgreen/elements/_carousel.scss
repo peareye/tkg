@@ -1,0 +1,133 @@
+.slider {
+ --slider-height: 400px;
+ height         : var(--slider-height);
+
+ position: relative;
+
+
+ @include mq(xs) {
+  --slider-height: 400px;
+ }
+
+ &__track-container {
+  border-radius: $br;
+  box-shadow: 0 5px 25px rgba(neutral(5), .15);
+  position     : relative;
+  overflow     : hidden;
+ }
+
+ &__track {
+  margin    : 0;
+  padding   : 0;
+  height    : var(--slider-height);
+  width     : 100%;
+  list-style: none;
+
+  position: relative;
+
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+  transition: transform ease-in 250ms;
+
+ }
+
+ &__slide {
+
+  position: absolute;
+  width   : 100%; // has to be 100% to create slide
+  height  : var(--slider-height);
+  top     : 0;
+  bottom  : 0;
+
+  display        : -webkit-flex;
+  display        : -webkit-box;
+  display        : flex;
+  flex-flow      : column nowrap;
+  justify-content: center;
+  align-items    : center;
+
+  &--inner {
+   @include dc(neutral(2));
+   border-radius: 50%;
+
+   height        : var(--slider-height);
+   padding-inline: calc($spacer * 1);
+   border-radius : $br;
+   box-shadow    : $bs;
+
+   display        : flex;
+   flex-flow      : column nowrap;
+   justify-content: center;
+   align-items    : center;
+
+   h3 {
+    font-size: 1.3rem;
+   }
+
+   h4 {
+    font-size : 1rem;
+    font-style: italic;
+
+    font-weight: 300;
+    line-height: 1.2;
+   }
+
+   p {
+    margin-block-start: $spacer;
+    margin-inline     : $spacer;
+    line-height       : 1.3;
+    font-size         : .9rem;
+    font-weight       : 300;
+   }
+  }
+
+
+ }
+
+ &__button {
+  display   : none;
+  background: transparent;
+  border    : 0;
+  cursor    : pointer;
+  box-shadow: none;
+  color     : hsl(0, 0%, 30%);
+
+  position : absolute;
+  z-index  : 100;
+  top      : 50%;
+  transform: translateY(-50%);
+
+  &--left {
+   left: $spacer;
+  }
+
+  &--right {
+   right: $spacer;
+  }
+ }
+
+ &__nav {
+  margin-block: (calc($spacer * 2));
+
+  display        : flex;
+  gap            : $spacer;
+  justify-content: center;
+  align-items    : center;
+ }
+
+ &__indicator {
+  width        : 1em;
+  height       : 1em;
+  border       : 0;
+  border-radius: 50%;
+  background   : rgba(neutral(5), 0.3);
+
+  cursor: pointer;
+
+  &.current-slide {
+   background: rgba(neutral(5), 0.75);
+  }
+ }
+}

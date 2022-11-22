@@ -5,12 +5,9 @@
     "templateType": "page",
     "blocks": [
         {
-            "name": "Content",
-            "key": "contentBlock",
-            "description": "Content for Testimonials",
-            "elementTypeOptions": [
-                "testimonials/testimonials"
-              ]
+            "name": "Carousel Items",
+            "key": "carouselBlock",
+            "description": "Content for Testimonials"
         }
     ]
 }

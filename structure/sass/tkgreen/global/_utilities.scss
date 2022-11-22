@@ -32,3 +32,59 @@ font-style: italic;
 inline-text {
     display: inline-block;
 }
+
+// Cutoff Text Styles
+.cutoff-text {
+ --max-lines  : 15;
+ --line-height: 1.4;
+
+ max-height : calc(var(--max-lines) * 1em * var(--line-height));
+ line-height: var(--line-height);
+ overflow   : hidden;
+
+ position: relative;
+
+ &:has(+ .expand-btn:not(:checked))::before {
+  content       : '';
+  position      : absolute;
+  height        : calc(1em * var(--line-height));
+  width         : 100%;
+  bottom        : 0;
+  pointer-events: none;
+ 
+  // background    : linear-gradient(to bottom, transparent, white);
+ }
+
+}
+
+.expand-btn {
+ appearance   : none;
+ color: hsl(0, 0%, 30%);
+ border       : 1px solid hsl(0, 0%, 85%);
+ padding      : .25em;
+ border-radius: .25em;
+ cursor       : pointer;
+ margin-top   : $spacer;
+ width: fit-content;
+ margin-inline: auto;
+
+ &:hover {
+  background-color: $clr-accent;
+  color: white;
+ }
+
+ &::before {
+  content: 'Read More';
+
+ }
+
+ &:checked::before {
+  content: 'Read Less';
+ }
+
+}
+
+.cutoff-text:has(+ .expand-btn:checked) {
+ max-height: none;
+
+}

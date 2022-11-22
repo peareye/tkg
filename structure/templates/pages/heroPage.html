@@ -30,19 +30,32 @@
 </section>
 {% endif %}
 
-{% if page.blocks.testimonialsBlock %}
-<section class="section grid-section section--testimonialsBlock">
 
-  {% if page.blocks.elementHeaderTestimonialsBlock %}
-  {{ getBlockElementsHtml(page.blocks.elementHeaderTestimonialsBlock) }}
-  {% endif %}
+{% if page.blocks.carouselBlock %}
+<section class="section grid-section section--carouselBlock">
+ {% if page.blocks.elementHeaderTestimonialsBlock %}
+ {{ getBlockElementsHtml(page.blocks.elementHeaderTestimonialsBlock) }}
+ {% endif %}
 
-  <div class="grid-three-columns testimonials">
-    {{ getBlockElementsHtml(page.blocks.testimonialsBlock) }}
-  </div>
-  <div class="readMore">
-    <a href="/testimonials" class="btn">Read More</a>
-  </div>
+ {# <h1 class="section__title">{{ page.title }}</h1>
+ <h2 class="section__subtitle">{{ page.subTitle }}</h2> #}
+
+ <div class="container__slider">
+   <div class="slider">
+     <div class="slider__track-container">
+       <ul class="slider__track">
+             {{ getBlockElementsHtml(page.blocks.carouselBlock) }}
+       </ul>
+     </div>
+     
+     <div class="slider__nav">
+      {% for e in page.blocks.carouselBlock %}
+       <button class="slider__indicator {% if loop.index==1 %}current-slide{% endif %}"></button>
+   {% endfor %}
+     </div>
+
+   </div>
+ </div>
 </section>
 {% endif %}
 
