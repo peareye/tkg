@@ -1,114 +1,90 @@
 {
-    "templateName": "Demo Page",
-    "templateDescription": "Page with all elements in their own content blocks.",
-    "showFeaturedImage": true,
-    "templateType": "page",
-    "blocks": [
-        {
-            "name": "Text",
-            "key": "textBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "text/text"
-              ]
-        },
-        {
-            "name": "Element Header Collection",
-            "key": "elementHeaderCollectionBlock",
-            "description": "Element Header Intro",
-            "elementTypeOptions": [
-                "elementHeader/elementHeader"
-              ]
-        },
-        {
-            "name": "Collection",
-            "key": "collectionBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "collection/collection"
-              ]
-        },
-        {
-            "name": "Contact",
-            "key": "contactBlock",
-            "description": "Contact Element",
-            "elementTypeOptions": [
-                "contact/contact"
-              ]
-        },
-        {
-            "name": "Embedded",
-            "key": "embeddedBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "embedded/embedded"
-              ]
-        },
-        {
-            "name": "Gallery",
-            "key": "galleryBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "gallery/gallery"
-              ]
-        },
-        {
-            "name": "Image",
-            "key": "imageBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "image/image"
-              ]
-        },
-        {
-            "name": "Element Header Testimonials",
-            "key": "elementHeaderTestimonialsBlock",
-            "description": "Element Header Intro",
-            "elementTypeOptions": [
-                "elementHeader/elementHeader"
-              ]
-        },
-    
-        {
-            "name": "Testimonials",
-            "key": "testimonialsBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "testimonials/testimonials"
-              ]
-        },
-        {
-            "name": "Element Header About",
-            "key": "elementHeaderAboutBlock",
-            "description": "Element Header Intro",
-            "elementTypeOptions": [
-                "elementHeader/elementHeader"
-              ]
-        },
-        {
-            "name": "About",
-            "key": "aboutBlock",
-            "description": "Update Description Here",
-            "elementTypeOptions": [
-                "about/about"
-              ]
-        },
-        {
-            "name": "Element Header Services",
-            "key": "elementHeaderServicesBlock",
-            "description": "Element Header Intro",
-            "elementTypeOptions": [
-                "elementHeader/elementHeader"
-              ]
-        },
-        {
-            "name": "Services",
-            "key": "servicesBlock",
-            "description": "Services Block",
-            "elementTypeOptions": [
-        
-                "service/service"
-              ]
-        }
-    ]
+ "templateName": "Demo Page",
+ "templateDescription": "Page with all elements in their own content blocks.",
+ "showFeaturedImage": true,
+ "templateType": "page",
+ "blocks": [
+  {
+   "name": "Hero Block",
+   "key": "heroBlock",
+   "description": "Large full width image",
+   "elementTypeOptions": [
+    "hero/hero"
+   ],
+   "elementCountLimit": 1
+  },
+  {
+   "name": "Text Block",
+   "key": "textBlock",
+   "description": "Update Description Here",
+   "elementTypeOptions": [
+    "text/text"
+   ]
+  },
+  {
+   "name": "Embedded Block",
+   "key": "embeddedBlock",
+   "description": "Update Description Here",
+   "elementTypeOptions": [
+    "embedded/embedded"
+   ]
+  },
+  {
+   "name": "Gallery Block",
+   "key": "galleryBlock",
+   "description": "Update Description Here",
+   "elementTypeOptions": [
+    "gallery/gallery"
+   ]
+  },
+  {
+   "name": "Contact Block",
+   "key": "contactBlock",
+   "description": "Contact Element",
+   "elementTypeOptions": [
+    "contact/contact"
+   ]
+  },
+  {
+   "name": "Element Header Image",
+   "key": "elementHeaderImageBlock",
+   "description": "Element Header Intro",
+   "elementTypeOptions": [
+    "elementHeader/elementHeader"
+   ]
+  },
+  {
+   "name": "Image Block",
+   "key": "imageBlock",
+   "description": "Update Description Here",
+   "elementTypeOptions": [
+    "image/image"
+   ]
+  },
+  {
+   "name": "Element Header Carousel",
+   "key": "elementHeaderCarouselBlock",
+   "description": "Element Header Intro",
+   "elementTypeOptions": [
+    "elementHeader/elementHeader"
+   ]
+  },
+  {
+   "name": "Carousel Block",
+   "key": "carouselBlock",
+   "description": "Content for Carousel Slider",
+   "elementTypeOptions": [
+    "carousel/carousel"
+   ]
+  },
+  {
+   "name": "Collection Block",
+   "key": "collectionBlock",
+   "description": "Update Description Here",
+   "elementTypeOptions": [
+    "collection/collection"
+   ]
+  }
+  
+ ]
 }

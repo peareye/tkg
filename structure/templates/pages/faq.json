@@ -9,7 +9,7 @@
             "key": "faqsBlock",
             "description": "Content for FAQs",
             "elementTypeOptions": [
-                "faq/faq"
+                "text/text"
               ]
         },
         {

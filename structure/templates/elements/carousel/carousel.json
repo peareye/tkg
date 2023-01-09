@@ -5,8 +5,8 @@
  "settings": [
   {
    "category": "element",
-   "label": "Testimonial Sub Title",
-   "key": "testimonialSubTitle",
+   "label": "Carousel Sub Title",
+   "key": "carouselSubTitle",
    "value": "",
    "inputType": "text",
    "help": "Enter subtitle desired for your testimonial"

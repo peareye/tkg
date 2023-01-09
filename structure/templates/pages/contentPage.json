@@ -1,13 +1,24 @@
 {
-    "templateName": "Without Hero",
-    "templateDescription": "Page without hero image and with one content block.",
-    "showFeaturedImage": true,
-    "templateType": "page",
-    "blocks": [
-        {
-            "name": "Content",
-            "key": "contentBlock",
-            "description": "Simple text areas"
-        }
-    ]
+ "templateName": "Without Hero",
+ "templateDescription": "Page without hero image and with one content block.",
+ "showFeaturedImage": true,
+ "templateType": "page",
+ "blocks": [
+  {
+   "name": "Content",
+   "key": "contentBlock",
+   "description": "Block of General Content"
+  },
+  {
+   "name": "Content1",
+   "key": "contentBlock1",
+   "description": "Block of General Content"
+  },
+  {
+   "name": "Content2",
+   "key": "contentBlock2",
+   "description": "Block of General Content"
+  }
+
+ ]
 }

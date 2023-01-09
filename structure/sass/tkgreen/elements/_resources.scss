@@ -1,65 +1,76 @@
 .resources {
-    @include word-wrap();
+ // @include dc(neutral(3));
+ @include word-wrap();
+ padding-block: $spacer;
 
-    &__sidebar {
-        display: none;
+ &__sidebar {
+  display       : none;
+  padding-block : $spacer;
+  padding-inline: $spacer;
 
-        @include mq(small) {
-            display  : block;
-            max-width: max-content;
+  @include mq(small) {
+   display  : block;
+   max-width: max-content;
 
-            &-li {
-                list-style: none;
-            }
+   &-ul {
+    display : grid;
+    gap     : calc($spacer / 2);
+    position: sticky;
+    top     : $spacer;
+   }
 
-            &-link {
-                display        : block;
-                font-weight    : $fw-m;
-                color          : neutral(5);
-                text-decoration: none;
-            }
+   &-li {
+    list-style: none;
+   }
 
-            &-ul {
-                position: sticky;
-                top     : $spacer;
-            }
-        }
+   &-link {
+    text-decoration: none;
+    padding-inline : $spacer;
+    padding-block  : calc($spacer / 4);
+    font-weight    : $fw-m;
+    border-radius  : $br;
+    @include dc(neutral(5));
+
+    display   : block;
+    transition: all ease-in-out 250ms;
+
+    &:hover,
+    &:focus {
+     @include dc(color(accent-light));
+    }
+   }
+  }
+ }
+
+ &__content {
+  @include dc(neutral(4));
+  padding: $spacer;
+  overflow: hidden;
+  ul {
+   list-style         : none;
+   list-style-position: inside;
+
+   a {
+    color: neutral(5);
+
+    position: relative;
+
+    &:hover,
+    &:focus {
+     color: color(accent);
     }
 
-    &__content {
-        a {
-            position: relative;
-
-            &::after {
-                content             : '';
-                font-family         : "Font Awesome 5 Free";
-                font-weight         : 900;
-                content             : "\f08e";
-                position            : absolute;
-                padding-inline-start: $spacer;
-
-            }
-        }
-
-        p {
-            margin: 0;
-        }
-
-        p:has(> strong) {
-            margin-block-start: $spacer;
-        }
-
-        ul {
-            list-style         : none;
-            padding-block-start: calc($spacer /2);
-        }
-
-        &-title {
-            margin-block-start: $spacer;
-
-            &:nth-child(1) {
-                margin-block-start: 0;
-            }
-        }
+    &::after {
+     content             : '';
+     font-family         : "Font Awesome 5 Free";
+     font-weight         : 900;
+     content             : "\f08e";
+     position            : absolute;
+     // right: $spacer;
+     padding-inline-start: 10px;
+ 
     }
+   }
+  }
+ }
 }

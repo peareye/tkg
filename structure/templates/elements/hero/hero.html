@@ -1,28 +1,24 @@
 {# Hero Element #}
 <div class="hero">
-
   <div class="hero__content">
+    <h2 class="hero__content-title">{{ element.title }}</h2>
 
-    <h1 class="hero__content-title">{{ element.title }}</h1>
-
-    {{ element.content }}
-
+    {{ element.content }} 
+    
     {% if element.settings.ctaTitle %}
     <a href="{{element.settings.ctaTarget}}" class="btn btn__cta styled-link">{{ element.settings.ctaTitle }}</a>
     {% endif %}
-
   </div>
 
   <div class="hero__image">
-
-    {% if element.media.filename %}
-    {% set positionStyle = 'object-position: ' ~ element.settings.placement ?? 'center' %}
-    {{ getMediaSrcSet(element.media.filename, element.media.caption, {'style': positionStyle, 'sizes': '100vw'}) }}
+    {% if element.media.filename %} {% set positionStyle = 'object-position: ' ~ element.settings.placement ?? 'center'
+    %} {{ getMediaSrcSet(element.media.filename, element.media.caption, {'style': positionStyle, 'sizes': '100vw'}) }}
     {% endif %}
-
   </div>
 
   {% if element.settings.overlay %}
-  <div class="hero__overlay" style="background-color: rgba({{element.settings.overlayColor}},{{element.settings.overlay }}%)"></div>
+  <div
+    class="hero__overlay"
+    style="background-color: rgba({{element.settings.overlayColor}},{{element.settings.overlay }}%)"></div>
   {% endif %}
 </div>

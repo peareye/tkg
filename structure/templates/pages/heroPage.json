@@ -1,54 +1,55 @@
 {
-  "templateName": "With Hero",
-  "templateDescription": "Page with hero image and content blocks.",
-  "showSubTitle": false,
-  "showFeaturedImage": true,
-  "templateType": "page",
-  "blocks": [{
-      "name": "Hero Image",
-      "key": "heroBlock",
-      "description": "Large full width image",
-      "elementTypeOptions": [
-        "hero/hero"
-      ],
-      "elementCountLimit": 1
-    },
-    {
-      "name": "Intro",
-      "key": "introBlock",
-      "description": "Introduction Section",
-      "elementTypeOptions": [
-          "image/image"
-        ]
-  },
-    {
-      "name": "Element Header Services",
-      "key": "elementHeaderServicesBlock",
-      "description": "Element Header Intro",
-      "elementTypeOptions": [
-          "elementHeader/elementHeader"
-        ]
-  },
-    {
-      "name": "Services",
-      "key": "servicesBlock",
-      "description": "Our Services",
-      "elementTypeOptions": [
-          "service/service"
-        ]
+ "templateName": "With Hero",
+ "templateDescription": "Page with hero image and content blocks.",
+ "showSubTitle": false,
+ "showFeaturedImage": true,
+ "templateType": "page",
+ "blocks": [
+  {
+   "name": "Hero Image",
+   "key": "heroBlock",
+   "description": "Large full width image",
+   "elementTypeOptions": [
+    "hero/hero"
+   ],
+   "elementCountLimit": 1
   },
   {
-    "name": "Element Header Testimonials",
-    "key": "elementHeaderTestimonialsBlock",
-    "description": "Element Header Intro",
-    "elementTypeOptions": [
-        "elementHeader/elementHeader"
-      ]
-},
-{
- "name": "Carousel Items",
- "key": "carouselBlock",
- "description": "Content for Testimonials"
-}
-  ]
+   "name": "Intro",
+   "key": "introBlock",
+   "description": "Introduction Section",
+   "elementTypeOptions": [
+    "image/image"
+   ]
+  },
+  {
+   "name": "Element Header Services",
+   "key": "elementHeaderServicesBlock",
+   "description": "Element Header Intro",
+   "elementTypeOptions": [
+    "elementHeader/elementHeader"
+   ]
+  },
+  {
+   "name": "Services",
+   "key": "servicesBlock",
+   "description": "Our Services",
+   "elementTypeOptions": [
+    "service/service"
+   ]
+  },
+  {
+   "name": "Element Header Testimonials",
+   "key": "elementHeaderTestimonialsBlock",
+   "description": "Element Header Intro",
+   "elementTypeOptions": [
+    "elementHeader/elementHeader"
+   ]
+  },
+  {
+   "name": "Carousel Items",
+   "key": "carouselBlock",
+   "description": "Content for Testimonials"
+  }
+ ]
 }

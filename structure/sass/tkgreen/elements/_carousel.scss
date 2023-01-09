@@ -49,7 +49,7 @@
   align-items    : center;
 
   &--inner {
-   @include dc(neutral(2));
+   @include dc(neutral(1));
    border-radius: 50%;
 
    height        : var(--slider-height);
@@ -92,7 +92,7 @@
   border    : 0;
   cursor    : pointer;
   box-shadow: none;
-  color     : hsl(0, 0%, 30%);
+  color     : neutral(4);
 
   position : absolute;
   z-index  : 100;

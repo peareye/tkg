@@ -33,7 +33,7 @@
      padding         : .5em;
      width           : 100%;
      box-shadow      : $bs;
-     background-color: neutral(2);
+     background-color: neutral(1);
      border-radius   : $br;
      border          : none;
 
@@ -71,10 +71,11 @@
    padding-inline  : $spacer;
    padding-block   :$spacer;
    margin-block-start: calc($spacer * 1.5);
+   margin-block-end: $spacer;
 
    border-radius   : $br;
    box-shadow      : $bs;
-   background-color: neutral(2);
+   background-color: neutral(1);
 
   align-self: start;
 

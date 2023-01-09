@@ -2,7 +2,6 @@
 
 .span {
     grid-column: 1 / -1;
-    // @include dc(green);
 }
 
 .text-small {
@@ -35,7 +34,7 @@ inline-text {
 
 // Cutoff Text Styles
 .cutoff-text {
- --max-lines  : 15;
+ --max-lines  :5;
  --line-height: 1.4;
 
  max-height : calc(var(--max-lines) * 1em * var(--line-height));
@@ -59,7 +58,7 @@ inline-text {
 
 .expand-btn {
  appearance   : none;
- color: hsl(0, 0%, 30%);
+ color: neutral(5);
  border       : 1px solid hsl(0, 0%, 85%);
  padding      : .25em;
  border-radius: .25em;

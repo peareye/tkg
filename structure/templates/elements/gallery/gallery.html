@@ -1,31 +1,21 @@
 {# Media Group (Gallery) Element #}
 
 
-<div>
-      <h2 class="element__title">{{ element.title }}</h2>
-  
-      <div class="element__content">
-        {{ element.content }}
-      </div>
-  
-      <div class="grid-even-columns">
-  
-        {% for g in getGallery(element.gallery_id) %}
-  
-        <a 
-        data-fancybox="gallery" 
-        class="gallery-img {{ g.orientation }} {{ g.featured }} styled-link" 
-        data-caption="{{ g.caption }}" 
-        href="{{ getMediaPath(g.filename, 'large') }}">
-  
-        <img src="{{ getMediaPath(g.filename, 'thumb') }}" alt="{{ g.caption }}" />
-  
-        </a>
-        
-        {% endfor %}
-  
-      </div>
-</div>
+  <h2 class="element__title">{{ element.title }}</h2>
 
-  
+  <div class="element__content">{{ element.content }}</div>
+
+  <div class="grid-even-columns">
+    {% for g in getGallery(element.gallery_id) %}
+
+    <a
+      data-fancybox="gallery"
+      class="gallery-img {{ g.orientation }} {{ g.featured }} styled-link"
+      data-caption="{{ g.caption }}"
+      href="{{ getMediaPath(g.filename, 'large') }}">
+      <img src="{{ getMediaPath(g.filename, 'thumb') }}" alt="{{ g.caption }}" />
+    </a>
+
+    {% endfor %}
+  </div>
 

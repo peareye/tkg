@@ -1,26 +1,38 @@
  // Image Element
  .imageElement {
-  
-   img {
-     aspect-ratio : 16 / 9;
-     object-fit   : cover;
-     min-height   : 100%;
-     border-radius: $br;
-     box-shadow   : $bs;
-     margin-block-end: $spacer;
-   }
 
-   &__content {
-    padding-block-start: $spacer;
+  margin-block-end: calc($spacer * 2);
+  gap             : calc($spacer * 3);
 
-    // Adjust the spacing between Image and Title when stacked.
-     @include mq(medium){
-     padding-block-start: 0;
-     }
-   }
+  &__image {
+   display        : flex;
+   align-items    : center;
+   justify-content: center;
+   aspect-ratio   : 4/3;
 
-   .element__content {
-     margin-block-end: $spacer;
-     margin-block-start: $spacer;
+  }
+
+  img {
+   aspect-ratio    : inherit;
+   object-fit      : cover;
+   min-height      : 100%;
+   border-radius   : $br;
+   box-shadow      : $bs;
+   margin-block-end: $spacer;
+
+  }
+
+  &__content {
+   padding-block-start: $spacer;
+
+   // Adjust the spacing between Image and Title when stacked.
+   @include mq(medium) {
+    padding-block-start: 0;
    }
+  }
+
+  .element__content {
+   margin-block-end  : $spacer;
+   margin-block-start: $spacer;
+  }
  }

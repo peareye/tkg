@@ -1,40 +1,41 @@
 // Theme
 
 // Color Pallette
-$clr-red    : #b82925;
-$clr-blue   : hsl(231, 58%, 37%);
-$clr-orange : #ff781f;
-$clr-green  : #25b82a;
-$clr-pink   : #ffadbb;
+$clr-red    : #b51700;
+$clr-blue   : #032f70;
 
 // Neutral Pallette
-$neutral-1: hsl(0, 4%, 100%);
-$neutral-2: hsl(180, 3%, 94%);
-$neutral-3: hsl(0, 4%, 50%);
-$neutral-4: hsl(208, 7%, 46%);
-$neutral-5: hsl(345, 6%, 13%);
+// $neutral-1: hsl(0, 4%, 100%);
+// $neutral-2: hsl(180, 3%, 90%);
+// $neutral-3: hsl(0, 4%, 50%);
+// $neutral-4: hsl(208, 7%, 46%);
+// $neutral-5: hsl(345, 6%, 13%);
 
 
-$neutral-1     : hsl(231, 15%, 100%);
-$neutral-2     : hsl(231, 15%, 97%);
-$neutral-3     : hsl(231, 15%, 65%);
-$neutral-4     : hsl(231, 15%, 46%);
-$neutral-5     : hsl(233, 15%, 16%);
+$neutral-1     : hsl(100, 0%, 98%);
+$neutral-2     : hsl(100, 0%, 94%);
+$neutral-3     : hsl(100, 0%, 60%);
+$neutral-4     : hsl(100, 0%, 40%);
+$neutral-5     : hsl(100, 0%, 10%);
+
 $clr-primary   : $clr-blue;
 $clr-secondary : adjust-hue($clr-primary, -30);
+
 $clr-accent    : $clr-red;
 
 
 // Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
 
-$neutrals: (1: $neutral-1,
+$neutrals: (
+  1: $neutral-1,
   2: $neutral-2,
   3: $neutral-3,
   4: $neutral-4,
   5: $neutral-5,
 );
 
-$clrs: (primary: $clr-primary,
+$clrs: (
+  primary: $clr-primary,
   primary-dark: darken($clr-primary, 20%),
   primary-light: lighten($clr-primary, 10%),
   primary-lighter: lighten($clr-primary, 40%),
@@ -51,15 +52,13 @@ $clrs: (primary: $clr-primary,
 
 // border-radius
 $br    : 7px;
-// line spacing
+// letter spacing
 $ls    : 2px;
 // default spacer
 $spacer: 1em;
 // box shadow(s)
-$bs1: 0 .5em 1em rgba(neutral(5), .15);
-$bs2: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-$bs: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 
+$bs: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 
 // Font Variables
 

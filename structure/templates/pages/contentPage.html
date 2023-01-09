@@ -9,4 +9,17 @@
   <section class="section grid-section">
     {{ getBlockElementsHtml(page.blocks.contentBlock) }}
   </section>
+
+  {% if page.blocks.contentBlock1 %}
+  <section class="section grid-section">
+    {{ getBlockElementsHtml(page.blocks.contentBlock1) }}
+  </section>
+  {% endif %} 
+
+  {% if page.blocks.contentBlock2 %}
+  <section class="section grid-section">
+    {{ getBlockElementsHtml(page.blocks.contentBlock2) }}
+  </section>
+  {% endif %} 
+
 {% endblock body %}

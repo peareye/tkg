@@ -1,11 +1,13 @@
 <footer class="footer">
 
     <div class="footer1">
+
         {% if site.settings.footerAbout %}
         <div class="footer-about span">
             {{ site.settings.footerAbout|nl2br}}
         </div>
         {% endif %}
+        
         <div class="footer-nav">
             <h5 class="footer-title">Navigation</h5>
             <nav class="nav-footer">
@@ -53,4 +55,5 @@
         {% endif %}
 
     </div>
+
 </footer>

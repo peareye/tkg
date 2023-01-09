@@ -1,54 +1,47 @@
-{# FAQ Template Page #}
+{# FAQ Template Page #} 
 
-{% extends 'pages/_base_layout.html' %}
+{% extends 'pages/_base_layout.html' %} 
 
-{% block navbar %}
+{% block navbar %} 
+{{ include('includes/_navbar.html')
+}} 
+{% endblock navbar %} 
 
-{{ include('includes/_navbar.html') }}
+{% block body %} 
 
-{% endblock navbar %}
-
-
-
-
-{% block body %}
-
-<section class="section grid-section section--faqBlock">
+<section id="faqs" class="section grid-section section--faqBlock">
   <h2 class="element__title">{{ page.title }}</h2>
 
   <div class="faqs">
-    {{ getBlockElementsHtml(page.blocks.faqsBlock) }}
+
+   {{ getBlockElementsHtml(page.blocks.faqsBlock) }}
   </div>
 </section>
 
-<section class="section grid-section  section--resourceBlock">
- 
+<section class="section grid-section section--resourceBlock" id="resources">
 
-        {% if page.blocks.elementHeaderResourcesBlock %}
-        {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
-        {% endif %}
+  {% if page.blocks.elementHeaderResourcesBlock %} 
+  {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
+  {% endif %}
 
+  <div class="resources flex-two-columns">
+    <div class="resources__sidebar">
+      <ul class="resources__sidebar-ul">
+        {% for c in page.blocks.resourcesBlock %}
+        <li class="resources__sidebar-li">
+          {# Loop the element titles here #}
+          <a class="resources__sidebar-link" href="#{{ c.title }}"> {{ c.title }} </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
+    <div class="resources__content">
+
+     {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
     
-    <div class="resources flex-two-columns">
-
-      <div class="resources__sidebar">
-        <ul class="resources__sidebar-ul">
-          {% for c in page.blocks.resourcesBlock %}
-          <li class="resources__sidebar-li">
-            {# Loop the element titles here #}
-            <a class="resources__sidebar-link" href="#{{ c.title }}">
-             {{ c.title }}
-            </a>
-          </li>  
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="resources__content">
-        {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
-        </div>
-     </div>
+    </div>
+  </div>
 </section>
 
 {% endblock body %}

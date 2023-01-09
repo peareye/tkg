@@ -15,22 +15,22 @@
 @import 'includes/pagination';
 @import 'includes/social';
 @import 'includes/footer';
+@import 'includes/badge';
 
-@import 'elements/collection';
-@import 'elements/contact';
+@import 'elements/hero';
+@import 'elements/text';
 @import 'elements/embedded';
 @import 'elements/gallery';
-@import 'elements/hero';
+@import 'elements/contact';
 @import 'elements/image';
-@import 'elements/about';
-@import 'elements/text';
+@import 'elements/collection';
+@import 'elements/carousel';
+
+// Custom Elements
 @import 'elements/services';
-@import 'elements/military';
-@import 'elements/testimonials';
-@import 'elements/testimonials';
 @import 'elements/faq';
 @import 'elements/resources';
-@import 'elements/carousel';
+
 
 @import 'pages/home';
 @import 'pages/about';

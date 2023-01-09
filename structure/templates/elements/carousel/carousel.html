@@ -4,12 +4,14 @@
     {% if element.title %}
     <h3>{{ element.title }}</h3>
     {% endif %} 
-    {% if element.settings.testimonialSubTitle %}
-    <h4>{{ element.settings.testimonialSubTitle }}</h4>
-    {% endif %}
+    
+    {% if element.settings.carouselSubTitle %}
+    <h4>{{ element.settings.carouselSubTitle }}</h4>
+    {% endif %} 
 
     {% if element.content %} 
     {{ element.content }} 
     {% endif %}
+    
   </div>
 </li>
