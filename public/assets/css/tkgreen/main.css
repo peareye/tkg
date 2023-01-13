@@ -403,6 +403,8 @@ p + p {
   text-decoration: none;
   font-size: var(--header-font-size);
   transition: all 125ms ease-in;
+  color: hsl(100deg, 0%, 10%);
+  font-weight: 600;
 }
 .header__link:hover, .header__link:focus {
   --header-font-size: 1.1rem;
