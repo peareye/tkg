@@ -14,17 +14,9 @@
   padding-block-start: calc($spacer * 2);
 
   >*+* {
-
-   // margin-block-start: calc($spacer * 4);
+   // margin-block-start: calc($spacer * .5);
   }
 
-  >div:nth-child(even) {
-
-   // padding-block: calc($spacer * 2);
-   // outline: dashed red 3px;
-   // box-shadow: 0 0 0 100vmax red;
-   // clip-path: inset (0 -100vmax);
-  }
  }
 
  &--aboutBlock {

@@ -1,15 +1,16 @@
 .faqs {
  display: grid;
- gap: $spacer;
+ gap    : $spacer;
 }
 
 details {
  box-shadow   : $bs;
  border-radius: $br;
  position     : relative;
- 
+
  .summary-title {
   user-select: none;
+  font-weight: $fw-b;
  }
 
  &:hover {
@@ -24,10 +25,11 @@ details {
  }
 
  summary {
-  list-style: none;
-  padding-inline   : $spacer;
-  padding-block: calc($spacer / 2);
-
+  list-style           : none;
+  padding-block        : calc($spacer / 2);
+  padding-inline-start : calc($spacer /2);
+  padding-inline-end: calc($spacer * 2);
+ 
   &:focus {
    outline: none;
   }

@@ -11,7 +11,7 @@
 
  &__track-container {
   border-radius: $br;
-  box-shadow: 0 5px 25px rgba(neutral(5), .15);
+  box-shadow   : 0 5px 25px rgba(neutral(5), .15);
   position     : relative;
   overflow     : hidden;
  }
@@ -130,4 +130,8 @@
    background: rgba(neutral(5), 0.75);
   }
  }
+}
+
+.container__slider {
+margin-block-start: $spacer;
 }

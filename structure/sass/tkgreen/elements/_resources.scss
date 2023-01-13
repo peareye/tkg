@@ -1,7 +1,7 @@
 .resources {
- // @include dc(neutral(3));
  @include word-wrap();
- padding-block: $spacer;
+ // padding-block: $spacer;
+
 
  &__sidebar {
   display       : none;
@@ -43,12 +43,21 @@
  }
 
  &__content {
-  @include dc(neutral(4));
-  padding: $spacer;
+  @include dc(neutral(1));
+  padding-inline : $spacer;
   overflow: hidden;
+
   ul {
    list-style         : none;
    list-style-position: inside;
+
+   >li+li {
+    padding-block-start: calc($spacer * .5);
+   }
+
+   li:last-of-type {
+    padding-block-end: $spacer;
+   }
 
    a {
     color: neutral(5);
@@ -68,9 +77,14 @@
      position            : absolute;
      // right: $spacer;
      padding-inline-start: 10px;
- 
+
     }
    }
+  }
+
+  &-title {
+   margin-block-start: $spacer;
+   margin-block-end: calc($spacer * .5);
   }
  }
 }

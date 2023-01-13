@@ -2,7 +2,30 @@
 
 {% block body %}
 <section class="section grid-section section--systemBlock">
-  {{ getBlockElementsHtml(page.blocks.systemBlock) }}
+
+<div id="{{element.settings.imageID}}" class="imageElement flex-two-columns">
+
+ <figure class="imageElement__image">
+  {{ getMediaSrcSet(page.media.filename, page.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
+ </figure>
+
+ <div class="imageElement__content">
+  
+   <div class="element__content">
+    {{ getBlockElementsHtml(page.blocks.systemBlock) }}
+   
+   </div>
+
+ </div>
+</div>
+
+
+
+
+ 
+
+ 
+  
 
 </section>
 

@@ -41,7 +41,7 @@
              <a class="styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
         </div>
         {% endif %}
-
+        {{ include("includes/_badge.html") }}
     </div>
 
     <div class="footer2">
@@ -53,7 +53,7 @@
                 site.settings.footerAuthor }}</a>
             </div>
         {% endif %}
-
+        {# {{ include("includes/_badge.html") }} #}
     </div>
 
 </footer>

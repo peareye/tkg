@@ -4,10 +4,12 @@
 *::after {
  margin : 0;
  padding: 0;
+ // outlines: dashed 2px green;
 }
 
 html {
  scroll-behavior: smooth;
+ scroll-padding-top: $spacer;
 }
 
 html,
@@ -52,6 +54,7 @@ h5 {
  font-family   : $ff-sans-headings;
  line-height   : 1.1;
  letter-spacing: $ls;
+ text-align: center;
 }
 
 h1 {
@@ -91,11 +94,11 @@ p+p {
 .element {
 
  &__title {
-  
+  text-align: center;
  }
 
  &__content {
-  width        : min(100%, $wide-container-width);
+  width        : min(100%, $narrow-container-width) !important;
   margin-inline: auto;
  }
 }

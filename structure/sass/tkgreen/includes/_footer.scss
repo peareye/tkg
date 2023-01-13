@@ -64,13 +64,14 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap                  : .75em;
       grid-auto-flow       : dense;
+
+      position: relative;
   
       >* {
         background-color:color(primary-light);
         padding         : .75em;
         border-radius   : $br;
       }
-  
     }
   }
   
@@ -86,4 +87,6 @@
     align-items    : center;
     justify-content: center;
     gap            : .25em;
+
+    position: relative;
   }

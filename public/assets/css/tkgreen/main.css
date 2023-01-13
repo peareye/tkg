@@ -171,6 +171,7 @@ inline-text {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 1em;
 }
 
 html,
@@ -202,6 +203,7 @@ h5 {
   font-family: "Roboto", sans-serif;
   line-height: 1.1;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 h1 {
@@ -236,8 +238,11 @@ p + p {
   margin-block-start: 1em;
 }
 
+.element__title {
+  text-align: center;
+}
 .element__content {
-  width: min(100%, 60rem);
+  width: min(100%, 40rem) !important;
   margin-inline: auto;
 }
 
@@ -557,6 +562,9 @@ p + p {
   font-weight: 300;
   letter-spacing: 2px;
   border-bottom: solid hsl(100deg, 0%, 94%) 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 48rem) {
   .navbar .nav-link {
@@ -568,17 +576,18 @@ p + p {
   }
 }
 .navbar .nav-link a {
-  padding-inline: 1rem;
-  padding-block: 1rem;
+  padding-inline: 0.5em;
+  padding-block: 1em;
   text-decoration: none;
   color: hsl(100deg, 0%, 98%);
   display: block;
-}
-.navbar .nav-link a:hover {
-  background-color: #00050d;
+  line-height: 1.1;
 }
 .navbar .nav-link--link {
   background-color: transparent;
+}
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+  background-color: #00050d;
 }
 
 .hero .navbar {
@@ -718,6 +727,7 @@ p + p {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 0.75em;
   grid-auto-flow: dense;
+  position: relative;
 }
 .footer .footer1 > * {
   background-color: #0444a2;
@@ -736,21 +746,21 @@ p + p {
   align-items: center;
   justify-content: center;
   gap: 0.25em;
+  position: relative;
 }
 
 .badge {
-  border: solid 5px hsl(100deg, 0%, 98%);
+  padding-block: 2em !important;
+  background-color: #032f70 !important;
   border-radius: 7px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  width: 6em;
-  position: absolute;
-  z-index: 1001;
-  left: 1em;
-  bottom: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 .badge img {
   width: 100%;
 }
+
 .hero {
   --hero-height: 80vh;
   --hero-min-height: 27em;
@@ -917,36 +927,28 @@ p + p {
 
 .imageElement {
   margin-block-end: 2em;
-  gap: 3em;
+  row-gap: 1em;
+  column-gap: 3em;
 }
 .imageElement__image {
   display: flex;
-  align-items: center;
   justify-content: center;
-  aspect-ratio: 4/3;
+  height: 100%;
+  height: min(50vh, 400px);
 }
 .imageElement img {
-  aspect-ratio: inherit;
+  width: 100%;
   object-fit: cover;
   min-height: 100%;
   border-radius: 7px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  margin-block-end: 1em;
-}
-.imageElement__content {
-  padding-block-start: 1em;
-}
-@media only screen and (min-width: 1025px) {
-  .imageElement__content {
-    padding-block-start: 0;
-  }
 }
 .imageElement .element__content {
-  margin-block-end: 1em;
-  margin-block-start: 1em;
+  margin-block: 1em;
 }
 
 .cards {
+  margin-block-start: 1em;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
@@ -1083,6 +1085,10 @@ p + p {
   background: rgba(26, 26, 26, 0.75);
 }
 
+.container__slider {
+  margin-block-start: 1em;
+}
+
 .service {
   background-color: hsl(100deg, 0%, 98%);
   color: rgba(26, 26, 26, 0.99);
@@ -1139,6 +1145,7 @@ details {
 }
 details .summary-title {
   user-select: none;
+  font-weight: 700;
 }
 details:hover {
   cursor: pointer;
@@ -1151,8 +1158,9 @@ details .summary-content {
 }
 details summary {
   list-style: none;
-  padding-inline: 1em;
   padding-block: 0.5em;
+  padding-inline-start: 0.5em;
+  padding-inline-end: 2em;
 }
 details summary:focus {
   outline: none;
@@ -1189,7 +1197,6 @@ details summary::-webkit-details-marker {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  padding-block: 1em;
 }
 .resources__sidebar {
   display: none;
@@ -1227,14 +1234,20 @@ details summary::-webkit-details-marker {
   }
 }
 .resources__content {
-  background-color: hsl(100deg, 0%, 40%);
-  color: rgba(250, 250, 250, 0.99);
-  padding: 1em;
+  background-color: hsl(100deg, 0%, 98%);
+  color: rgba(26, 26, 26, 0.99);
+  padding-inline: 1em;
   overflow: hidden;
 }
 .resources__content ul {
   list-style: none;
   list-style-position: inside;
+}
+.resources__content ul > li + li {
+  padding-block-start: 0.5em;
+}
+.resources__content ul li:last-of-type {
+  padding-block-end: 1em;
 }
 .resources__content ul a {
   color: hsl(100deg, 0%, 10%);
@@ -1250,6 +1263,10 @@ details summary::-webkit-details-marker {
   content: "\f08e";
   position: absolute;
   padding-inline-start: 10px;
+}
+.resources__content-title {
+  margin-block-start: 1em;
+  margin-block-end: 0.5em;
 }
 
 /*# sourceMappingURL=main.css.map */

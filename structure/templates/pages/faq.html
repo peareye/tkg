@@ -1,25 +1,15 @@
-{# FAQ Template Page #} 
-
-{% extends 'pages/_base_layout.html' %} 
-
-{% block navbar %} 
-{{ include('includes/_navbar.html')
-}} 
-{% endblock navbar %} 
-
-{% block body %} 
+{# FAQ Template Page #} {% extends 'pages/_base_layout.html' %} {% block navbar %} {{ include('includes/_navbar.html')
+}} {% endblock navbar %} {% block body %}
 
 <section id="faqs" class="section grid-section section--faqBlock">
   <h2 class="element__title">{{ page.title }}</h2>
 
   <div class="faqs">
-
    {{ getBlockElementsHtml(page.blocks.faqsBlock) }}
   </div>
 </section>
 
 <section class="section grid-section section--resourceBlock" id="resources">
-
   {% if page.blocks.elementHeaderResourcesBlock %} 
   {{ getBlockElementsHtml(page.blocks.elementHeaderResourcesBlock) }}
   {% endif %}
@@ -36,11 +26,7 @@
       </ul>
     </div>
 
-    <div class="resources__content">
-
-     {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
-    
-    </div>
+    <div class="resources__content">{{ getBlockElementsHtml(page.blocks.resourcesBlock) }}</div>
   </div>
 </section>
 
