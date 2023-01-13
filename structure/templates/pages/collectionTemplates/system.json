@@ -8,7 +8,10 @@
          {
          "name": "Systems",
          "key": "systemBlock",
-         "description": "Systems Block"
+         "description": "Systems Block",
+         "elementTypeOptions": [
+          "text/text"
+      ]
      }
  ]
 }
