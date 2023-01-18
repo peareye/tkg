@@ -174,11 +174,6 @@ a[href*="//"]:not([href*="tkg.moritzmedia.com"]) {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 1em;
-}
-
 html,
 body {
   width: 100vw;
