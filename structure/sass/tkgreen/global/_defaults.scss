@@ -6,12 +6,18 @@
  padding: 0;
 }
 
+html {
+ scroll-behavior: smooth;
+ scroll-padding-top: 2rem;
+}
 html,
 body {
  width     : 100vw;
  height    : 100vh;
  min-height: 100vh;
  overflow-x: hidden;
+ scroll-behavior: smooth;
+ scroll-padding-top: $spacer;
 }
 
 p::selection {
