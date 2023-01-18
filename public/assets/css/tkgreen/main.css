@@ -162,10 +162,6 @@ inline-text {
 }
 
 /* Styling External Links */
-a[href*="//"]:not([href*="tkg.moritzmedia.com"]) {
-  background-color: hsl(100deg, 0%, 98%);
-}
-
 /* Default Styles - Global */
 *,
 *::before,
