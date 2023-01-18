@@ -1,7 +1,6 @@
 .btn {
   padding-inline  : 1.25em;
   padding-block   : 1em;
-  background-color: color(accent);
   text-align      : center;
   text-decoration : none;
   @include dc(color(accent));

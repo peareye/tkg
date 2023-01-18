@@ -87,3 +87,8 @@ inline-text {
  max-height: none;
 
 }
+
+/* Styling External Links */
+a[href*="//"]:not([href*="tkg.moritzmedia.com"]) {
+ background-color: neutral(1);
+}

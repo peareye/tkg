@@ -26,7 +26,7 @@
 /* Color RGB Components */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Serif:wght@700&display=swap");
 :root {
-  --clr-primary: #283995;
+  --clr-primary: rgb(40, 57, 149);
   --clr-primary-rgb: 40, 57, 149;
   --clr-primary-dark: #1d2a6d;
   --clr-primary-dark-rgb: 29, 42, 109;
@@ -34,23 +34,23 @@
   --clr-primary-light-rgb: 82, 102, 209;
   --clr-secondary: #285d95;
   --clr-secondary-rgb: 40, 93, 149;
-  --clr-accent: #b82925;
+  --clr-accent: rgb(184, 41, 37);
   --clr-accent-rgb: 184, 41, 37;
   --clr-accent-dark: #8e201c;
   --clr-accent-rgb: 142, 32, 28;
   --clr-accent-light: #e06763;
   --clr-accent-rgb: 224, 103, 99;
-  --clr-dark-text: #333333;
+  --clr-dark-text: hsl(0deg, 0%, 20%);
   --clr-dark-text-rgb: 51, 51, 51;
-  --clr-white: white;
+  --clr-white: hsl(0deg, 0%, 100%);
   --clr-white-rgb: 255, 255, 255;
-  --clr-black: #333333;
+  --clr-black: hsl(0deg, 0%, 20%);
   --clr-black-rgb: 51, 51, 51;
-  --clr-grey-dark: #5c5c5c;
+  --clr-grey-dark: hsl(0deg, 0%, 36%);
   --clr-grey-dark-rgb: 92, 92, 92;
-  --clr-grey-medium: #9e9e9e;
+  --clr-grey-medium: hsl(0deg, 0%, 62%);
   --clr-grey-medium-rgb: 158, 158, 158;
-  --clr-grey-light: #f2f2f2;
+  --clr-grey-light: hsl(0deg, 0%, 95%);
   --clr-grey-light-rgb: 242, 242, 242;
   /* Default Element Styles */
   --bs: 0 0 25px rgba(51, 51, 51, 0.25);
@@ -63,11 +63,11 @@
   --section-margin: 0rem;
   /*  Navigation Styles */
   --nav-height: 60px;
-  --nav-bg: #283995;
+  --nav-bg: rgb(40, 57, 149);
   --nav-bg-opacity: 0;
-  --nav-text: white;
-  --nav-hover: #b82925;
-  --nav-accent: #b82925;
+  --nav-text: hsl(0deg, 0%, 100%);
+  --nav-hover: rgb(184, 41, 37);
+  --nav-accent: rgb(184, 41, 37);
   /* Layout Variables */
   --max-width: 1200px;
   /* Font Families */
@@ -107,7 +107,7 @@
 /* Color base */
 /* Color RGB Components */
 :root {
-  --clr-primary: #336699;
+  --clr-primary: rgb(51, 102, 153);
   --clr-primary-rgb: 51, 102, 153;
   --clr-primary-dark: #264d73;
   --clr-primary-dark-rgb: 38, 77, 115;
@@ -115,19 +115,19 @@
   --clr-primary-light-rgb: 102, 153, 204;
   --clr-secondary: #338899;
   --clr-secondary-rgb: 51, 136, 153;
-  --clr-accent: #ff781f;
+  --clr-accent: rgb(255, 120, 31);
   --clr-accent-rgb: 255, 120, 31;
-  --clr-dark-text: #333333;
+  --clr-dark-text: rgb(51, 51, 51);
   --clr-dark-text-rgb: 51, 51, 51;
-  --clr-white: white;
+  --clr-white: rgb(255, 255, 255);
   --clr-white-rgb: 255, 255, 255;
-  --clr-black: #333333;
+  --clr-black: rgb(51, 51, 51);
   --clr-black-rgb: 51, 51, 51;
-  --clr-grey-dark: #4d4d4d;
+  --clr-grey-dark: hsl(0deg, 0%, 30%);
   --clr-grey-dark-rgb: 77, 77, 77;
-  --clr-grey-medium: #cccccc;
+  --clr-grey-medium: rgb(204, 204, 204);
   --clr-grey-medium-rgb: 204, 204, 204;
-  --clr-grey-light: #f0f0f0;
+  --clr-grey-light: rgb(240, 240, 240);
   --clr-grey-light-rgb: 240, 240, 240;
   /* Default Element Styles */
   --bs: 0 0 25px rgba(51, 51, 51, 0.25);
@@ -140,11 +140,11 @@
   --section-margin: 0rem;
   /*  Navigation Styles */
   --nav-height: 60px;
-  --nav-bg: #336699;
+  --nav-bg: rgb(51, 102, 153);
   --nav-bg-opacity: 0;
-  --nav-text: white;
-  --nav-hover: #ff781f;
-  --nav-accent: #ff781f;
+  --nav-text: rgb(255, 255, 255);
+  --nav-hover: rgb(255, 120, 31);
+  --nav-accent: rgb(255, 120, 31);
   /* Layout Variables */
   --max-width: 1200px;
   /* Media Queries */
@@ -193,9 +193,9 @@ body {
 }
 
 body {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   font-family: var(--ff-sans);
-  color: contrast-switch(white);
+  color: contrast-switch(rgb(255, 255, 255));
   font-weight: 400;
   line-height: 1.6;
   display: flex;
@@ -238,7 +238,7 @@ p {
 }
 
 a {
-  color: contrast-switch(white);
+  color: contrast-switch(rgb(255, 255, 255));
   text-decoration: none;
   transition: all 125ms ease;
 }
@@ -254,7 +254,7 @@ h5,
 h6 {
   font-family: var(--ff-serif);
   line-height: 1.1;
-  color: #ff781f;
+  color: rgb(255, 120, 31);
   text-transform: capitalize;
 }
 
@@ -318,7 +318,7 @@ main {
 .btn {
   font-size: inherit;
   display: inline-block;
-  background: var(--clr-primary);
+  background-color: var(--clr-primary);
   border: solid 10px rgba(var(--clr-black), 50);
   border-radius: var(--br);
   color: var(--clr-white);
@@ -649,7 +649,7 @@ textarea:focus {
 /* Navigation Styles w/sub navigation dropdown and responsive toggles */
 .navbar {
   background: #264d73;
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   height: 60px;
   line-height: 60px;
   display: flex;
@@ -666,14 +666,14 @@ textarea:focus {
 }
 .navbar .logo a {
   text-decoration: none;
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   font-size: 2rem;
   height: 60px;
   line-height: 60px;
 }
 .navbar .nav {
   background: #4080bf;
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   white-space: nowrap;
   text-align: center;
   position: absolute;
@@ -715,11 +715,11 @@ textarea:focus {
 }
 .navbar .nav a {
   text-decoration: none;
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   display: block;
 }
 .navbar .toggle-label {
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   cursor: pointer;
   font-size: inherit;
   display: block;
@@ -760,7 +760,7 @@ textarea:focus {
 }
 .navbar .subnav-link:hover {
   background: #264d73;
-  color: constrast-switch(#336699);
+  color: constrast-switch(rgb(51, 102, 153));
 }
 .navbar .subnav-link a {
   text-decoration: none;
@@ -840,11 +840,11 @@ textarea:focus {
 
 .footer {
   background: var(--clr-primary);
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   font-size: 0.9rem;
 }
 .footer a {
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
   transition: all 125ms ease;
 }
 .footer a:hover {
@@ -877,7 +877,7 @@ textarea:focus {
 .footer .footer2 p {
   font-size: 0.8rem;
   font-weight: var(--fw-l);
-  color: contrast-switch(#336699);
+  color: contrast-switch(rgb(51, 102, 153));
 }
 
 .pagination {
@@ -920,7 +920,7 @@ textarea:focus {
   color: var(--clr-white);
 }
 .pagination .page-link.disabled a {
-  color: #cccccc;
+  color: hsl(0deg, 0%, 80%);
   cursor: default;
   pointer-events: none;
 }
@@ -928,7 +928,7 @@ textarea:focus {
   background: white;
 }
 .pagination .page-link.disabled:hover a {
-  color: #cccccc;
+  color: hsl(0deg, 0%, 80%);
 }
 .pagination .page-link.active {
   background: var(--clr-primary);

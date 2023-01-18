@@ -161,6 +161,11 @@ inline-text {
   max-height: none;
 }
 
+/* Styling External Links */
+a[href*="//"]:not([href*="tkg.moritzmedia.com"]) {
+  background-color: hsl(100deg, 0%, 98%);
+}
+
 /* Default Styles - Global */
 *,
 *::before,
@@ -317,7 +322,6 @@ p + p {
 .btn {
   padding-inline: 1.25em;
   padding-block: 1em;
-  background-color: #b51700;
   text-align: center;
   text-decoration: none;
   background-color: #b51700;
@@ -935,7 +939,6 @@ p + p {
 .imageElement__image {
   display: flex;
   justify-content: center;
-  height: 100%;
   height: min(50vh, 400px);
 }
 .imageElement img {
@@ -1024,7 +1027,6 @@ p + p {
 .slider__slide--inner {
   background-color: hsl(100deg, 0%, 98%);
   color: rgba(26, 26, 26, 0.99);
-  border-radius: 50%;
   height: var(--slider-height);
   padding-inline: 1em;
   border-radius: 7px;
@@ -1124,7 +1126,6 @@ p + p {
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
-  color: #032f70;
   color: rgba(3, 47, 112, 0.15);
   position: absolute;
   left: 0.2em;
@@ -1193,7 +1194,6 @@ details summary::-webkit-details-marker {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
-  word-break: break-all;
   word-break: break-word;
   -ms-hyphens: auto;
   -moz-hyphens: auto;
@@ -1238,8 +1238,6 @@ details summary::-webkit-details-marker {
 .resources__content {
   background-color: hsl(100deg, 0%, 98%);
   color: rgba(26, 26, 26, 0.99);
-  padding-inline: 1em;
-  overflow: hidden;
 }
 .resources__content ul {
   list-style: none;
@@ -1252,19 +1250,18 @@ details summary::-webkit-details-marker {
   padding-block-end: 1em;
 }
 .resources__content ul a {
-  color: hsl(100deg, 0%, 10%);
+  color: hsl(100deg, 0%, 40%);
   position: relative;
 }
 .resources__content ul a:hover, .resources__content ul a:focus {
   color: #b51700;
 }
 .resources__content ul a::after {
-  content: "";
+  content: "\f08e";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f08e";
-  position: absolute;
   padding-inline-start: 10px;
+  position: absolute;
 }
 .resources__content-title {
   margin-block-start: 1em;

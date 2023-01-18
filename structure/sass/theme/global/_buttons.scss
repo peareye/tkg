@@ -1,38 +1,6 @@
-// .btn {
-
-
-//   border-color    : neutral(1);
-
-
-
-
-//   background      : none;
-//   border          : 2px solid neutral(1);
-//   overflow        : hidden;
-
-
-
-
-
-
-
-//   &__cta {
-
-//     font-size: 1rem;
-
-//     &:hover {
-//       color: neutral(1);
-//     }
-//   }
-//   &__submit {
-//     background: $clr-primary;
-//   }
-// } 
-
 .btn {
   padding-inline  : 1.5em;
   padding-block   : 1em;
-  background-color: color(accent);
   text-align      : center;
   text-decoration : none;
   @include dc(color(accent));

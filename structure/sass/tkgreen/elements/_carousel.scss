@@ -50,7 +50,6 @@
 
   &--inner {
    @include dc(neutral(1));
-   border-radius: 50%;
 
    height        : var(--slider-height);
    padding-inline: calc($spacer * 1);

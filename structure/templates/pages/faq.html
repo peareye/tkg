@@ -1,5 +1,6 @@
 {# FAQ Template Page #} {% extends 'pages/_base_layout.html' %} {% block navbar %} {{ include('includes/_navbar.html')
 }} {% endblock navbar %} {% block body %}
+<base target="_blank">
 
 <section id="faqs" class="section grid-section section--faqBlock">
   <h2 class="element__title">{{ page.title }}</h2>
@@ -20,14 +21,18 @@
         {% for c in page.blocks.resourcesBlock %}
         <li class="resources__sidebar-li">
           {# Loop the element titles here #}
-          <a class="resources__sidebar-link" href="#{{ c.title }}"> {{ c.title }} </a>
+          <a class="resources__sidebar-link" href="#{{ c.title }}" target="_self"> {{ c.title }} </a>
         </li>
         {% endfor %}
       </ul>
     </div>
 
-    <div class="resources__content">{{ getBlockElementsHtml(page.blocks.resourcesBlock) }}</div>
+    <div class="resources__content">
+     {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
+    </div>
+
   </div>
-</section>
+
+ </section>
 
 {% endblock body %}

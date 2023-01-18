@@ -1,7 +1,5 @@
 .resources {
  @include word-wrap();
- // padding-block: $spacer;
-
 
  &__sidebar {
   display       : none;
@@ -44,8 +42,6 @@
 
  &__content {
   @include dc(neutral(1));
-  padding-inline : $spacer;
-  overflow: hidden;
 
   ul {
    list-style         : none;
@@ -60,7 +56,7 @@
    }
 
    a {
-    color: neutral(5);
+    color: neutral(4);
 
     position: relative;
 
@@ -70,13 +66,12 @@
     }
 
     &::after {
-     content             : '';
+     content             : "\f08e";
      font-family         : "Font Awesome 5 Free";
      font-weight         : 900;
-     content             : "\f08e";
-     position            : absolute;
-     // right: $spacer;
      padding-inline-start: 10px;
+    
+     position            : absolute;
 
     }
    }
