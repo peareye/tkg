@@ -1,9 +1,11 @@
 {% if element.title %}
+  <h2 class="element__title">
+   {{ element.title }}
+  </h2>
+{% endif %} 
 
-    <h2 class="element__title">{{ element.title }}</h2>
-    {% endif %}
-    
-    {% if element.content %}
-    <div class="element__content">{{ element.content }}</div>
-
+{% if element.content %}
+  <div class="element__content text__element">
+   {{ element.content }}
+  </div>
 {% endif %}

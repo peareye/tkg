@@ -78,8 +78,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -543,7 +543,7 @@ textarea:focus {
 }
 @media only screen and (min-width: 768px) {
   .header__phone, .header__location,
-.header .social, .header__contact {
+  .header .social, .header__contact {
     font-size: 0.8rem;
   }
 }

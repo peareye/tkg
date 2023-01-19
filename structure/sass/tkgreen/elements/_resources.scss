@@ -74,6 +74,9 @@
      position            : absolute;
 
     }
+    &:visited {
+     color: color(accent-light);
+    }
    }
   }
 
