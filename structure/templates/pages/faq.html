@@ -3,7 +3,10 @@
 <base target="_blank">
 
 <section id="faqs" class="section grid-section section--faqBlock">
-  <h2 class="element__title">{{ page.title }}</h2>
+ {% if page.blocks.elementHeaderFaqsBlock %} 
+ {{ getBlockElementsHtml(page.blocks.elementHeaderFaqsBlock) }}
+ {% endif %}
+
 
   <div class="faqs">
    {{ getBlockElementsHtml(page.blocks.faqsBlock) }}
@@ -28,7 +31,7 @@
     </div>
 
     <div class="resources__content">
-     {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
+    {{ getBlockElementsHtml(page.blocks.resourcesBlock) }}
     </div>
 
   </div>

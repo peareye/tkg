@@ -1,59 +1,59 @@
 <footer class="footer">
+  <div class="footer1">
 
-    <div class="footer1">
+    {% if site.settings.footerAbout %}
+    <div class="footer-about span">{{ site.settings.footerAbout|nl2br}}</div>
+    {% endif %}
 
-        {% if site.settings.footerAbout %}
-        <div class="footer-about span">
-            {{ site.settings.footerAbout|nl2br}}
-        </div>
-        {% endif %}
-        
-        <div class="footer-nav">
-            <h5 class="footer-title">Navigation</h5>
-            <nav class="nav-footer">
-                <ul class="nav-footer__nav">
-                    {# This example footer nav does not display drop down nav links #}
-                    {% for navItem in getNavigator('footer') %}
-                    <li class="{% if navItem.currentPage %}active{% endif %}">
-                        <a class="styled-link" href="{{ getNavigationLink(navItem) }}">{{ navItem.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
-
-        <div class="footer-social">
-            <h5 class="footer-title">Get Social</h5>
-            {{ include("includes/_social.html") }}
-        </div>
-
-        {% if site.settings.contactAddress %}
-        <div class="footer-address">
-            <h5 class="footer-title">Address</h5>
-            <p> {{ site.settings.contactAddress|nl2br}}</p>
-        </div>
-        {% endif %}
-
-        {% if site.settings.contactPhone %}
-        <div class="contactPhone">
-            <h5 class="footer-title">Phone</h5>
-            <p><i class="fa-solid fa-phone"></i>
-             <a class="styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a></p>
-        </div>
-        {% endif %}
-        {{ include("includes/_badge.html") }}
+    <div class="footer-nav">
+      <h5 class="footer-title">Navigation</h5>
+      <nav class="nav-footer">
+       {# This example footer nav does not display drop down nav links #} 
+        <ul class="nav-footer__nav">
+          {% for navItem in getNavigator('footer') %}
+          <li class="{% if navItem.currentPage %}active{% endif %}">
+            <a class="styled-link" href="{{ getNavigationLink(navItem) }}">{{ navItem.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
 
-    <div class="footer2">
-        <p>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</p>
-        {% if site.settings.footerAuthor %}
-        <div class="text-small">Built with
-            <a class="styled-link" href="http://pitoncms.com" target="_blank">PitonCMS </a> by 
-            <a class="styled-link" href="{{ site.settings.footerAuthorURL }} " target="_blank">{{
-                site.settings.footerAuthor }}</a>
-            </div>
-        {% endif %}
-        {# {{ include("includes/_badge.html") }} #}
+    <div class="footer-social">
+      <h5 class="footer-title">Get Social</h5>
+      {{ include("includes/_social.html") }}
     </div>
 
+    {% if site.settings.contactAddress %}
+    <div class="footer-address">
+      <h5 class="footer-title">Address</h5>
+
+      <div>{{ site.settings.contactAddress|nl2br}}</div>
+    </div>
+    {% endif %} 
+    {% if site.settings.contactPhone %}
+
+    <div class="contactPhone">
+      <h5 class="footer-title">Phone</h5>
+      <div>
+        <i class="fa-solid fa-phone"></i>
+        <a class="styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+      </div>
+    </div>
+    {% endif %} 
+    
+    {{ include("includes/_badge.html") }}
+  </div>
+
+  <div class="footer2">
+    <div>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</div>
+    {% if site.settings.footerAuthor %}
+    <div class="text-small">
+      Built with <a class="styled-link" href="http://pitoncms.com" target="_blank">PitonCMS </a> by
+      <a class="styled-link" href="{{ site.settings.footerAuthorURL }} " target="_blank"
+        >{{ site.settings.footerAuthor }}</a
+      >
+    </div>
+    {% endif %} {# {{ include("includes/_badge.html") }} #}
+  </div>
 </footer>

@@ -234,10 +234,19 @@ h6 {
 
 p {
   font-size: 1rem;
+  background-color: rgba(144, 238, 144, 0.25);
 }
 
 p + p {
   margin-block-start: 1em;
+}
+
+a {
+  color: #032f70;
+  font-weight: 600;
+}
+a:hover, a:focus {
+  color: #e81d00;
 }
 
 .element__title {
@@ -709,6 +718,9 @@ p + p {
   display: flex;
   gap: 1rem;
 }
+.footer-social:hover, .footer-social:focus {
+  font-size: 1.4rem;
+}
 .footer-title {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -722,7 +734,7 @@ p + p {
 .footer .footer1 {
   margin-inline: auto;
   padding-block: 1em;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   background-color: #032f70;
   color: hsl(100deg, 0%, 98%);
   width: min(100% - 1em, 60rem);
@@ -736,6 +748,12 @@ p + p {
   background-color: #0444a2;
   padding: 0.75em;
   border-radius: 7px;
+}
+.footer .footer1 a {
+  color: hsl(100deg, 0%, 98%);
+}
+.footer .footer1 a:hover, .footer .footer1 a:focus {
+  color: #e81d00;
 }
 
 .footer2 {

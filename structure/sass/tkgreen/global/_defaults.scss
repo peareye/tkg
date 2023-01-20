@@ -83,10 +83,20 @@ h6 {
 
 p {
  font-size: 1rem;
+ background-color: rgba(lightgreen, .25);
 }
 
 p+p {
  margin-block-start: $spacer;
+}
+
+a {
+ color: color(primary);
+ font-weight: $fw-m;
+
+ &:hover, &:focus {
+  color: color(accent-light);
+ }
 }
 
 // Element Globals

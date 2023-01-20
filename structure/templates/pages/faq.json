@@ -5,6 +5,14 @@
     "templateType": "page",
     "blocks": [
         {
+            "name": "Element Header FAQs",
+            "key": "elementHeaderFaqsBlock",
+            "description": "Element Header Intro",
+            "elementTypeOptions": [
+                "elementHeader/elementHeader"
+              ]
+        },
+        {
             "name": "FAQs",
             "key": "faqsBlock",
             "description": "Content for FAQs",
