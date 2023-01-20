@@ -24,6 +24,7 @@
   &:hover,
   &:focus {
     background: color(accent-dark);
+    color: neutral(1);
     transform : scale(1.1);
   }
 
