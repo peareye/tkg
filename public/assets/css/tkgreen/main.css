@@ -799,10 +799,12 @@ a:hover, a:focus {
   line-height: 1;
   font-size: 3rem;
   font-weight: 700;
+  text-shadow: 5px 5px 10px rgba(26, 26, 26, 0.5);
 }
 @media only screen and (min-width: 48rem) {
   .hero__content-title {
     font-weight: 700;
+    font-size: 4rem;
   }
 }
 .hero__image {

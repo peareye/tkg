@@ -35,11 +35,13 @@
   
       &-title {
         line-height: 1;
-        font-size  : 3rem;
+       font-size: 3rem;
         font-weight: $fw-b;
+        text-shadow: 5px 5px 10px rgba(neutral(5), .5);
   
         @include mq(small) {
           font-weight: $fw-b;
+          font-size  : 4rem;
         }
       }
   
