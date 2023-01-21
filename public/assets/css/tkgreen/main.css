@@ -763,18 +763,6 @@ a:hover, a:focus {
   position: relative;
 }
 
-.badge {
-  padding-block: 2em !important;
-  background-color: #032f70 !important;
-  border-radius: 7px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-}
-.badge img {
-  width: 100%;
-}
-
 .hero {
   --hero-height: 80vh;
   --hero-min-height: 27em;
