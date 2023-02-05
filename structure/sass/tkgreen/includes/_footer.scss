@@ -27,20 +27,32 @@
   }
  }
 
- &-social {
-  font-size : 1.3rem;
-  text-align: left;
+ &-socialLinks {
+  .socialLinks {
+   display              : grid;
+   grid-template-columns: repeat(auto-fit, minmax($spacer, 1fr));
+   gap                  : calc($spacer / 4);
+   font-size            : 1.75em;
+   align-items          : center;
+   justify-content      : center;
+  
 
-  >* {
-
-   display: flex;
-   gap    : 1rem;
+   
+   .social-icon {
+    transform: scale(1);
+    transition: transform 250ms ease;
+    &:hover,
+   &:focus {
+    transform: scale(1.2);
+   }
+   }
   }
 
-  &:hover, &:focus {
-   font-size: 1.4rem;
-  }
+  @include mq(small) {}
+
  }
+
+
 
  &-title {
   font-family     : $ff-sans-headings;

@@ -1,17 +1,10 @@
+.container__slider {
+ margin-block-start: $spacer;
+}
 .slider {
- --slider-height: 400px;
- height         : var(--slider-height);
-
- position: relative;
-
-
- @include mq(xs) {
-  --slider-height: 400px;
- }
-
  &__track-container {
   border-radius: $br;
-  box-shadow   : 0 5px 25px rgba(neutral(5), .15);
+  box-shadow   : $bs;
   position     : relative;
   overflow     : hidden;
  }
@@ -19,7 +12,6 @@
  &__track {
   margin    : 0;
   padding   : 0;
-  height    : var(--slider-height);
   width     : 100%;
   list-style: none;
 
@@ -30,42 +22,24 @@
   align-items    : center;
 
   transition: transform ease-in 250ms;
-
  }
 
  &__slide {
-
   position: absolute;
   width   : 100%; // has to be 100% to create slide
-  height  : var(--slider-height);
   top     : 0;
   bottom  : 0;
 
-  display        : -webkit-flex;
-  display        : -webkit-box;
-  display        : flex;
-  flex-flow      : column nowrap;
-  justify-content: center;
-  align-items    : center;
-
   &--inner {
-   @include dc(neutral(1));
-
-   height        : var(--slider-height);
-   padding-inline: calc($spacer * 1);
-   border-radius : $br;
-   box-shadow    : $bs;
-
-   display        : flex;
-   flex-flow      : column nowrap;
-   justify-content: center;
-   align-items    : center;
-
+   padding-block: calc($spacer * 2);
+  
    h3 {
     font-size: 1.3rem;
+    padding-inline: $spacer;
    }
 
    h4 {
+    padding-inline: $spacer;
     font-size : 1rem;
     font-style: italic;
 
@@ -81,8 +55,6 @@
     font-weight       : 300;
    }
   }
-
-
  }
 
  &__button {
@@ -131,6 +103,3 @@
  }
 }
 
-.container__slider {
-margin-block-start: $spacer;
-}

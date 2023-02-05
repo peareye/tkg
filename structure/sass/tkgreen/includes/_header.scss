@@ -84,11 +84,12 @@
     }
   }
 
-  .social {
+  .socialLinks {
     display        : flex;
     gap            : $spacer;
     justify-content: center;
     align-items    : center;
+    font-size: 1.75em;
 
     >* {
       --header-font-size: 2rem;
