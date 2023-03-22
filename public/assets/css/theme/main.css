@@ -963,26 +963,4 @@ textarea:focus {
   font-size: 1.2rem;
 }
 
-.about-wrapper {
-  display: grid;
-  gap: 2em;
-}
-.about-wrapper .switcher:not(:last-of-type) {
-  position: relative;
-}
-.about-wrapper .switcher:not(:last-of-type)::after {
-  content: "";
-  display: block;
-  margin: 0.5em auto;
-  background: currentColor;
-  height: 1px;
-  width: 40%;
-  opacity: 0.25;
-  position: absolute;
-  bottom: -1em;
-  left: 50%;
-  transform: translateX(-50%);
-  color: hsl(0deg, 4%, 50%);
-}
-
 /*# sourceMappingURL=main.css.map */
