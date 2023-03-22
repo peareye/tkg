@@ -23,3 +23,18 @@
   }
 }
 
+// Extract RGB values from variables in scss to be used in css variables
+// https://www.techhive.io/our-insights/how-to-use-css-variables-with-sass-mixins
+
+// How to use in CSS Variables
+
+// :root {  
+//  --color: #{$color};
+// }
+
+@function hexToRGB($hex) {
+ @return red($hex),
+ green($hex),
+ blue($hex);
+}
+
