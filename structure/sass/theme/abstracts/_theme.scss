@@ -9,12 +9,10 @@
   $neutral-1: hsl(0, 4%, 100%);
   $neutral-2: hsl(0, 4%, 94%);
   $neutral-3: hsl(0, 4%, 50%);
-  $neutral-4: hsl(208,7%, 46%);
-  // $neutral-4: hsl(0, 4%, 30%);
-  // $neutral-5: hsl(0, 4%, 13%);
+  $neutral-4: hsl(208, 7%, 46%);
   $neutral-5: rgb(33, 37, 41);
 
-  $col: hsl(208, 7%, 46%);
+  $col : hsl(208, 7%, 46%);
   $clr1: rgb(33, 37, 41);
 
 
@@ -24,24 +22,24 @@
   $clr-accent    : $clr-red;
 
   // Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
-  $neutrals: (
-    1: $neutral-1,
-    2: $neutral-2,
-    3: $neutral-3,
-    4: $neutral-4,
-    5: $neutral-5,
+
+  // Neutral palette map
+  $neutrals: (1: $neutral-1,
+   2: $neutral-2,
+   3: $neutral-3,
+   4: $neutral-4,
+   5: $neutral-5,
   );
 
-  $clrs: (
-    primary: $clr-primary,
-    primary-dark: darken($clr-primary, 20%),
-    primary-light: lighten($clr-primary, 10%),
-    secondary: $clr-secondary,
-    secondary-dark: darken($clr-secondary, 20%),
-    secondary-light: lighten($clr-secondary, 10%),
-    accent: $clr-accent,
-    accent-dark: darken($clr-accent, 20%),
-    accent-light: lighten($clr-accent, 10%),
+  $clrs: (primary: $clr-primary,
+   primary-dark: darken($clr-primary, 20%),
+   primary-light: lighten($clr-primary, 10%),
+   secondary: $clr-secondary,
+   secondary-dark: darken($clr-secondary, 20%),
+   secondary-light: lighten($clr-secondary, 10%),
+   accent: $clr-accent,
+   accent-dark: darken($clr-accent, 20%),
+   accent-light: lighten($clr-accent, 10%),
   );
 
 
@@ -51,7 +49,7 @@
   $bs-1 : 0 10px 25px rgba(neutral(5), .25);
   $bs-2 : 0 20px 40px -15px rgba(neutral(5), .25);
   $bs-3 : 0 0 20px rgba(neutral(5), .15);
-  $bs-4: 0 .5rem 1rem rgba(neutral(5),.15);
+  $bs-4 : 0 .5rem 1rem rgba(neutral(5), .15);
   $bsh  : 0px 0px 10px 2px rgba(neutral(5), .15); // box shadow hover
   $br   : 7px;
   $ls   : 2px;
@@ -59,30 +57,32 @@
 
   $spacer: 1em;
 
-  $breakpoints: (
-    xs: 576px,
-    small: 768px,
-    medium: 850px,
-    big: 1500px);
+  $breakpoints: (xs: 576px,
+   small: 768px,
+   medium: 850px,
+   big: 1500px);
 
   // Navigation Variables
   $nav-height: 60px;
   $scale     : 0; // Scales the navigation. valid #'s 0 -> 1. Zero value is collapsed.
 
   // Layout Variables
-  $max-container-width: 60em;
-  $wide-container-width: 60em;
+  $max-container-width   : 60em;
+  $wide-container-width  : 60em;
   $narrow-container-width: 40rem;
-  $full-container-width: calc(100% - $spacer);
+  $full-container-width  : calc(100% - $spacer);
 
   // Font Variables
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=PT+Serif+Caption&family=Patua+One&family=Roboto:wght@300;400;700&display=swap');
-  $fw-l: 300;
-  $fw-n: 400;
-  $fw-m: 600;
-  $fw-b: 700;
+  $fw-l             : 300;
+  $fw-n             : 400;
+  $fw-m             : 600;
+  $fw-b             : 700;
 
-  $ff-serif: 'PT Serif', serif;
-  $ff-sans-body: 'Lato', sans-serif;
-  $ff-sans-headings: 'Roboto', sans-serif;
+  $ff-serif: 'PT Serif',
+  serif;
+  $ff-sans-body: 'Lato',
+  sans-serif;
+  $ff-sans-headings: 'Roboto',
+  sans-serif;

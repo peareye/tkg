@@ -1,5 +1,3 @@
-
-
 // Gray scale 
 @function neutral($shade: 4) {
   @if type-of($shade) !=number or $shade < 1 or $shade>5 {
@@ -17,7 +15,6 @@
 }
 
 // Dynamic Color. Sets the text color to constrast with 
-
 @function dynamic-color($color){
   @if lightness($color) > 50% {
     @return rgba(neutral(5), .99);

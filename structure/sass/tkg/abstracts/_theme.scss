@@ -12,12 +12,6 @@
   $neutral-4: hsl(208, 7%, 46%);
   $neutral-5: hsl(345, 6%, 13%);
 
-
-  // $neutral-1: hsl(231, 15%, 100%);
-  // $neutral-2: hsl(231, 15%, 97%);
-  // $neutral-3: hsl(231, 15%, 65%);
-  // $neutral-4: hsl(231, 15%, 46%);
-  // $neutral-5: hsl(233, 15%, 16%);
   $clr-primary   : $clr-blue;
   $clr-secondary : adjust-hue($clr-primary, -30);
   $clr-accent    : $clr-red;
