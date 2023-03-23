@@ -1211,6 +1211,9 @@ details summary::-webkit-details-marker {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+.resources.flex-two-columns {
+  gap: 0;
+}
 .resources__sidebar {
   display: none;
   padding-block: 1em;

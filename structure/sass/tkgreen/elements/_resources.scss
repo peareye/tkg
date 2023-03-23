@@ -1,6 +1,10 @@
 .resources {
  @include word-wrap();
 
+ &.flex-two-columns {
+  gap: 0;
+ }
+
  &__sidebar {
   display       : none;
   padding-block : $spacer;
