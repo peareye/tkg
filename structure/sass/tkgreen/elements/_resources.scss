@@ -50,6 +50,7 @@
   ul {
    list-style         : none;
    list-style-position: inside;
+   padding-inline-end: calc($spacer * 1.5);
 
    >li+li {
     padding-block-start: calc($spacer * .5);

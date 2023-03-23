@@ -1257,6 +1257,7 @@ details summary::-webkit-details-marker {
 .resources__content ul {
   list-style: none;
   list-style-position: inside;
+  padding-inline-end: 1.5em;
 }
 .resources__content ul > li + li {
   padding-block-start: 0.5em;
