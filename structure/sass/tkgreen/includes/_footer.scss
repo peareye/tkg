@@ -1,4 +1,5 @@
 // Footer Styles
+
 .footer {
  margin-block-start: auto;
  background-color  : color(primary);
@@ -28,12 +29,10 @@
 
  &-socialLinks {
   .socialLinks {
-   display              : grid;
-   grid-template-columns: repeat(auto-fit, minmax($spacer, 1fr));
-   gap                  : calc($spacer / 4);
-   font-size            : 1.75em;
-   align-items          : center;
-   justify-content      : center;
+   display: flex;
+   flex-wrap: wrap;
+   gap: $spacer;
+   justify-content: center;
 
 
    .social-icon {
@@ -52,10 +51,8 @@
 
  &-title {
   font-family     : $ff-sans-headings;
-  margin          : 0;
-  margin-block-end: .25rem;
-  padding         : 0;
-  font-size       : 1rem;
+  margin-block-end: .75rem;
+  font-size       : 1.3rem;
  }
 
  &-about {
@@ -69,6 +66,8 @@
   background-color     : color(primary);
   color                : neutral(1);
   width                : min(calc(100% - $spacer), $wide-container-width);
+  text-align: center;
+
   display              : grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap                  : .75em;
