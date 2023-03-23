@@ -29,9 +29,9 @@
 
  &-socialLinks {
   .socialLinks {
-   display: flex;
-   flex-wrap: wrap;
-   gap: $spacer;
+   display        : flex;
+   flex-wrap      : wrap;
+   gap            : $spacer;
    justify-content: center;
 
 
@@ -45,8 +45,6 @@
     }
    }
   }
-
-  @include mq(small) {}
  }
 
  &-title {
@@ -59,14 +57,22 @@
   text-align: center;
  }
 
+ &Badge {
+  img {
+   width        : 100%;
+   aspect-ratio : 2 / 1;
+  
+  }
+ }
+
  .footer1 {
-  margin-inline        : auto;
-  padding-block        : 1em;
-  font-size            : 1.1rem;
-  background-color     : color(primary);
-  color                : neutral(1);
-  width                : min(calc(100% - $spacer), $wide-container-width);
-  text-align: center;
+  margin-inline   : auto;
+  padding-block   : 1em;
+  font-size       : 1.1rem;
+  background-color: color(primary);
+  color           : neutral(1);
+  width           : min(calc(100% - $spacer), $wide-container-width);
+  text-align      : center;
 
   display              : grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

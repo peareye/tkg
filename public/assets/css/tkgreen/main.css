@@ -725,6 +725,10 @@ a:hover, a:focus {
 .footer-about {
   text-align: center;
 }
+.footerBadge img {
+  width: 100%;
+  aspect-ratio: 2/1;
+}
 .footer .footer1 {
   margin-inline: auto;
   padding-block: 1em;
