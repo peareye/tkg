@@ -960,23 +960,21 @@ a:hover, a:focus {
 
 .imageElement {
   margin-block-end: 2em;
+  column-gap: 1.5em;
   row-gap: 1em;
-  column-gap: 3em;
 }
 .imageElement__image {
   display: flex;
   justify-content: center;
-  height: min(50vh, 400px);
 }
 .imageElement img {
-  width: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  min-height: 100%;
   border-radius: 7px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 .imageElement .element__content {
-  margin-block: 1em;
+  margin-block-start: 1em;
 }
 
 .cards {

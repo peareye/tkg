@@ -1,24 +1,22 @@
  // Image Element
  .imageElement {
   margin-block-end: calc($spacer * 2);
+  column-gap      : 1.5em;
   row-gap         : $spacer;
-  column-gap      : calc($spacer * 3);
 
   &__image {
    display        : flex;
    justify-content: center;
-   height         : min(50vh, 400px);
   }
 
   img {
-   width        : 100%;
+   aspect-ratio : 1/1;
    object-fit   : cover;
-   min-height   : 100%;
    border-radius: $br;
    box-shadow   : $bs;
   }
 
   .element__content {
-   margin-block  : $spacer;
+   margin-block-start: $spacer;
   }
  }
