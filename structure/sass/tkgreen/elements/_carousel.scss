@@ -1,5 +1,7 @@
 .container__slider {
  margin-block-start: $spacer;
+ width: min(100%, $narrow-container-width);
+
 }
 
 .slider {
@@ -20,6 +22,9 @@
   justify-content: center;
   align-items    : center;
   transition     : transform ease-in 250ms;
+  &-container {
+   background-color: neutral(1);
+  }
  }
 
  &__slide {
@@ -30,6 +35,7 @@
 
   &--inner {
    padding-block: calc($spacer * 2);
+
 
    h3 {
     font-size     : 1.3rem;
@@ -88,7 +94,7 @@
   height       : 1em;
   border       : 0;
   border-radius: 50%;
-  background   : rgba(neutral(5), 0.3);
+  background-color   : rgba(neutral(5), 0.3);
   cursor       : pointer;
 
   &.current-slide {
