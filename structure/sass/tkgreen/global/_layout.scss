@@ -40,8 +40,7 @@
  &section {
 
   grid-template-columns: calc($spacer * .5) auto calc($spacer * .5);
-  row-gap: calc($spacer * 3);
-  column-gap: $spacer;
+  gap: $spacer;
 
   >* {
    width        : min(100%, $wide-container-width);
