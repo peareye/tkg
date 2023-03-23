@@ -1,32 +1,30 @@
 .text__element {
-@include dc(neutral(1));
-&:has(.image){
+ @include dc(neutral(1));
 
+ &:has(.image) {
+  display              : grid;
+  column-gap           : $spacer;
+  grid-template-columns: repeat(2, 1fr);
 
- display: grid;
- column-gap: $spacer;
- grid-template-columns: 1fr 1fr;
-figure {
- grid-row: 1 / 10;
-}
- p {
-grid-column: -2 / -1;
+  figure {
+   grid-row: 1 / 10;
+  }
+
+  p {
+   grid-column: -2 / -1;
+  }
  }
 
-}
+ figure {
+  img {
+   box-shadow: $bs;
+  }
 
-figure {
-
-
-img{
- box-shadow: $bs;
-}
-figcaption {
- font-weight: $fw-l;
-font-size: .8rem;
-color: neutral(4);
- margin-block-start: calc($spacer /2);
-}
-}
-
+  figcaption {
+   font-weight       : $fw-l;
+   font-size         : .8rem;
+   color             : neutral(4);
+   margin-block-start: calc($spacer /2);
+  }
+ }
 }

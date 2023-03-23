@@ -837,7 +837,7 @@ a:hover, a:focus {
 .text__element:has(.image) {
   display: grid;
   column-gap: 1em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 .text__element:has(.image) figure {
   grid-row: 1/10;
