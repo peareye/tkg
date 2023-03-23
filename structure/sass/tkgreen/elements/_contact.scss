@@ -40,6 +40,10 @@
    grid-column: 2 / 3;
 
    transition: all 125ms ease-in-out;
+
+   @supports (-webkit-touch-callout: none) {
+    border: solid 1px $neutral-3;
+   }
   }
 
   /* Add styles to show 'focus' of selector */
