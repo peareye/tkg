@@ -30,7 +30,7 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-// sliderContainer.style.height = maxSlideHeight + "px";
+sliderContainer.style.height = maxSlideHeight + "px";
 
 // Function for left/right button
 const moveToSlide = (track, currentSlide, targetSlide) => {
