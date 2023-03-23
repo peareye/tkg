@@ -58,6 +58,7 @@
  &three-columns {
   // children will expand to fill space if there are not enough items to fill full screen space. Should not be more than 3 items total.
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacer;
  }
 
  &stacked {

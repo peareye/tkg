@@ -288,6 +288,7 @@ a:hover, a:focus {
 }
 .grid-three-columns {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
 }
 .grid-stacked {
   grid-template-columns: auto 1fr;
