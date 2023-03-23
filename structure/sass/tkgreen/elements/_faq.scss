@@ -25,11 +25,11 @@ details {
  }
 
  summary {
-  list-style           : none;
-  padding-block        : calc($spacer / 2);
-  padding-inline-start : calc($spacer /2);
-  padding-inline-end: calc($spacer * 2);
- 
+  list-style          : none;
+  padding-block       : calc($spacer / 2);
+  padding-inline-start: calc($spacer /2);
+  padding-inline-end  : calc($spacer * 2);
+
   &:focus {
    outline: none;
   }

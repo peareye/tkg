@@ -1,5 +1,4 @@
 // Utilities
-
 .span {
  grid-column: 1 / -1;
 }
@@ -34,17 +33,13 @@ inline-text {
 
 // Cutoff Text Styles
 .cutoff-text {
- --max-lines: 5;
-
+ --max-lines       : 5;
  display           : -webkit-box;
  overflow          : hidden;
  -webkit-box-orient: vertical;
  -webkit-line-clamp: var(--max-lines);
-
-
- position: relative;
+ position          : relative;
 }
-
 
 .expand-btn {
  appearance   : none;
@@ -64,16 +59,13 @@ inline-text {
 
  &::before {
   content: 'Read More';
-
  }
 
  &:checked::before {
   content: 'Read Less';
  }
-
 }
 
 .cutoff-text:has(+ .expand-btn:checked) {
  max-height: none;
-
 }

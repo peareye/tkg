@@ -6,17 +6,15 @@
  border-bottom-color: rgba(color(accent), .75);
  box-shadow         : $bs;
  border-radius      : $br;
-
- display: flex;
- gap    : $spacer;
-
- position: relative;
+ display            : flex;
+ gap                : $spacer;
+ position           : relative;
 
  .element__title {
   color         : color(primary);
   text-transform: capitalize;
   font-weight   : $fw-m;
-  line-height: 1;
+  line-height   : 1;
  }
 
  &__content {
@@ -35,13 +33,11 @@
   align-items    : center;
   justify-content: center;
   transform      : rotate(45deg);
-
-  color: rgba(color(primary), .15);
-
-  position : absolute;
-  left     : calc($spacer / 5);
-  top      : calc($spacer / 5);
-  font-size: 3em;
+  color          : rgba(color(primary), .15);
+  position       : absolute;
+  left           : calc($spacer / 5);
+  top            : calc($spacer / 5);
+  font-size      : 3em;
 
   .fas {
    transform: rotate(-45deg);

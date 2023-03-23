@@ -28,7 +28,6 @@
     font-weight    : $fw-m;
     border-radius  : $br;
     @include dc(neutral(5));
-
     display   : block;
     transition: all ease-in-out 250ms;
 
@@ -56,8 +55,7 @@
    }
 
    a {
-    color: neutral(4);
-
+    color   : neutral(4);
     position: relative;
 
     &:hover,
@@ -70,10 +68,10 @@
      font-family         : "Font Awesome 5 Free";
      font-weight         : 900;
      padding-inline-start: 10px;
-    
-     position            : absolute;
 
+     position: absolute;
     }
+
     &:visited {
      color: color(accent-light);
     }
@@ -82,7 +80,7 @@
 
   &-title {
    margin-block-start: $spacer;
-   margin-block-end: calc($spacer * .5);
+   margin-block-end  : calc($spacer * .5);
   }
  }
 }

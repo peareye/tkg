@@ -1,6 +1,7 @@
 .container__slider {
  margin-block-start: $spacer;
 }
+
 .slider {
  &__track-container {
   border-radius: $br;
@@ -10,18 +11,15 @@
  }
 
  &__track {
-  margin    : 0;
-  padding   : 0;
-  width     : 100%;
-  list-style: none;
-
-  position: relative;
-
+  margin         : 0;
+  padding        : 0;
+  width          : 100%;
+  list-style     : none;
+  position       : relative;
   display        : flex;
   justify-content: center;
   align-items    : center;
-
-  transition: transform ease-in 250ms;
+  transition     : transform ease-in 250ms;
  }
 
  &__slide {
@@ -32,19 +30,18 @@
 
   &--inner {
    padding-block: calc($spacer * 2);
-  
+
    h3 {
-    font-size: 1.3rem;
+    font-size     : 1.3rem;
     padding-inline: $spacer;
    }
 
    h4 {
     padding-inline: $spacer;
-    font-size : 1rem;
-    font-style: italic;
-
-    font-weight: 300;
-    line-height: 1.2;
+    font-size     : 1rem;
+    font-style    : italic;
+    font-weight   : 300;
+    line-height   : 1.2;
    }
 
    p {
@@ -64,11 +61,10 @@
   cursor    : pointer;
   box-shadow: none;
   color     : neutral(4);
-
-  position : absolute;
-  z-index  : 100;
-  top      : 50%;
-  transform: translateY(-50%);
+  position  : absolute;
+  z-index   : 100;
+  top       : 50%;
+  transform : translateY(-50%);
 
   &--left {
    left: $spacer;
@@ -80,8 +76,7 @@
  }
 
  &__nav {
-  margin-block: (calc($spacer * 2));
-
+  margin-block   : (calc($spacer * 2));
   display        : flex;
   gap            : $spacer;
   justify-content: center;
@@ -94,12 +89,10 @@
   border       : 0;
   border-radius: 50%;
   background   : rgba(neutral(5), 0.3);
-
-  cursor: pointer;
+  cursor       : pointer;
 
   &.current-slide {
    background: rgba(neutral(5), 0.75);
   }
  }
 }
-
