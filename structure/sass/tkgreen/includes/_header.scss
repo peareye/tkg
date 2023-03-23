@@ -27,7 +27,6 @@
   @include mq(small) {
     flex-direction : row;
     justify-content: space-between;
-    gap            : calc($spacer * .25);
   }
 
   // Header Logo
@@ -76,9 +75,14 @@
   &__location,
   .social {
     font-size : var(--header-font-size);
-    text-align: center;
+    // text-align: center;
 
-
+    display: grid;
+    grid-template-columns: min-content max-content;
+    column-gap: calc($spacer * .5);
+    align-items: center;
+    justify-content: center;
+ 
     @include mq(small) {
       --header-font-size: .9rem;
     }
@@ -86,7 +90,7 @@
 
   .socialLinks {
     display        : flex;
-    gap            : $spacer;
+    gap            : calc($spacer * .25);
     justify-content: center;
     align-items    : center;
     font-size: 1.75em;

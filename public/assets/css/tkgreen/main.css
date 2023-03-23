@@ -385,7 +385,6 @@ a:hover, a:focus {
   .header {
     flex-direction: row;
     justify-content: space-between;
-    gap: 0.25em;
   }
 }
 .header .logo {
@@ -425,7 +424,11 @@ a:hover, a:focus {
 .header__phone, .header__location,
 .header .social {
   font-size: var(--header-font-size);
-  text-align: center;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  column-gap: 0.5em;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-width: 48rem) {
   .header__phone, .header__location,
@@ -435,7 +438,7 @@ a:hover, a:focus {
 }
 .header .socialLinks {
   display: flex;
-  gap: 1em;
+  gap: 0.25em;
   justify-content: center;
   align-items: center;
   font-size: 1.75em;
