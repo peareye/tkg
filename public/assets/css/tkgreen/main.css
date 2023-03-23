@@ -259,9 +259,6 @@ a:hover, a:focus {
 .section:first-of-type {
   padding-block-start: 2em;
 }
-.section--aboutBlock {
-  row-gap: 2em;
-}
 .section--carouselBlock {
   margin-block-end: 3em;
 }
@@ -274,11 +271,12 @@ a:hover, a:focus {
 
 [class*=grid-] {
   display: grid;
-  gap: 1em 2em;
 }
 
 .grid-section {
   grid-template-columns: 0.5em auto 0.5em;
+  row-gap: 3em;
+  column-gap: 1em;
 }
 .grid-section > * {
   width: min(100%, 60rem);
@@ -959,7 +957,6 @@ a:hover, a:focus {
 }
 
 .imageElement {
-  margin-block-end: 2em;
   column-gap: 1.5em;
   row-gap: 1em;
 }
