@@ -1249,6 +1249,7 @@ details summary::-webkit-details-marker {
 .resources__content {
   background-color: hsl(100deg, 0%, 98%);
   color: rgba(26, 26, 26, 0.99);
+  padding-inline: 1em;
 }
 .resources__content ul {
   list-style: none;
