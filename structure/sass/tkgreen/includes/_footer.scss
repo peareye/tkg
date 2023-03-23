@@ -1,5 +1,4 @@
 // Footer Styles
-
 .footer {
  margin-block-start: auto;
  background-color  : color(primary);
@@ -35,24 +34,21 @@
    font-size            : 1.75em;
    align-items          : center;
    justify-content      : center;
-  
 
-   
+
    .social-icon {
-    transform: scale(1);
+    transform : scale(1);
     transition: transform 250ms ease;
+
     &:hover,
-   &:focus {
-    transform: scale(1.2);
-   }
+    &:focus {
+     transform: scale(1.2);
+    }
    }
   }
 
   @include mq(small) {}
-
  }
-
-
 
  &-title {
   font-family     : $ff-sans-headings;
@@ -66,22 +62,18 @@
   text-align: center;
  }
 
-
  .footer1 {
-  margin-inline   : auto;
-  padding-block   : 1em;
-  font-size       : 1.1rem;
-  background-color: color(primary);
-  color           : neutral(1);
-
-  width: min(calc(100% - $spacer), $wide-container-width);
-
+  margin-inline        : auto;
+  padding-block        : 1em;
+  font-size            : 1.1rem;
+  background-color     : color(primary);
+  color                : neutral(1);
+  width                : min(calc(100% - $spacer), $wide-container-width);
   display              : grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap                  : .75em;
   grid-auto-flow       : dense;
-
-  position: relative;
+  position             : relative;
 
   >* {
    background-color: color(primary-light);
@@ -106,12 +98,10 @@
  color           : neutral(1);
  padding-block   : $spacer;
  font-size       : .9em;
-
- display        : flex;
- flex-direction : column;
- align-items    : center;
- justify-content: center;
- gap            : .25em;
-
- position: relative;
+ display         : flex;
+ flex-direction  : column;
+ align-items     : center;
+ justify-content : center;
+ gap             : .25em;
+ position        : relative;
 }
