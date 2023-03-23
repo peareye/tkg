@@ -41,7 +41,7 @@
 
  &__content {
   @include dc(neutral(1));
-  padding-inline: $spacer;
+  padding-inline-start: $spacer;
 
   ul {
    list-style         : none;
