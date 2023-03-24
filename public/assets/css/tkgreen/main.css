@@ -260,7 +260,7 @@ a:hover, a:focus {
   padding-block-start: 2em;
 }
 .section--carouselBlock {
-  margin-block-end: 3em;
+  padding-block-end: 3em;
 }
 .section--inspectionBlock > * > * + * {
   margin-block: 3em;
@@ -275,7 +275,7 @@ a:hover, a:focus {
 
 .grid-section {
   grid-template-columns: 0.5em auto 0.5em;
-  gap: 1em;
+  gap: 3em;
 }
 .grid-section > * {
   width: min(100%, 60rem);
@@ -312,6 +312,10 @@ a:hover, a:focus {
 }
 .flex-two-columns > * {
   flex: 1 1 20em;
+}
+
+.flex-two-column + .flex-two-columns {
+  background-color: orange;
 }
 
 .btn {
@@ -968,8 +972,13 @@ a:hover, a:focus {
 }
 
 .imageElement {
+  padding-block: 4em;
+  padding-inline: 2em;
+  background-color: hsl(100deg, 0%, 94%);
+  color: rgba(26, 26, 26, 0.99);
   column-gap: 1.5em;
   row-gap: 1em;
+  position: relative;
 }
 .imageElement__image {
   display: flex;

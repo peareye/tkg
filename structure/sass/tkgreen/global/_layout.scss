@@ -14,7 +14,7 @@
  }
 
  &--carouselBlock {
-  margin-block-end: calc($spacer * 3);
+  padding-block-end: calc($spacer * 3);
  }
 
  &--inspectionBlock {
@@ -40,7 +40,7 @@
  &section {
 
   grid-template-columns: calc($spacer * .5) auto calc($spacer * .5);
-  gap: $spacer;
+  gap: calc($spacer * 3);
 
   >* {
    width        : min(100%, $wide-container-width);
@@ -90,4 +90,7 @@
    flex: 1 1 20em;
   }
  }
+}
+.flex-two-column + .flex-two-columns {
+ background-color: orange ;
 }
