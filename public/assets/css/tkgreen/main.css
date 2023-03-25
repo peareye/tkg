@@ -992,6 +992,8 @@ a:hover, a:focus {
 }
 .imageElement .element__content {
   margin-block-start: 1em;
+  margin-block-end: 1em;
+  background-color: inherit;
 }
 
 .cards {
