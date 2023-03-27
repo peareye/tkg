@@ -233,6 +233,7 @@ p + p {
 }
 
 a {
+  text-decoration: none;
   color: #032f70;
   font-weight: 600;
 }
@@ -278,7 +279,7 @@ a:hover, a:focus {
   gap: 3em;
 }
 .grid-section > * {
-  width: min(100%, 60rem);
+  width: min(100%, 70rem);
   margin-inline: auto;
   grid-column: 2/3;
 }
@@ -353,7 +354,10 @@ a:hover, a:focus {
 .btn__header {
   background-color: #b51700;
   color: rgba(250, 250, 250, 0.99);
+  background-color: #032f70;
+  color: rgba(250, 250, 250, 0.99);
   font-weight: 700;
+  padding-block-end: 1em;
 }
 .btn__submit {
   border: none;
@@ -365,16 +369,14 @@ a:hover, a:focus {
 .header-wrapper {
   width: 100%;
   display: grid;
-  gap: 1em;
   border-top: 0.75em solid #032f70;
 }
 
 .header {
   --header-font-size: 1rem;
   margin-inline: auto;
-  padding-block-start: 1em;
   padding-inline: 1em;
-  width: min(100%, 60rem);
+  width: min(100%, 70rem);
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -393,9 +395,6 @@ a:hover, a:focus {
 .header .logo {
   align-self: center;
   max-width: fit-content;
-}
-.header .logo img {
-  width: 100%;
 }
 .header__logo {
   width: min(100%, 20em);
@@ -437,6 +436,17 @@ a:hover, a:focus {
   .header__phone, .header__location,
   .header .social {
     --header-font-size: .9rem;
+  }
+}
+.header__button {
+  padding-block-end: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 48rem) {
+  .header__button {
+    padding-block-end: 0;
   }
 }
 .header .socialLinks {
@@ -739,7 +749,7 @@ a:hover, a:focus {
   font-size: 1.1rem;
   background-color: #032f70;
   color: hsl(100deg, 0%, 98%);
-  width: min(100% - 1em, 60rem);
+  width: min(100% - 1em, 70rem);
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -864,7 +874,7 @@ a:hover, a:focus {
 
 .video-container {
   margin-block-start: 1em;
-  max-width: 60rem;
+  max-width: 70rem;
   position: relative;
 }
 .video-container::before {

@@ -1,45 +1,43 @@
 // Theme
 
 // Color Pallette
-$clr-red    : #b51700;
-$clr-blue   : #032f70;
+$clr-red  : #b51700;
+$clr-blue : #032f70;
 
 // Neutral Pallette
 
-$neutral-1     : hsl(100, 0%, 98%);
-$neutral-2     : hsl(100, 0%, 94%);
-$neutral-3     : hsl(100, 0%, 60%);
-$neutral-4     : hsl(100, 0%, 40%);
-$neutral-5     : hsl(100, 0%, 10%);
+$neutral-1 : hsl(100, 0%, 98%);
+$neutral-2 : hsl(100, 0%, 94%);
+$neutral-3 : hsl(100, 0%, 60%);
+$neutral-4 : hsl(100, 0%, 40%);
+$neutral-5 : hsl(100, 0%, 10%);
 
 $clr-primary   : $clr-blue;
 $clr-secondary : adjust-hue($clr-primary, -30);
 
-$clr-accent    : $clr-red;
+$clr-accent : $clr-red;
 
 
 // Theme -- DO NOT CHANGE VARIABLE NAMES. Update the color pallette values.
 
-$neutrals: (
-  1: $neutral-1,
-  2: $neutral-2,
-  3: $neutral-3,
-  4: $neutral-4,
-  5: $neutral-5,
+$neutrals: (1: $neutral-1,
+ 2: $neutral-2,
+ 3: $neutral-3,
+ 4: $neutral-4,
+ 5: $neutral-5,
 );
 
-$clrs: (
-  primary: $clr-primary,
-  primary-dark: darken($clr-primary, 20%),
-  primary-light: lighten($clr-primary, 10%),
-  primary-lighter: lighten($clr-primary, 40%),
-  secondary: $clr-secondary,
-  secondary-dark: darken($clr-secondary, 20%),
-  secondary-light: lighten($clr-secondary, 10%),
-  secondary-lighter: lighten($clr-secondary, 60%),
-  accent: $clr-accent,
-  accent-dark: darken($clr-accent, 20%),
-  accent-light: lighten($clr-accent, 10%),
+$clrs: (primary: $clr-primary,
+ primary-dark: darken($clr-primary, 20%),
+ primary-light: lighten($clr-primary, 10%),
+ primary-lighter: lighten($clr-primary, 40%),
+ secondary: $clr-secondary,
+ secondary-dark: darken($clr-secondary, 20%),
+ secondary-light: lighten($clr-secondary, 10%),
+ secondary-lighter: lighten($clr-secondary, 60%),
+ accent: $clr-accent,
+ accent-dark: darken($clr-accent, 20%),
+ accent-light: lighten($clr-accent, 10%),
 );
 
 // Default Element Styles 
@@ -51,7 +49,7 @@ $ls    : 2px;
 // default spacer
 $spacer: 1em;
 // box shadow(s)
-$bs: 0px 0px 20px rgba($neutral-5, 0.15);
+$bs    : 0px 0px 20px rgba($neutral-5, 0.15);
 
 // Font Variables
 
@@ -69,15 +67,15 @@ $ff-sans-headings: 'Roboto',
 sans-serif;
 
 // Layout Variables
-$wide-container-width  : 60rem;
+$wide-container-width  : 70rem;
 $narrow-container-width: 45rem;
 $full-container-width  : calc(100% - $spacer);
 
 $breakpoints: (
-  xs: 36rem,
-  small: 48rem,
-  medium: 1025px,
-  big: 90rem);
+ xs     : 36rem,
+ small  : 48rem,
+ medium : 60rem,
+ big    : 70rem);
 
 // Navigation Variables
 $nav-height: 3.75em;

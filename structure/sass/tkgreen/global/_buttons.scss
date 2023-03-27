@@ -38,7 +38,9 @@
 
   &__header {
     @include dc(color(accent));
+    @include dc(color(primary));
     font-weight: $fw-b;
+    padding-block-end: $spacer;
   }
 
   &__submit {

@@ -1,14 +1,12 @@
 .header-wrapper {
  width     : 100%;
  display   : grid;
- gap       : $spacer;
  border-top: .75em solid color(primary);
 }
 
 .header {
  --header-font-size : 1rem;
  margin-inline      : auto;
- padding-block-start: $spacer;
  padding-inline     : $spacer;
  width              : min(100%, $wide-container-width);
 
@@ -32,10 +30,6 @@
  .logo {
   align-self: center;
   max-width : fit-content;
-
-  img {
-   width: 100%;
-  }
  }
 
  &__logo {
@@ -75,7 +69,6 @@
  &__location,
  .social {
   font-size            : var(--header-font-size);
-  // text-align: center;
   display              : grid;
   grid-template-columns: min-content max-content;
   column-gap           : calc($spacer * .5);
@@ -84,6 +77,16 @@
 
   @include mq(small) {
    --header-font-size: .9rem;
+  }
+ }
+
+ &__button {
+  padding-block-end: $spacer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(small){
+   padding-block-end: 0;
   }
  }
 
