@@ -19,33 +19,31 @@
       </nav>
     </div>
 
-    <div class="footer-socialLinks">
-      <h5 class="footer-title">Get Social</h5>
-      {{ include("includes/_social.html") }}
-    </div>
-
     {% if site.settings.contactAddress %}
     <div class="footer-address">
       <h5 class="footer-title">Address</h5>
 
       <div>{{ site.settings.contactAddress|nl2br}}</div>
-    </div>
-    {% endif %} 
-
-    {% if site.settings.contactPhone %}
-    <div class="contactPhone">
+      {% if site.settings.contactPhone %}
       <h5 class="footer-title">Phone</h5>
       <div>
         <i class="fa-solid fa-phone"></i>
         <a class="styled-link" href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
       </div>
+      {% endif %} 
     </div>
     {% endif %} 
+
+    <div class="footer-socialLinks">
+      <h5 class="footer-title">Get Social</h5>
+      {{ include("includes/_social.html") }}
+    </div>
+
+
 
     <div class="footerBadge">
      <a href="/about-us#Military"><img src="assets/img/supportTroops.svg" alt="We Support Our Troops"></a>
     </div>
-
   </div>
 
   <div class="footer2">

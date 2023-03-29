@@ -72,10 +72,19 @@ $narrow-container-width: 45rem;
 $full-container-width  : calc(100% - $spacer);
 
 $breakpoints: (
- xs     : 36rem,
- small  : 48rem,
- medium : 60rem,
- big    : 70rem);
+ xs     : 36rem, // 576px
+ small  : 48rem, // 768px
+ medium : 60rem, // 960px
+ big    : 70rem); // 1120px
+ a {
+  text-decoration: none;
+  color          : neutral(2);
+  font-weight    : $fw-n;
+
+  &:hover {
+   color: color(accent);
+  }
+ }
 
 // Navigation Variables
 $nav-height: 3.75em;

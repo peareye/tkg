@@ -1,8 +1,11 @@
 // Footer Styles
-
 .footer {
- margin-block-start: auto;
- background-color  : color(primary);
+ margin-block-start : auto;
+ padding-block-start: $spacer;
+ @include dc(color(primary));
+ text-align: center;
+ display   : grid;
+ gap       : $spacer;
 
  a {
   text-decoration: none;
@@ -14,99 +17,86 @@
   }
  }
 
- p {
-  margin : 0;
-  padding: 0;
+ &-title {
+  font-family     : $ff-sans-headings;
+  // margin-block-start: $spacer;
+  margin-block-end: calc($spacer * .25);
+  font-size       : 1.4rem;
+  &:not(:first-of-type){
+   margin-block-start: $spacer;
+  }
  }
 
  &-nav {
+  grid-row: 2 / 4;
   ul {
    list-style: none;
-   margin    : 0;
-   padding   : 0;
   }
  }
 
  &-socialLinks {
+
   .socialLinks {
    display        : flex;
-   flex-wrap      : wrap;
    gap            : $spacer;
+   align-items    : center;
    justify-content: center;
-
-
-   .social-icon {
-    transform : scale(1);
-    transition: transform 250ms ease;
-
-    &:hover,
-    &:focus {
-     transform: scale(1.2);
-    }
-   }
+   font-size      : 1.3em;
   }
  }
 
- &-title {
-  font-family     : $ff-sans-headings;
-  margin-block-end: .75rem;
-  font-size       : 1.3rem;
- }
-
- &-about {
-  text-align: center;
+ &-address {
+  line-height: 1.2;
  }
 
  &Badge {
   img {
-   width        : 100%;
-   aspect-ratio : 2 / 1;
-  
-  }
- }
-
- .footer1 {
-  margin-inline   : auto;
-  padding-block   : 1em;
-  font-size       : 1.1rem;
-  background-color: color(primary);
-  color           : neutral(1);
-  width           : min(calc(100% - $spacer), $wide-container-width);
-  text-align      : center;
-
-  display              : grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap                  : .75em;
-  grid-auto-flow       : dense;
-  position             : relative;
-
-  >* {
-   background-color: color(primary-light);
-   padding         : .75em;
-   border-radius   : $br;
-  }
-
-  a {
-   color: neutral(1);
-
-   &:hover,
-   &:focus {
-    color: color(accent-light);
-   }
+   width       : 100%;
+   aspect-ratio: 2 / 1;
   }
  }
 }
 
+.footer1 {
+ padding-block: $spacer;
+ width        : min(calc(100% - 2em), $wide-container-width);
+ margin-inline: auto;
+
+ display      : grid;
+ gap                  : .75em;
+ grid-auto-flow       : dense;
+ position             : relative;
+
+ @include mq(xs) {
+  grid-template-columns: repeat(3, 1fr);
+ }
+ >* {
+  background-color: color(primary-light);
+  padding-block: $spacer;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
 .footer2 {
- width           : 100%;
- background-color: color(primary-dark);
- color           : neutral(1);
- padding-block   : $spacer;
- font-size       : .9em;
- display         : flex;
- flex-direction  : column;
- align-items     : center;
- justify-content : center;
- gap             : .25em;
- position        : relative;
+ padding-block-end: $spacer;
+ background-color : color(primary-dark);
+ color            : neutral(2);
+ font-weight      : $fw-l;
+ padding-block    : $spacer;
+ font-size        : .9em;
+
+ display        : flex;
+ flex-direction : column;
+ align-items    : center;
+ justify-content: center;
+ gap            : .25em;
 }

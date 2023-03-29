@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=PT+Serif+Caption&family=Patua+One&family=Roboto:wght@300;400;700&display=swap");
+a {
+  text-decoration: none;
+  color: hsl(100deg, 0%, 94%);
+  font-weight: 400;
+}
+a:hover {
+  color: #b51700;
+}
+
 :root {
   font-size: 16px;
 }
@@ -699,7 +708,12 @@ a:hover, a:focus {
 
 .footer {
   margin-block-start: auto;
+  padding-block-start: 1em;
   background-color: #032f70;
+  color: rgba(250, 250, 250, 0.99);
+  text-align: center;
+  display: grid;
+  gap: 1em;
 }
 .footer a {
   text-decoration: none;
@@ -709,70 +723,59 @@ a:hover, a:focus {
 .footer a:hover {
   color: #b51700;
 }
-.footer p {
-  margin: 0;
-  padding: 0;
+.footer-title {
+  font-family: "Roboto", sans-serif;
+  margin-block-end: 0.25em;
+  font-size: 1.4rem;
+}
+.footer-title:not(:first-of-type) {
+  margin-block-start: 1em;
+}
+.footer-nav {
+  grid-row: 2/4;
 }
 .footer-nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .footer-socialLinks .socialLinks {
   display: flex;
-  flex-wrap: wrap;
   gap: 1em;
+  align-items: center;
   justify-content: center;
+  font-size: 1.3em;
 }
-.footer-socialLinks .socialLinks .social-icon {
-  transform: scale(1);
-  transition: transform 250ms ease;
-}
-.footer-socialLinks .socialLinks .social-icon:hover, .footer-socialLinks .socialLinks .social-icon:focus {
-  transform: scale(1.2);
-}
-.footer-title {
-  font-family: "Roboto", sans-serif;
-  margin-block-end: 0.75rem;
-  font-size: 1.3rem;
-}
-.footer-about {
-  text-align: center;
+.footer-address {
+  line-height: 1.2;
 }
 .footerBadge img {
   width: 100%;
   aspect-ratio: 2/1;
 }
-.footer .footer1 {
-  margin-inline: auto;
+
+.footer1 {
   padding-block: 1em;
-  font-size: 1.1rem;
-  background-color: #032f70;
-  color: hsl(100deg, 0%, 98%);
-  width: min(100% - 1em, 70rem);
-  text-align: center;
+  width: min(100% - 2em, 70rem);
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 0.75em;
   grid-auto-flow: dense;
   position: relative;
 }
-.footer .footer1 > * {
+@media only screen and (min-width: 36rem) {
+  .footer1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.footer1 > * {
   background-color: #0444a2;
-  padding: 0.75em;
-  border-radius: 7px;
-}
-.footer .footer1 a {
-  color: hsl(100deg, 0%, 98%);
-}
-.footer .footer1 a:hover, .footer .footer1 a:focus {
-  color: #e81d00;
+  padding-block: 1em;
 }
 
 .footer2 {
-  width: 100%;
+  padding-block-end: 1em;
   background-color: #00050d;
-  color: hsl(100deg, 0%, 98%);
+  color: hsl(100deg, 0%, 94%);
+  font-weight: 300;
   padding-block: 1em;
   font-size: 0.9em;
   display: flex;
@@ -780,7 +783,6 @@ a:hover, a:focus {
   align-items: center;
   justify-content: center;
   gap: 0.25em;
-  position: relative;
 }
 
 .hero {
