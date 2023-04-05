@@ -1,4 +1,8 @@
 {# Custom Element - Header Element so that you can add a title/intro text to an element that is made up of various other elements. Usually just a title and paragraph text. #}
 
-<h2 class="element__title">{{ element.title }}</h2>
-<div class="element__content">{{ element.content }}</div>
+<h2 class="element__title span">{{ element.title }}</h2>
+
+{% if element.content %}
+<div class="element__content span">{{ element.content }}</div>
+
+{% endif %}

@@ -32,15 +32,13 @@
 
 // Grid Layout
 [class*="grid-"] {
- display: grid;
- // gap    : $spacer calc($spacer * 2); 
+ display   : grid;
 }
 
 .grid- {
  &section {
-
-  grid-template-columns: calc($spacer * .5) auto calc($spacer * .5);
-  gap: calc($spacer * 3);
+  grid-template-columns: calc($spacer * 2) auto calc($spacer * 2);
+  row-gap: calc($spacer * 1);
 
   >* {
    width        : min(100%, $wide-container-width);
@@ -58,7 +56,7 @@
   // children will expand to fill space if there are not enough items to fill full screen space. Should not be more than 3 items total.
   grid-template-columns: repeat(auto-fit, minmax(calc(60rem / 3), 1fr));
   grid-template-columns: repeat(auto-fit, minmax(calc($wide-container-width / 4), 1fr));
-  gap: calc($spacer * 1.5);
+  gap                  : calc($spacer * 1.5);
  }
 
  &stacked {
@@ -68,6 +66,10 @@
    grid-row   : 1 / 2;
    grid-column: 1 / 3;
   }
+ }
+
+ &two-columns {
+  background: pink !important;
  }
 }
 
@@ -79,9 +81,9 @@
 
 .flex- {
  &two-columns {
-  flex-direction: row;
-  flex-wrap     : wrap;
-  row-gap       : calc($spacer * 0);
+  flex-direction   : row;
+  flex-wrap        : wrap;
+  // row-gap       : calc($spacer * 0);
 
   &:nth-child(even) {
    flex-direction: row-reverse;
@@ -92,6 +94,7 @@
   }
  }
 }
-.flex-two-column + .flex-two-columns {
- background-color: orange ;
+
+.flex-two-column+.flex-two-columns {
+ background-color: orange;
 }

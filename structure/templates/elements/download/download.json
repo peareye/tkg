@@ -1,0 +1,15 @@
+{
+ "elementName": "Download",
+ "elementDescription": "Download element",
+ "enableInput": "image",
+ "settings": [
+     {
+         "category": "element",
+         "label": "Download Button Link",
+         "key": "downloadTarget",
+         "value": "",
+         "inputType": "text",
+         "help": "enter URL to thing to be downloaded."
+     }
+ ]
+}

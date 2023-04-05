@@ -1,0 +1,27 @@
+{# Download Element #}
+
+<div class="downloadElement flex-two-columns">
+
+ {% if element.media.filename %}
+ <figure class="downloadElement__image">
+  {{
+  getMediaSrcSet(element.media.filename, element.media.caption,
+  {'sizes': '(min-width: 1020px) 926px, 93.43vw'})
+  }}
+ </figure>
+ {% endif %}
+
+ <div class="downloadElement__content">
+
+  <h3 class="element__title">{{ element.title }}</h3>
+
+   <div class="element__content">
+    {{ element.content }}
+   </div>
+
+   <a href="{{element.settings.downloadTarget}}" class="btn btn__download">
+    Download <i class="fas fa-download"></i>
+   </a>
+
+ </div>
+</div>

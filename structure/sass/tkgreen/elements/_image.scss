@@ -1,12 +1,11 @@
  // Image Element
  .imageElement {
-  // margin-block-end: calc($spacer * 2);
-  padding-block: calc($spacer * 4);
+  padding-block : calc($spacer * 4);
   padding-inline: calc($spacer * 2);
- @include dc(neutral(2));
-  column-gap      : 1.5em;
-  row-gap         : $spacer;
-  position: relative;
+  @include dc(neutral(2));
+  column-gap: 1.5em;
+  row-gap   : $spacer;
+  position  : relative;
 
   &__image {
    display        : flex;
@@ -22,7 +21,7 @@
 
   .element__content {
    margin-block-start: $spacer;
-   margin-block-end: $spacer;
-   background-color: inherit;
+   margin-block-end  : $spacer;
+   background-color  : inherit;
   }
  }

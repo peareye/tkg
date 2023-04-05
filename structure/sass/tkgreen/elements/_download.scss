@@ -1,0 +1,47 @@
+section:has(.downloadElement) {
+ background: color(primary-lighter);
+ grid-template-columns: 1fr $narrow-container-width 1fr;
+ margin-inline: auto;
+}
+
+.downloadElement {
+ padding       : calc($spacer * 1);
+ flex-direction: row;
+ background-color: neutral(1);
+
+ &:nth-child(even) {
+  flex-direction: row;
+ }
+
+ &__image {
+  display           : flex;
+  justify-content   : center;
+  justify-content   : flex-end;
+
+  img {
+   width : clamp(10rem, 50vw, 22rem);
+   filter: drop-shadow(0 0 15px rgba(neutral(5), .15));
+  }
+ }
+
+ .element {
+  &__title {
+   font-size: 1.2rem;
+  }
+
+  &__content {
+   margin-block-start: $spacer;
+
+  }
+
+ }
+
+ .btn {
+  margin-block-start: $spacer;
+ }
+
+ &__content {
+  @include dc(neutral(1));
+  padding: $spacer;
+ }
+}

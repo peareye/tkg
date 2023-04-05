@@ -33,11 +33,11 @@
   align-items    : center;
   justify-content: center;
   transform      : rotate(45deg);
-  color          : rgba(color(primary), .15);
+  color          : rgba(color(primary), .05);
   position       : absolute;
   left           : calc($spacer / 5);
   top            : calc($spacer / 5);
-  font-size      : 3em;
+  font-size      : 4em;
 
   .fas {
    transform: rotate(-45deg);
