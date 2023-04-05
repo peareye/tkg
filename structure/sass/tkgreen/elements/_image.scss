@@ -25,3 +25,10 @@
    background-color  : inherit;
   }
  }
+section:has(#Military) {
+ @include dc(color(primary-lighter));
+}
+ #Military.imageElement {
+  padding: calc($spacer * 2);
+
+ }

@@ -67,10 +67,6 @@
    grid-column: 1 / 3;
   }
  }
-
- &two-columns {
-  background: pink !important;
- }
 }
 
 // Flex Layouts 
@@ -83,7 +79,6 @@
  &two-columns {
   flex-direction   : row;
   flex-wrap        : wrap;
-  // row-gap       : calc($spacer * 0);
 
   &:nth-child(even) {
    flex-direction: row-reverse;
