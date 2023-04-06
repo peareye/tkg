@@ -18,9 +18,12 @@
 
   &__image {
    display: flex;
+   width: 100%;
 
    img {
     object-fit  : cover;
+    width: 100%;
+    aspect-ratio: 2 / 1;
    }
   }
 
@@ -36,4 +39,8 @@
   }
 
   }
+}
+
+.cutoff-text p+p{
+ display:none;
 }

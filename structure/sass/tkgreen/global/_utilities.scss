@@ -33,12 +33,18 @@ inline-text {
 
 // Cutoff Text Styles
 .cutoff-text {
- --max-lines       : 5;
+ --max-lines       : 2;
  display           : -webkit-box;
  overflow          : hidden;
  -webkit-box-orient: vertical;
  -webkit-line-clamp: var(--max-lines);
  position          : relative;
+ -webkit-box-pack: end;
+
+
+ @include mq(small){
+  --max-lines: 5;
+ }
 }
 
 .expand-btn {

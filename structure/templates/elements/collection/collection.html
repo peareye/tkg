@@ -1,5 +1,5 @@
 {# Collection Element #} {# Get the collection summary set. The second argument is the number of items to return per
-page #} 
+page #}
 
 {% set collection = getCollectionPagesWithPagination(element.collection_id, 12) %}
 
@@ -8,37 +8,37 @@ page #}
 
 <ul class="cards">
 
-  {% for detail in collection %}
+ {% for detail in collection %}
 
-  <li class="card">
+ <li class="card">
 
-    {% if detail.media.filename %}
-    <div class="card__image">
-      <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}" />
-    </div>
-    {% endif %}
+  {% if detail.media.filename %}
+  <div class="card__image">
+   <img src="{{ getMediaPath(detail.media.filename, 'thumb') }}" />
+  </div>
+  {% endif %}
 
-    <div class="card__content">
+  <div class="card__content">
 
-      <div class="card__title">
-        <h3>{{ detail.title }}</h3>
-      </div>
+   <div class="card__title">
+    <h3>{{ detail.title }}</h3>
+   </div>
 
-      <div class="cutoff-text">
-        <p class="card__text">{{ detail.first_element_content }}</p>
-      </div>
+   <div class="cutoff-text">
+    {{ detail.first_element_content }}
+   </div>
 
-    <div class="card__content-readmore">
-     <a href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}" class="btn btn-readmore">Read More</a>
-    </div>
-      
+   <div class="card__content-readmore">
+    <a href="{{ pathFor('showPage', {'slug1': detail.collection_slug, 'slug2': detail.page_slug}) }}" class="btn btn-readmore">Read More</a>
+   </div>
 
-      </div>
-   
 
-  </li>
+  </div>
 
-  {% endfor %}
+
+ </li>
+
+ {% endfor %}
 
 </ul>
 

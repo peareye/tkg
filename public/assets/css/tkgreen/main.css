@@ -128,12 +128,18 @@ inline-text {
 }
 
 .cutoff-text {
-  --max-lines: 5;
+  --max-lines: 2;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--max-lines);
   position: relative;
+  -webkit-box-pack: end;
+}
+@media only screen and (min-width: 48rem) {
+  .cutoff-text {
+    --max-lines: 5;
+  }
 }
 
 .expand-btn {
@@ -1037,9 +1043,12 @@ section:has(#Military) {
 }
 .cards .card__image {
   display: flex;
+  width: 100%;
 }
 .cards .card__image img {
   object-fit: cover;
+  width: 100%;
+  aspect-ratio: 2/1;
 }
 .cards .card__content {
   padding: 1em;
@@ -1049,6 +1058,10 @@ section:has(#Military) {
 .cards .card__content-readmore {
   margin-block-start: auto;
   padding-block-start: 1em;
+}
+
+.cutoff-text p + p {
+  display: none;
 }
 
 .container__slider {
