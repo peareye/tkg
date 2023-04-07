@@ -23,7 +23,7 @@ section:has(.downloadElement) {
    // width: 500px;
    // max-width: 1000px;
    width: min(100%, 400px);
-   filter: drop-shadow(0 0 15px rgba(neutral(5), .15));
+   filter: $ds;
   }
  }
 
