@@ -70,6 +70,14 @@
    &:focus {
     background-color: color(primary-dark);
    }
+
+   &.active {
+   background-color: color(primary-light);
+   @include dc(color(primary-light));
+   &:hover, &:focus {
+    @include dc(color(primary-dark));
+   }
+   }
   }
  }
 }

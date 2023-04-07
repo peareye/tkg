@@ -38,6 +38,7 @@ $clrs: (primary: $clr-primary,
  accent: $clr-accent,
  accent-dark: darken($clr-accent, 20%),
  accent-light: lighten($clr-accent, 10%),
+ accent-lighter: lighten($clr-accent, 15%),
 );
 
 // Default Element Styles 
@@ -49,7 +50,9 @@ $ls    : 2px;
 // default spacer
 $spacer: 1em;
 // box shadow(s)
-$bs    : 0px 0px 20px rgba($neutral-5, 0.15);
+$bs    : 0px 0px 15px rgba(neutral(5), 0.15);
+// drop shadow
+$ds: drop-shadow(0 0 15px rgba(neutral(5), .15));
 
 // Font Variables
 

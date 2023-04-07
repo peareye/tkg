@@ -1,25 +1,28 @@
+// Download Element Styles
 section:has(.downloadElement) {
  background: color(primary-lighter);
- grid-template-columns: 1fr $narrow-container-width 1fr;
- margin-inline: auto;
+
+ @include mq(small) {
+  grid-template-columns: 1fr $narrow-container-width 1fr;
+ }
 }
 
 .downloadElement {
- padding       : calc($spacer * 1);
- flex-direction: row;
+ padding         : calc($spacer * 1);
+ flex-direction  : row;
  background-color: neutral(1);
 
- &:nth-child(even) {
-  flex-direction: row;
- }
-
  &__image {
-  display           : flex;
-  justify-content   : center;
-  justify-content   : flex-end;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
 
   img {
-   width : clamp(10rem, 50vw, 22rem);
+   // width : clamp(10rem, 50vw, 22rem);
+   // min-width: 200px;
+   // width: 500px;
+   // max-width: 1000px;
+   width: min(100%, 400px);
    filter: drop-shadow(0 0 15px rgba(neutral(5), .15));
   }
  }
@@ -31,17 +34,19 @@ section:has(.downloadElement) {
 
   &__content {
    margin-block-start: $spacer;
-
   }
-
  }
 
  .btn {
-  margin-block-start: $spacer;
+  margin-block-start: 4rem;
  }
 
  &__content {
-  @include dc(neutral(1));
-  padding: $spacer;
+  // @include dc(color(accent-lighter));
+  padding        : $spacer;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
  }
 }

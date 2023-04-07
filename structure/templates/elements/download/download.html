@@ -2,15 +2,6 @@
 
 <div class="downloadElement flex-two-columns">
 
- {% if element.media.filename %}
- <figure class="downloadElement__image">
-  {{
-  getMediaSrcSet(element.media.filename, element.media.caption,
-  {'sizes': '(min-width: 1020px) 926px, 93.43vw'})
-  }}
- </figure>
- {% endif %}
-
  <div class="downloadElement__content">
 
   <h3 class="element__title">{{ element.title }}</h3>
@@ -24,4 +15,13 @@
    </a>
 
  </div>
+
+ {% if element.media.filename %}
+ <figure class="downloadElement__image">
+  {{
+  getMediaSrcSet(element.media.filename, element.media.caption,
+  {'sizes': '(min-width: 1020px) 926px, 93.43vw'})
+  }}
+ </figure>
+ {% endif %} 
 </div>

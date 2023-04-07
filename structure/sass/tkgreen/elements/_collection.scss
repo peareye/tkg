@@ -1,28 +1,29 @@
 .cards {
- margin-block-start: $spacer;
+ margin-block-start   : $spacer;
  list-style           : none;
  display              : grid;
  grid-template-columns: 1fr;
  gap                  : calc($spacer * 2);
 
 
-  .card {
-  background-color     : neutral(1);
-  box-shadow           : $bs;
-  display              : grid;
-  gap                  : $spacer;
-  @include mq(small){
-  grid-template-columns: .4fr 1fr;
+ .card {
+  background-color: neutral(1);
+  box-shadow      : $bs;
+  display         : grid;
+  gap             : $spacer;
+
+  @include mq(small) {
+   grid-template-columns: .4fr 1fr;
   }
 
 
   &__image {
    display: flex;
-   width: 100%;
+   width  : 100%;
 
    img {
     object-fit  : cover;
-    width: 100%;
+    width       : 100%;
     aspect-ratio: 2 / 1;
    }
   }
@@ -35,12 +36,13 @@
    &-readmore {
     margin-block-start : auto;
     padding-block-start: $spacer;
+    text-align: center;
    }
   }
 
-  }
+ }
 }
-
-.cutoff-text p+p{
- display:none;
+// If there are more than 1 paragraph in the collection text, this hides the overflow of the multiple paragraphs on IOS devices.
+.cutoff-text p+p {
+ display: none;
 }

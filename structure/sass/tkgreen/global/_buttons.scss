@@ -1,53 +1,54 @@
 .btn {
-  padding-inline  : 1.25em;
-  padding-block   : 1em;
-  text-align      : center;
-  text-decoration : none;
+ padding-inline : 1em;
+ padding-block  : .5em;
+ text-align     : center;
+ text-decoration: none;
+ @include dc(color(accent));
+ border-radius : $br;
+ text-transform: uppercase;
+ letter-spacing: $ls;
+ border        : none;
+ cursor        : pointer;
+ font-size     : .75rem;
+ font-weight   : $fw-b;
+ font-family   : inherit;
+ transform     : scale(1);
+ width         : max-content;
+
+ display: inline-block;
+
+ position: relative;
+
+ transition: all 125ms ease-in;
+
+ &:hover,
+ &:focus {
+  background: color(accent-dark);
+  color     : neutral(1);
+  transform : scale(1.1);
+ }
+
+ &__cta {
+  font-size       : 1rem;
+  background-color: transparent;
+  border          : solid neutral(1) 3px;
+  font-weight     : $fw-b;
+
+ }
+
+ &__header {
   @include dc(color(accent));
-  border-radius : $br;
-  text-transform: uppercase;
-  letter-spacing: $ls;
+  @include dc(color(primary));
+  font-weight         : $fw-b;
+  // padding-block-end: $spacer;
+ }
+
+ &__submit {
   border: none;
-  cursor        : pointer;
-  font-size     : .75rem;
-  font-weight   : $fw-b;
-  font-family   : inherit;
-  transform     : scale(1);
-  width   : max-content;
+ }
 
-  display: inline-block;
+ &__back {
+  margin-inline: auto $spacer;
 
-  position: relative;
-
-  transition: all 125ms ease-in;
-
-  &:hover,
-  &:focus {
-    background: color(accent-dark);
-    color: neutral(1);
-    transform : scale(1.1);
-  }
-
-  &__cta {
-    font-size       : 1rem;
-    background-color: transparent;
-    border          : solid neutral(1) 3px;
-    font-weight     : $fw-b;
-
-  }
-
-  &__header {
-    @include dc(color(accent));
-    @include dc(color(primary));
-    font-weight: $fw-b;
-    padding-block-end: $spacer;
-  }
-
-  &__submit {
-    border: none;
-  }
-&__back {
- margin-inline: auto $spacer;
- 
-}
+ }
 }
