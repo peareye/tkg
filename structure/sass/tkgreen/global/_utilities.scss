@@ -39,10 +39,10 @@ inline-text {
  -webkit-box-orient: vertical;
  -webkit-line-clamp: var(--max-lines);
  position          : relative;
- -webkit-box-pack: end;
+ -webkit-box-pack  : end;
 
 
- @include mq(small){
+ @include mq(small) {
   --max-lines: 5;
  }
 }
@@ -74,4 +74,17 @@ inline-text {
 
 .cutoff-text:has(+ .expand-btn:checked) {
  max-height: none;
+}
+ 
+.visually-hidden {
+ position   : absolute;
+ position   : absolute !important;
+ width      : 1px !important;
+ height     : 1px !important;
+ padding    : 0 !important;
+ margin     : -1px !important;
+ overflow   : hidden !important;
+ clip       : rect(0, 0, 0, 0) !important;
+ white-space: nowrap !important;
+ border     : 0 !important;
 }
