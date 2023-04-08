@@ -10,11 +10,17 @@ Options -Indexes
 
 RewriteEngine On
 
+RedirectMatch 301 ^/index\.html$ /
+RedirectMatch 301 ^/inspection-team\.html$ /about-us
+RedirectMatch 301 ^/services\.html$ /your-inspection
+RedirectMatch 301 ^/reports\.html$ /your-inspection
+RedirectMatch 301 ^/contact-us\.html$ /contact
+
 # Check to see if the user is attempting to access a valid file, such as an image
 # or css document, if this isn't true this sends the request to index.php.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|css|js|map|ico|txt|svg)$ [NC]
-RewriteRule . index.php [L]
+RewriteRule ^ index.php [L]
 
 # Caching
 <IfModule mod_expires.c>
