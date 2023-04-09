@@ -10,6 +10,11 @@ Options -Indexes
 
 RewriteEngine On
 
+# Redirect from www subdomain to preferred domain (no-www)
+RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+RewriteCond %{HTTP_HOST} ^www [NC]
+RewriteRule ^(.*)$ https://tkgreenllc.com/$1 [L,R=301]
+
 RedirectMatch 301 ^/index\.html$ /
 RedirectMatch 301 ^/inspection-team\.html$ /about-us
 RedirectMatch 301 ^/services\.html$ /your-inspection
