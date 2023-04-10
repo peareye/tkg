@@ -979,17 +979,12 @@ a:hover, a:focus {
   outline: none;
 }
 .contact-form p {
+  background-color: hsl(100deg, 0%, 94%);
+  color: rgba(26, 26, 26, 0.99);
   padding: 1em;
   font-weight: 400;
-  border-radius: 7px;
-  box-shadow: 0px 0px 15px rgba(26, 26, 26, 0.15);
   font-size: 1.3rem !important;
-  border: solid #036670 0.05em;
   grid-column: 1/-1;
-}
-
-.contact-info + .contact-form:has(> p) {
-  display: none;
 }
 
 .contact-info {

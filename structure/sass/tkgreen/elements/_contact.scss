@@ -56,20 +56,23 @@
 
   // This styles the thank you paragraph after form submission.
   p {
+   @include dc(neutral(2));
    padding      : $spacer;
    font-weight  : $fw-n;
-   border-radius: $br;
-   box-shadow   : $bs;
+   // border-radius: $br;
+   // box-shadow   : $bs;
    font-size    : 1.3rem !important;
-   border       : solid color(secondary) .05em;
+   // border       : solid color(secondary) .05em;
 
    grid-column: 1 / -1;
   }
  }
 
- .contact-info+.contact-form:has(> p) {
-  display: none;
- }
+ // .contact-info+.contact-form:has(> p) .contact-form {
+ //  @include dc(neutral(2));
+ //  border: none;
+
+ // }
 
  .contact-info {
   padding-inline    : $spacer;

@@ -1,4 +1,7 @@
-{# Contact Form Element #} {% import "includes/_macros.html" as pitonMacro %}
+{# Contact Form Element #} 
+
+{% import "includes/_macros.html" as pitonMacro %}
+
 <h2 class="element__title">{{ element.title }}</h2>
 
 <div class="flex-two-columns contactElement">
@@ -51,4 +54,12 @@
 
     {{ pitonMacro.contactHoneypot() }}
   </form>
+
+  
+  <div class="contact-form__response" data-contact-response="true" hidden>
+   <p>{{ site.settings.contactFormAcknowledgement }}</p>
+ </div>
 </div>
+
+
+
