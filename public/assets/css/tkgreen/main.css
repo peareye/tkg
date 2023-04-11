@@ -9,12 +9,12 @@ a:hover {
 }
 
 :root {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 1000px) {
   :root {
-    font-size: calc( 14px + (18 - 14) * ( (100vw - 576px) / ( 1000 - 576) ));
+    font-size: calc( 16px + (18 - 16) * ( (100vw - 576px) / ( 1000 - 576) ));
   }
 }
 @media (min-width: 1000px) {
@@ -474,7 +474,7 @@ a:hover, a:focus {
 }
 .header .socialLinks {
   display: flex;
-  gap: 0.25em;
+  gap: 0.75em;
   justify-content: center;
   align-items: center;
   font-size: 1.75em;
@@ -949,7 +949,6 @@ a:hover, a:focus {
   align-items: baseline;
 }
 .contact-form label {
-  font-weight: 300;
   font-size: 0.9em;
   padding-block-end: 0.2em;
 }
@@ -958,32 +957,32 @@ a:hover, a:focus {
 .contact-form textarea {
   padding: 0.5em;
   width: 100%;
+  -webkit-appearance: none;
   box-shadow: 0px 0px 15px rgba(26, 26, 26, 0.15);
-  background-color: hsl(100deg, 0%, 98%);
+  -webkit-box-shadow: 0px 0px 15px rgba(26, 26, 26, 0.15);
   border-radius: 7px;
   border: none;
-  grid-column: 2/3;
   transition: all 125ms ease-in-out;
-}
-@supports (-webkit-touch-callout: none) {
-  .contact-form input[type=text],
-  .contact-form input[type=email],
-  .contact-form textarea {
-    border: solid 1px hsl(100deg, 0%, 60%);
-  }
 }
 .contact-form input[type=text]:focus,
 .contact-form input[type=email]:focus,
 .contact-form textarea:focus {
-  border: 1px dashed #b51700;
+  border: 1px solid #b51700;
   outline: none;
 }
+.contact-form input[type=text]:focus-visible,
+.contact-form input[type=email]:focus-visible,
+.contact-form textarea:focus-visible {
+  border: none;
+  outline: dashed #b51700 2px;
+}
 .contact-form p {
-  background-color: hsl(100deg, 0%, 94%);
-  color: rgba(26, 26, 26, 0.99);
   padding: 1em;
   font-weight: 400;
+  border-radius: 7px;
+  box-shadow: 0px 0px 15px rgba(26, 26, 26, 0.15);
   font-size: 1.3rem !important;
+  border: solid #036670 0.05em;
   grid-column: 1/-1;
 }
 
