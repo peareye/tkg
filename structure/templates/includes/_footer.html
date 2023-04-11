@@ -50,10 +50,16 @@
     <div>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</div>
     {% if site.settings.footerAuthor %}
     <div class="text-small">
-       Built {# with <a class="styled-link" href="http://pitoncms.com" target="_blank">PitonCMS </a>  #}by
-      <a class="styled-link" href="{{ site.settings.footerAuthorURL }} " target="_blank"
-        >{{ site.settings.footerAuthor }}</a
-      >
+       Built {# with <a class="styled-link" href="http://pitoncms.com" target="_blank">PitonCMS </a>  #}
+       by
+      <a 
+      class="styled-link" 
+      href="{{ site.settings.footerAuthorURL }}" 
+      target="_blank"
+      rel="external noopener noreferrer"
+      aria-label="External link to Website Author">
+        {{ site.settings.footerAuthor }}
+        </a>
     </div>
     {% endif %} 
   </div>
