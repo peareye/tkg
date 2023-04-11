@@ -1236,15 +1236,18 @@ details summary:hover .summary-chevron-up svg {
   opacity: 1;
 }
 details .summary-chevron-up svg {
-  opacity: 0.5;
+  opacity: 1;
 }
 details .summary-chevron-up,
 details .summary-chevron-down {
   pointer-events: none;
   position: absolute;
-  top: 0.75em;
-  right: 1em;
+  top: 0.5em;
+  right: 0.25em;
   background: hsl(100deg, 0%, 98%);
+  font-weight: 900;
+  color: #00050d;
+  color: #b51700;
 }
 details .summary-chevron-up svg,
 details .summary-chevron-down svg {
