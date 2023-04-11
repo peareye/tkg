@@ -970,20 +970,12 @@ a:hover, a:focus {
   border: 1px solid #b51700;
   outline: none;
 }
-.contact-form input[type=text]:focus-visible,
-.contact-form input[type=email]:focus-visible,
-.contact-form textarea:focus-visible {
-  border: none;
-  outline: dashed #b51700 2px;
-}
-.contact-form p {
+.contact-form__response {
   padding: 1em;
   font-weight: 400;
   border-radius: 7px;
   box-shadow: 0px 0px 15px rgba(26, 26, 26, 0.15);
-  font-size: 1.3rem !important;
-  border: solid #036670 0.05em;
-  grid-column: 1/-1;
+  font-size: 2rem !important;
 }
 
 .contact-info {
