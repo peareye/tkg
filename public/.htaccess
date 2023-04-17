@@ -10,16 +10,24 @@ Options -Indexes
 
 RewriteEngine On
 
-# Redirect from www subdomain to preferred domain (no-www)
-RewriteCond %{HTTP_HOST} !^localhost$ [NC]
-RewriteCond %{HTTP_HOST} ^www [NC]
-RewriteRule ^(.*)$ https://tkgreenllc.com/$1 [L,R=301]
+# Rewrite old page paths to new
+RewriteRule ^index\.html$ /
+RewriteRule ^inspection-team\.html$ /about-us
+RewriteRule ^services\.html$ /your-inspection
+RewriteRule ^reports\.html$ /your-inspection
+RewriteRule ^contact-us\.html$ /contact
 
-RedirectMatch 301 ^/index\.html$ /
-RedirectMatch 301 ^/inspection-team\.html$ /about-us
-RedirectMatch 301 ^/services\.html$ /your-inspection
-RedirectMatch 301 ^/reports\.html$ /your-inspection
-RedirectMatch 301 ^/contact-us\.html$ /contact
+# Strip weird legacy query strings with "imz_s" and "redirect"
+RewriteCond %{QUERY_STRING} imz_s [OR]
+RewriteCond %{QUERY_STRING} redirect
+RewriteRule ^(.*)$ /$1?
+
+# Redirect from www subdomain to preferred domain (no-www), also redirect m. subdomain requests
+RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
+RewriteCond %{HTTP_HOST} ^m\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://tkgreenllc.com/$1 [R=301,L]
 
 # Check to see if the user is attempting to access a valid file, such as an image
 # or css document, if this isn't true this sends the request to index.php.
