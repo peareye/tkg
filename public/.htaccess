@@ -11,16 +11,11 @@ Options -Indexes
 RewriteEngine On
 
 # Rewrite old page paths to new
-RewriteRule ^index\.html$ /
-RewriteRule ^inspection-team\.html$ /about-us
-RewriteRule ^services\.html$ /your-inspection
-RewriteRule ^reports\.html$ /your-inspection
-RewriteRule ^contact-us\.html$ /contact
-
-# Strip weird legacy query strings with "imz_s" and "redirect"
-RewriteCond %{QUERY_STRING} imz_s [OR]
-RewriteCond %{QUERY_STRING} redirect
-RewriteRule ^(.*)$ /$1?
+RewriteRule ^index\.html$ https://tkgreenllc.com [R=301,QSD,L]
+RewriteRule ^inspection-team\.html$ https://tkgreenllc.com/about-us [R=301,QSD,L]
+RewriteRule ^services\.html$ https://tkgreenllc.com/your-inspection [R=301,QSD,L]
+RewriteRule ^reports\.html$ https://tkgreenllc.com/your-inspection [R=301,QSD,L]
+RewriteRule ^contact-us\.html$ https://tkgreenllc.com/contact [R=301,QSD,L]
 
 # Redirect from www subdomain to preferred domain (no-www), also redirect m. subdomain requests
 RewriteCond %{HTTP_HOST} !^localhost$ [NC]
