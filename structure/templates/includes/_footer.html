@@ -19,11 +19,13 @@
       </nav>
     </div>
 
-    {% if site.settings.contactAddress %}
+   
     <div class="footer-address">
+     {% if site.settings.contactAddress %}
       <h5 class="footer-title">Address</h5>
 
       <div>{{ site.settings.contactAddress|nl2br}}</div>
+      {% endif %} 
       {% if site.settings.contactPhone %}
       <h5 class="footer-title">Phone</h5>
       <div>
@@ -32,7 +34,7 @@
       </div>
       {% endif %} 
     </div>
-    {% endif %} 
+    
 
     <div class="footer-socialLinks">
       <h5 class="footer-title">Get Social</h5>
